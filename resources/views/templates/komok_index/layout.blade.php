@@ -27,7 +27,8 @@
     <link href="{{ asset('css/style.css') }}" rel="stylesheet">
 </head>
 <body>
-    @include('komok_index.header')
-    @yield('content')
+    @include('templates.komok_index.header')
+    @yield('body')
+    @include('templates.komok_index.footer')
 </body>
 </html>

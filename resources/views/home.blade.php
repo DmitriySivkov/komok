@@ -1,5 +1,5 @@
-@extends('komok_index.layout')
-@section('content')
+@extends('templates.komok_index.layout')
+@section('body')
     <section class="section"></section>
     <div class="grid-container">
         <div class="grid-x">
@@ -130,45 +130,4 @@
         <img class="section__img section__img_20" src="{{ asset('images/mainpage/back6/circle.png') }}">
         <img class="section__img section__img_21" src="{{ asset('images/mainpage/back6/circle-small.png') }}">
     </section>
-    <div class="grid-container">
-        <footer class="footer">
-            <div class="grid-x medium-up-4">
-                <div class="cell">
-                    <a class="footer__link" href="#">О лагере</a>
-                    <a class="footer__link" href="#">Местонахождение</a>
-                    <a class="footer__link" href="#">Команда</a><a class="footer__link" href="#">Вопросы и ответы</a>
-                    <a class="footer__link" href="#">Галерея</a><a class="footer__link" href="#">Отзывы</a>
-                </div>
-                <div class="cell">
-                    <a class="footer__link" href="#">Способы оплаты</a><a class="footer__link" href="#">
-                        Путевка в рассрочку
-                    </a>
-                    <a class="footer__link" href="#">
-                        Необходимые документы
-                    </a>
-                    <a class="footer__link" href="#">
-                        Список вещей для лагеря
-                    </a>
-                </div>
-                <div class="cell">
-                    <div class="footer__contacts">
-                        <div class="footer__worktime"><a class="footer__phone">+7 (495) 995-15-18</a>
-                            <div>пн-пт 10:00- 19:00</div>
-                        </div>
-                        <div class="footer__soc">
-                            <a class="footer__soc-link" href="#">Фейсбук</a>
-                            <a class="footer__soc-link" href="#">Вконтакте</a>
-                            <a class="footer__soc-link" href="#">Инстаграмм</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="cell">
-                    <div class="footer__addres">
-                        <div class="footer__addres-item">2021 КОМОКг. Москва, Милютинский пер., д. 15, стр. 2</div>
-                        <div class="footer__addres-item">ООО «МБА» ОГРН 1157746052650 ИНН/КПП 7715404727/771301001</div>
-                    </div>
-                </div>
-            </div>
-        </footer>
-    </div>
 @endsection
