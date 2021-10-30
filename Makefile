@@ -1,9 +1,9 @@
 .PHONY: mysql dump import
 
-MYSQL_CONTAINER_NAME = shopifyApp-mysql
-PHP_CONTAINER_NAME = shopifyApp-php
-NGINX_CONTAINER_NAME = shopifyApp-nginx
-DB_NAME = shopifyApp_db
+MYSQL_CONTAINER_NAME = komok-mysql
+PHP_CONTAINER_NAME = komok-php
+NGINX_CONTAINER_NAME = komok-nginx
+DB_NAME = komok_db
 MYSQL_USER = root
 MYSQL_PASS = root
 
