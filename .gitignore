@@ -13,8 +13,8 @@ _ide_helper.php
 /node_modules
 /public/hot
 /public/storage
-/public/js
-/public/css
+#/public/js
+#/public/css
 /storage/*.key
 /vendor
 .env.backup
