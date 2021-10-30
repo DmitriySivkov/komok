@@ -1,0 +1,41 @@
+.footer{
+    padding:rem-calc(53) 0;
+    border-top: 1px solid #E1E1E1;
+
+    margin-top: rem-calc(40);
+    font-size: rem-calc(20);
+    line-height: 200%;
+    color: #7C7C7C;
+    &__link{
+        display: block;
+        color: #7C7C7C;
+    }
+    &__contacts{
+        display: flex;
+        flex-direction: column;
+    }
+    &__worktime{
+        margin-bottom: rem-calc(10);
+    }
+    &__phone{
+        font-size: rem-calc(25);
+        line-height: 200%;
+        color: #8B57A3;
+        font-weight: bold;
+    }
+    &__soc{
+        display: flex;
+        flex-direction: column;
+        font-weight: bold;
+        font-size: rem-calc(20);
+        line-height: 200%;
+        color: #8B57A3;
+    }
+    &__addres{
+        line-height: rem-calc(27);
+        color: #7C7C7C;
+        &-item{
+            margin-bottom: rem-calc(20);
+        }
+    }
+}

@@ -1,0 +1,39 @@
+.board{
+    margin:rem-calc(80) 0;
+    &__wrapper{
+        background: url("/i/board-1.png");
+        position: relative;
+
+        background-size: 100% 100%;
+        background-position: center center;
+        background-repeat: no-repeat;
+        padding: rem-calc(150) 0;
+        display: flex;
+        justify-content: center;
+    }
+    &__content{
+        font-weight: 800;
+        font-size: rem-calc(45);
+        line-height: 51px;
+
+        color: #FFFFFF;
+        width: 70%;
+    }
+    &__img{
+        bottom: 22%;
+        right: 0;
+        position: absolute;
+    }
+
+    @include breakpoint(small only){
+        &__wrapper{
+            padding: 4.375rem 0;
+        }
+        &__img{
+            bottom:0;
+        }
+        &__content{
+            font-size: 1.4rem;
+        }
+    }
+}

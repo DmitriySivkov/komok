@@ -1,0 +1,23 @@
+@charset "utf-8";
+$imagesPath: "../images" !default;
+$fontsPath: "../fonts" !default;
+
+@import "foundation-sites/scss/util/util";
+@import "fonts";
+@import "settings";
+@import "~@fancyapps/fancybox/dist/jquery.fancybox.min.css";
+@import "foundation-sites/scss/foundation";
+@import "slick-carousel/slick/slick.scss";
+@import "motion-ui/motion-ui";
+@import "foundation";
+@import "../blocks/**/*.scss";
+@import "common";
+@import "svg-inline";
+@import "print";
+@import "header";
+@import "nav";
+@import "work-time";
+@import "section";
+@import "footer";
+@import "board";
+@import "burger";
