@@ -5,3 +5,9 @@
 <li>Импортировать дамп - make import</li>
 </ul>
 <p>Новый дамп появляется в директории: /dump/new_dump.sql</p>
+
+<p><strong>Если не появляются картинки из БД:</strong></p>
+<ul>
+<li>прописать симлинки на сервере: php artisan storage:link</li>
+</ul>
+
