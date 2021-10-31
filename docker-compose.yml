@@ -15,6 +15,7 @@ services:
       - php
 
   php:
+    user: "${UID}:${GID}"
     build:
       context: .
       dockerfile: docker/php-fpm.dockerfile

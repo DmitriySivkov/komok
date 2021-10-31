@@ -6,7 +6,6 @@ Thumbs.db
 # env
 *.sql
 tmp/*
-.env
 .phpstorm.meta.php
 _ide_helper.php
 
