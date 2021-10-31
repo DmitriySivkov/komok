@@ -11,3 +11,9 @@
 <li>прописать симлинки на сервере: php artisan storage:link</li>
 </ul>
 
+<p><strong>Вход в контейнеры</strong></p>
+<ul>
+<li>php - make php_container</li>
+<li>nginx - make nginx_container</li>
+<li>mysql - make mysql_container</li>
+</ul>
