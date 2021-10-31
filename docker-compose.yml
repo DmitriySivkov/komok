@@ -34,6 +34,7 @@ services:
     container_name: komok-mysql
     volumes:
       - ./Makefile:/Makefile
+      - ./dump:/dump
     ports:
       - 127.0.0.1:53307:3306
     environment:
