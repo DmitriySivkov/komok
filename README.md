@@ -17,3 +17,7 @@
 <li>nginx - make nginx_container</li>
 <li>mysql - make mysql_container</li>
 </ul>
+
+<p><strong>дефолт.админ</strong></p>
+l: admin@admin.com
+p: password
