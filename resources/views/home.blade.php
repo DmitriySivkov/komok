@@ -50,7 +50,7 @@
     <div class="grid-container">
         <div class="section__background">
             <div class="grid-x">
-                <div class="cell large-9 large-offset-2">
+                <div class="cell large-9 large-offset-1 xlarge-offset-0">
                     <img class="section__slide" src="{{ asset('storage/' . $blocks_on_main[3]->picture) }}">
                 </div>
                 <div class="cell large-9">

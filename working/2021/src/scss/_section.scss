@@ -16,6 +16,8 @@
         color: #000000;
     }
     &__content{
+        position: relative;
+        z-index: 3;
         margin-bottom: rem-calc(35);
         display: flex;
         justify-content: center;

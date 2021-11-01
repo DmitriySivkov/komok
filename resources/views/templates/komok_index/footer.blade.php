@@ -1,6 +1,6 @@
 <div class="grid-container">
     <footer class="footer">
-        <div class="grid-x medium-up-4">
+        <div class="grid-x large-up-4 medium-up-2 grid-margin-y">
             {{ menu('Главное', 'components.menu.main_bottom') }}
             {{ menu('Главное 2', 'components.menu.main_bottom_second') }}
             <div class="cell">
