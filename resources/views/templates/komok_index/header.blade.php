@@ -13,7 +13,7 @@
             <div class="work-time__wrapper">
                 <div class="work-time__item">
                     <a class="work-time__link" href="tel:+{{ preg_replace('/[^0-9.]+/', '', $settings["site.main_phone"]->value) }}">
-                        {{ $settings["site.phone"]->value }}
+                        {{ $settings["site.main_phone"]->value }}
                     </a>
                 </div>
                 <div class="work-time__item">{{ $settings["site.work_time"]->value }}</div>
