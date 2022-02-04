@@ -1,0 +1,85 @@
+extends site-regular
+block page
+  .grid-container
+    .breadcrumbs
+      a.breadcrumbs__item Главная
+      span.breadcrumbs__item.breadcrumbs__item_active Галлерея
+
+    .article
+      h1.article__title Галлерея
+      .article__img
+        img.article__photo(src="i/article/gallery.png")
+      .grid-x.grid-padding-y
+        .cell.medium-12
+          p Наш любимый фотоальбом. Здесь вы можете познакомиться с жизнью нашего лагеря, или вспомнить о веселых и интересных деньках. Честно говоря, мы и сами частенько пересматриваем эти фотографии.
+          p Укажите в каком году вы были в лагере и в какой смене. У нас все сохранено.
+
+      form
+        .grid-x.grid-padding-x.grid-margin-y.grid-padding-y.medium-up-3.xlarge-up-6.large-up-5
+          .cell
+            .custom-select
+              select
+                option(value='0') Год
+                option(value='1') 2022
+                option(value='2') 2021
+                option(value='3') 2020
+                option(value='4') 2019
+          .cell
+            .custom-select
+              select
+                option(value='0') Время года
+                option(value='1') Зима
+                option(value='2') Лето
+          .cell
+            .custom-select
+              select
+                option(value='0') Смена
+                option(value='1') 1
+                option(value='2') 2
+                option(value='3') 3
+                option(value='4') 4
+          .cell
+            .custom-radio
+              input#small(type="radio" name="group2")
+              .custom-radio__wrapper
+                label(for="small")
+                  | Смены 7-12 лет
+          .cell
+            .custom-radio
+              input#large(type="radio" checked="checked" name="group2")
+              .custom-radio__wrapper
+                label(for="large" onclick="console.log(1);")
+                  | Смены 13-17 лет
+
+    .gallery
+      .grid-x.grid-padding-x.grid-padding-y
+        .cell.large-12
+          .grid-x
+            .cell
+              a(href='i/gallery/Photo_1.jpg', data-fancybox='gallery', data-caption='Фото #1').gallery__link
+                img(src="i/gallery/Photo_1.jpg").gallery__photo
+          .grid-x.grid-padding-y.grid-margin-y.grid-padding-x
+            .cell.medium-12
+              a(href='i/gallery/Photo_4.jpg', data-fancybox='gallery', data-caption='Фото #2').gallery__link
+                img(src="i/gallery/Photo_4.jpg").gallery__photo
+            .cell.medium-12
+              a(href='i/gallery/Photo_5.jpg', data-fancybox='gallery', data-caption='Фото #3').gallery__link
+                img(src="i/gallery/Photo_5.jpg").gallery__photo
+        .cell.large-12
+          .grid-x
+            .grid-x.grid-padding-y.grid-margin-y.grid-padding-x
+              .cell.medium-12
+                a(href='i/gallery/Photo_2.jpg', data-fancybox='gallery', data-caption='Фото #4').gallery__link
+                  img(src="i/gallery/Photo_2.jpg").gallery__photo
+              .cell.medium-12
+                a(href='i/gallery/Photo_3.jpg', data-fancybox='gallery', data-caption='Фото #5').gallery__link
+                  img(src="i/gallery/Photo_3.jpg").gallery__photo
+            .cell
+              a(href='i/gallery/Photo_6.jpg', data-fancybox='gallery', data-caption='Фото #6').gallery__link
+                img(src="i/gallery/Photo_6.jpg").gallery__photo
+        .cell
+          a(href='i/gallery/Photo_7.jpg', data-fancybox='gallery', data-caption='Фото #7').gallery__link
+           img(src="i/gallery/Photo_7.jpg").gallery__photo
+    br
+    +pagination
+

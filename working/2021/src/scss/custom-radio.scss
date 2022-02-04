@@ -1,0 +1,29 @@
+.custom-radio{
+
+    .custom-radio__wrapper{
+        padding: rem-calc(8) rem-calc(16);
+        border-radius: 124px;
+        text-align: center;
+        border: 1px solid #E1E1E1;
+        color: #E1E1E1;
+
+        transition: background-color .2s linear;
+        &:hover{
+            background: linear-gradient(-90deg, #5F48B0 3.24%, #6048B0 4.96%, #7F53A6 63.89%, #8B57A3 96.77%);
+        }
+        & label{
+            cursor: pointer !important;
+        }
+    }
+
+    & input{
+        display: none;
+
+        &:checked{
+            & + .custom-radio__wrapper{
+                background: linear-gradient(90deg, #5F48B0 3.24%, #6048B0 4.96%, #7F53A6 63.89%, #8B57A3 96.77%);
+                color:#fff;
+            }
+        }
+    }
+}

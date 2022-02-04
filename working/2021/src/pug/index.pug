@@ -1,11 +1,5 @@
-doctype html
-html.no-js(lang='ru')
-  include components/service/_head
-  body
-    .grid-container
-      include components/common/_header
-
-
+extends site-regular
+block page
     section.section
     .grid-container
       .grid-x
@@ -114,4 +108,3 @@ html.no-js(lang='ru')
       img(src="./images/mainpage/back6/circle.png").section__img.section__img_20
       img(src="./images/mainpage/back6/circle-small.png").section__img.section__img_21
 
-    include components/common/_footer

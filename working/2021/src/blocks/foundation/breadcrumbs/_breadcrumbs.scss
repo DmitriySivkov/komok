@@ -1,9 +1,21 @@
-.breadcrumbs {
-  margin-top: rem-calc(32);
-  margin-bottom: rem-calc(32);
-}
+ .breadcrumbs{
+    & a{
+        color: #7C7C7C;
+        font-size: rem-calc(16);
+    }
+    &__item{
+        font-size: rem-calc(16);
+        line-height: rem-calc(22);
+        color: $secondary-color;
 
-.breadcrumbs a {
-  color: $secondary-color;
-  font-size: rem-calc(12);
+        &:after{
+            display: inline-block;
+            content: "——";
+            margin: 0 rem-calc(4);
+            font-size: 14px;
+        }
+        &:last-child:after{
+            content: "";
+        }
+    }
 }

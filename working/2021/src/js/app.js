@@ -7,6 +7,7 @@ import "./handleInputNumber.js";
 import "./stickyFooter.js";
 import "./replaceImgSvg.js";
 import "./lazyLoadVideo.js";
+import "./custom-select";
 
 import "../scss/style.scss";
 (function ($) {

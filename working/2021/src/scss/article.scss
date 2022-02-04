@@ -1,0 +1,38 @@
+.article{
+    padding-top: rem-calc(65);
+    position: relative;
+    color:#000;
+    &__title{
+        color:#FFC01E;
+        font-weight: 800;
+        font-size: rem-calc(45);
+        line-height: 114.4%;
+
+        border-bottom: 1px solid #E1E1E1;
+    }
+    &__img{
+        position: absolute;
+        top: 0;
+        z-index: 100;
+        right: 5%;
+        width: 30%;
+        background: #fff;
+    }
+
+    @include breakpoint(medium down){
+
+        &{
+            padding-top: rem-calc(15);
+            &__img{
+                width: 20%;
+            }
+        }
+    }
+    @include breakpoint(small only){
+        &{
+            &__img{
+                right: 0;
+            }
+        }
+    }
+}

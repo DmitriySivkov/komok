@@ -150,9 +150,7 @@ h6 {
 
 .h1,
 h1 {
-  margin-bottom: rem-calc(32);
-  line-height: 1;
-  font-size: 3rem;
+
 }
 
 .h2,
@@ -195,14 +193,7 @@ h2 {
   position: relative;
 
   &::after {
-    content: "";
-    position: absolute;
-    background: $warning-color;
-    height: rem-calc(3);
-    width: 5rem;
-    left: 0;
-    right: 0;
-    bottom: -0.5rem;
+
   }
 }
 

@@ -72,8 +72,8 @@ $xy-grid: true;
 $grid-container: $global-width;
 $grid-columns: 24;
 $grid-margin-gutters: (
-  small: rem-calc(20),
-  medium: rem-calc(20),
+  small: rem-calc(10),
+  medium: rem-calc(10),
 );
 $grid-padding-gutters: $grid-margin-gutters;
 $grid-container-padding: $grid-padding-gutters;
