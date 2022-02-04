@@ -41,7 +41,6 @@
     @include breakpoint(small only){
         &{
             order: 1;
-            width: 100%;
         }
         &__top,
         &__bottom{
