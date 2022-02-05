@@ -1,0 +1,140 @@
+extends site-regular
+block page
+  .grid-container
+    .breadcrumbs
+      a.breadcrumbs__item Главная
+      span.breadcrumbs__item.breadcrumbs__item_active Вопросы и ответы
+
+    .article
+      .article__header
+        h1.article__title Вопросы и ответы
+        .article__img
+          img.article__photo(src="i/article/faq.png")
+      .grid-x.grid-padding-y
+        .cell.medium-16.large-6
+          p Мы подготовили для вас ответы на часто задаваемые вопросы от родителей и детей
+    br
+    .grid-x
+      .cell.large-17
+        ul.accordion(data-accordion data-multi-expand="true" data-allow-all-closed="true")
+          li.accordion-item(data-accordion-item)
+            a.accordion-title(href="#")
+              span Что входит в стоимость путевки?
+            div.accordion-content(data-tab-content)
+              p Программа клиента SSL VPN использует TСР порт 4100 для подключения к Firebox c целью загрузки обновлений программного обеспечения клиента и его конфигурационного файла.
+              p Если пользователь не может подключиться через ТСР порт 4100, но при наличии конфигурационного файла он может создать VPN-соединение, но при этом не сможет загрузить обновленный конфигурационный файл.
+              p Пользователь увидит диалоговое окно с ошибкой «Could not download the configuration from the server. Do you want to try to connect using the most recent configuration?». Затем пользователю следует нажать Yes и создать VPN-соединение, только если он не изменил параметры Mobile VPN with SSL в конфигурации Firebox.
+              p Если пользователь не может подключиться к устройству Firebox через порт 4100, так как он заблокирован брандмауэром или ISP, то вы можете пользователю отправить программу клиента и конфигурационный файл. Для более подробной информации см. Manually distribute and install the Mobile VPN with SSL client software and configuration file
+          li.accordion-item(data-accordion-item)
+            a.accordion-title(href="#")
+              span Какой распорядок дня?
+            div.accordion-content(data-tab-content)
+              p
+                b Оплата наличными
+              p Вы можете оплатить путевку наличными в любом отделении банка, заполненную квитанцию для оплаты мы прикладываем к договору.
+          li.accordion-item(data-accordion-item)
+            a.accordion-title(href="#")
+              span Какие документы необходимы?
+            div.accordion-content(data-tab-content)
+              p
+                b Оплата наличными
+              p Вы можете оплатить путевку наличными в любом отделении банка, заполненную квитанцию для оплаты мы прикладываем к договору.
+          li.accordion-item(data-accordion-item)
+            a.accordion-title(href="#")
+              span Сколько длятся смены?
+            div.accordion-content(data-tab-content)
+              p
+                b Оплата наличными
+              p Вы можете оплатить путевку наличными в любом отделении банка, заполненную квитанцию для оплаты мы прикладываем к договору.
+          li.accordion-item(data-accordion-item)
+            a.accordion-title(href="#")
+              span Как можно оплатить путевку?
+            div.accordion-content(data-tab-content)
+              p
+                b Оплата наличными
+              p Вы можете оплатить путевку наличными в любом отделении банка, заполненную квитанцию для оплаты мы прикладываем к договору.
+
+              p
+                b Безналичный расчет
+              p Путевку можно оплатить через сервис интернет-банк, указав в назначении платежа – оплата за услуги по договору №____ от __.__.2019г.
+              p
+                b Наши реквизиты:
+
+              p Общество с ограниченной ответственностью «МБА» <br> Юридический адрес: 127550, г. Москва, ул. Прянишникова, д. 19, стр. 1, пом. IV, ком. 1 <br> Фактический адрес: 127550, г. Москва, ул. Прянишникова, д. 19, стр. 1, пом. IV, ком. 1
+
+              p ОГРН 1157746052650 <br> ИНН 7715404727 <br> КПП 771301001
+
+              p Р/c 40702810202630002129 <br> К/с 30101810200000000593
+
+              p АО "АЛЬФА-БАНК" <br> БИК 044525593
+
+
+              p Обратите внимание, что банк может взимать комиссию за совершение операции.
+
+          li.accordion-item(data-accordion-item)
+            a.accordion-title(href="#")
+              span Можно ли взять путевку в рассрочку?
+            div.accordion-content(data-tab-content)
+              p
+                b Оплата наличными
+              p Вы можете оплатить путевку наличными в любом отделении банка, заполненную квитанцию для оплаты мы прикладываем к договору.
+          li.accordion-item(data-accordion-item)
+            a.accordion-title(href="#")
+              span Где находится лагерь?
+            div.accordion-content(data-tab-content)
+              p
+                b Оплата наличными
+              p Вы можете оплатить путевку наличными в любом отделении банка, заполненную квитанцию для оплаты мы прикладываем к договору.
+
+              p
+               b Безналичный расчет
+              p Путевку можно оплатить через сервис интернет-банк, указав в назначении платежа – оплата за услуги по договору №____ от __.__.2019г.
+              p
+                b Наши реквизиты:
+
+              p Общество с ограниченной ответственностью «МБА» <br> Юридический адрес: 127550, г. Москва, ул. Прянишникова, д. 19, стр. 1, пом. IV, ком. 1 <br> Фактический адрес: 127550, г. Москва, ул. Прянишникова, д. 19, стр. 1, пом. IV, ком. 1
+
+              p ОГРН 1157746052650 <br> ИНН 7715404727 <br> КПП 771301001
+
+              p Р/c 40702810202630002129 <br> К/с 30101810200000000593
+
+              p АО "АЛЬФА-БАНК" <br> БИК 044525593
+
+
+              p Обратите внимание, что банк может взимать комиссию за совершение операции.
+
+    section.section
+      .grid-container
+        .section__background.section__background_faq
+          .grid-x
+            .cell.large-11.large-offset-6
+              .section__content.section__content_center
+                .section__head
+                  | Задайте&nbsp;
+                  span.section__violet.section__violet_2 свой вопрос
+        .question
+          .grid-x
+            .cell.medium-12.question__item
+              .question__title
+                | Через электронную почту
+              form
+                .grid-x.grid-margin-x
+                  .cell.large-8
+                    .custom-input
+                      input(type="text" placeholder=" ")
+                      label Имя и фамилия
+                  .cell.large-14
+                    .custom-input
+                      input(placeholder=" " type="mail")
+                      label Электронная почта
+                  .cell.large-22
+                    textarea(rows="5" cols="33" placeholder="Поле для текста")
+                  .cell.large-22.question__button
+                    a(href="#" type="submit").button Отправить
+            .cell.medium-12.question__item
+              .grid-x
+                .cell.medium-22.medium-offset-2
+                  .question__title
+                    | Или по телефону, так быстрее
+                  a(href="tel:84959951518" title="Позвонить нам").question__phone +7 (495) 995-15-18
+                  .question__time пн-пт 10:00- 19:00

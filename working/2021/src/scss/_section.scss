@@ -160,6 +160,11 @@
             &_large-padding{
                 padding-top:rem-calc(120);
             }
+            &__background{
+                &_faq{
+                    padding:0;
+                }
+            }
         }
         &__head{
             font-size: 1.4rem;

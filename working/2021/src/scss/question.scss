@@ -1,0 +1,46 @@
+.question{
+    &__title{
+        font-weight: bold;
+        font-size: rem-calc(20);
+        line-height: rem-calc(31);
+        margin-bottom: rem-calc(19);
+    }
+    &__button{
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__item{
+        &:last-child{
+            border-left: 2px solid #E1E1E1;
+        }
+    }
+    &__phone{
+        font-weight: 800;
+        font-size: rem-calc(60);
+        line-height: 114.4%;
+        color: #8B57A3;
+        margin-top: rem-calc(47);
+        margin-bottom: rem-calc(10);
+    }
+    &__time{
+        line-height: 153.9%;
+    }
+    @include breakpoint(medium only){
+        &__phone{
+            font-size: rem-calc(40);
+        }
+    }
+    @include breakpoint(small only){
+        &__phone{
+            font-size: rem-calc(30);
+        }
+        &__item{
+            &:last-child{
+                border-top:2px solid #E1E1E1;
+                border-left: none;
+                padding-top: rem-calc(30);
+            }
+        }
+    }
+}
