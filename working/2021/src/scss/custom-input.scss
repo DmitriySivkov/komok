@@ -1,0 +1,31 @@
+.custom-input{
+    position: relative;
+
+    & input{
+        padding: 5px 15px;
+
+
+        &:focus~label,
+        &:not(:placeholder-shown)~label{
+            top: rem-calc(5);
+
+            font-size: rem-calc(10);
+            line-height:rem-calc(14);
+
+
+            color: #A0A0A0;
+        }
+    }
+
+    & label{
+        position: absolute;
+        pointer-events: none;
+        left: 15px;
+        right: 15px;
+        top: 10%;
+        white-space: nowrap;
+        overflow: hidden;
+        line-height: 40px;
+        transition: .3s;
+    }
+}
