@@ -130,6 +130,28 @@
             top: 95%;
         }
     }
+    &__background{
+        &_review{
+            & .section__img{
+                &_1{
+                    top:90%;
+                    right: 20%;
+                }
+                &_2{
+                    left: 10%;
+                    top: 20%;
+                }
+                &_3{
+                    top: 60%;
+                    left: 10%;
+                }
+                &_4{
+                    top: 20%;
+                    right: 5%;
+                }
+            }
+        }
+    }
     @include breakpoint(large down){
         &__content{
             text-align: center;
@@ -185,6 +207,15 @@
             }
         }
 
+    }
+    &__background{
+        &_review{
+            & .section__img{
+                &_2{
+                    left: 0;
+                }
+            }
+        }
     }
 
 }

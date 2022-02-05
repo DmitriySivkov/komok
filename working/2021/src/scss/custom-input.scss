@@ -1,9 +1,9 @@
 .custom-input{
     position: relative;
+    z-index: 1;
 
     & input{
         padding: 5px 15px;
-
 
         &:focus~label,
         &:not(:placeholder-shown)~label{

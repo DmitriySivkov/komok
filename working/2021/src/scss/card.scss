@@ -1,0 +1,70 @@
+.card{
+    border:none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    &__col{
+        width: 32%;
+        display: flex;
+        flex-direction: column;
+    }
+    &__item{
+        border-radius: 30px;
+        border: 1px solid #FFC01E;
+        padding: rem-calc(50) rem-calc(54);
+        margin-bottom: rem-calc(20);
+        &:last-child{
+            margin-bottom: 0;
+        }
+    }
+    &__img{
+        position: relative;
+        display: inline-block;
+    }
+    &__photo{
+        border-radius: 50%;
+        z-index: 2;
+        position: relative;
+    }
+    &__circle{
+        position: absolute;
+        right: rem-calc(-10);
+        top: rem-calc(-10);
+        z-index: 1;
+    }
+    &__name,&__age{
+        font-weight: 800;
+        font-size: rem-calc(30);
+        line-height: 114.4%;
+        color: #000000;
+    }
+    &__name{
+        &:after{
+            content: ",";
+        }
+    }
+    &__age{
+        margin-bottom: rem-calc(35);
+    }
+    &__button{
+        text-align: center;
+    }
+
+    @include breakpoint(medium down){
+        &__col{
+            width: 100%;
+            flex-direction: row;
+            flex-wrap: wrap;
+            &:last-child{
+                margin-bottom: rem-calc(20);
+            }
+        }
+        &__iten{
+            width: 50%;
+            &:last-child{
+                margin-bottom: rem-calc(20);
+            }
+        }
+    }
+}

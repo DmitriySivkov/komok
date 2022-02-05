@@ -8,6 +8,7 @@ import "./stickyFooter.js";
 import "./replaceImgSvg.js";
 import "./lazyLoadVideo.js";
 import "./custom-select";
+import "./mask";
 
 import "../scss/style.scss";
 (function ($) {
@@ -24,6 +25,7 @@ import "../scss/style.scss";
       nav.toggleClass("show");
     });
 
-
+  // Mask for phone
+    $("#phone").mask("+7 (999) 999-99-99");
   });
 })(jQuery);
