@@ -133,7 +133,7 @@
             </form>
         </div>
         <div class="gallery">
-            @if($pictures->total() > 0)
+            @if($pictures && $pictures->total() > 0)
             <div class="grid-x grid-padding-x grid-padding-y">
                 <div class="cell large-12">
                 @foreach($pictures->slice(
@@ -221,9 +221,11 @@
                     @endforeach
                 </div>
                 @else
-                <div class="callout callout__info">
-                    К сожалению, фотографии не найдены
-                </div>
+                    @if (!empty(request()->all()))
+                    <div class="callout callout__info">
+                        К сожалению, фотографии не найдены
+                    </div>
+                    @endif
                 @endif
             </div>
         <br>
