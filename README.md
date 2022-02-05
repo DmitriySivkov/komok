@@ -2,7 +2,7 @@
 <ul>
 <li>Запустить докер - docker-compose up</li>
 <li>Сделать дамп - make mysql_container + make dump(внутри контейнера)</li>
-<li>Импортировать дамп - maky mysql_container + make import(внутри контейнера)</li>
+<li>Импортировать дамп - make mysql_container + make import(внутри контейнера)</li>
 </ul>
 <p>Новый дамп появляется в директории: /dump/new_dump.sql</p>
 
