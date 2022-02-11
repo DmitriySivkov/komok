@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [\App\Http\Controllers\HomeController::class, "index"]);
 Route::get('/gallery', [\App\Http\Controllers\GalleryController::class, "index"]);
+Route::get('/reviews', [\App\Http\Controllers\ReviewController::class, "index"]);
 
 
 Route::group(['prefix' => 'admin'], function () {
