@@ -1,14 +1,16 @@
 @extends('templates.komok_index.layout')
 @section('body')
     <div class="grid-container">
-        <div class="breadcrumbs"><a class="breadcrumbs__item">Главная</a><span
-                class="breadcrumbs__item breadcrumbs__item_active">Галерея</span></div>
-        <div class="article"><h1 class="article__title">Галерея</h1>
-            <div class="article__img"><img class="article__photo" src="i/article/gallery.png"></div>
+        {{ Breadcrumbs::render('gallery') }}
+        <div class="article">
+            <h1 class="article__title">{{ $meta->headline }}</h1>
+            <div class="article__img">
+                <img class="article__photo" src="{{ asset('i/article/gallery.png') }}">
+            </div>
             <div class="grid-x grid-padding-y">
-                <div class="cell medium-12"><p>Наш любимый фотоальбом. Здесь вы можете познакомиться с жизнью нашего лагеря, или
-                        вспомнить о веселых и интересных деньках. Честно говоря, мы и сами частенько пересматриваем эти фотографии.</p>
-                    <p>Укажите в каком году вы были в лагере и в какой смене. У нас все сохранено.</p></div>
+                <div class="cell medium-12">
+                    {!! $meta->description !!}
+                </div>
             </div>
             @if ($errors->any())
                 <div class="grid-x grid-padding-x">

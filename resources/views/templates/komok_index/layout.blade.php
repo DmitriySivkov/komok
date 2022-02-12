@@ -7,7 +7,7 @@
     <meta name="copyright" content="Создание сайтов - Kirill Philips, https://vk.com/id90191490, 2021">
     <meta name="author"
           content="Kirill Philips, https://vk.com/id90191490, создание сайтов, поддержка сайтов, продвижение сайтов">
-    <title>{{ $settings["site.title"]->value }}</title>
+    <title>{{ $settings["site.title"]->value }} {{ $meta ? " - " . $meta->headline : "" }}</title>
     <meta name="description" content="{{ $settings["site.description"]->value }}"/>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">

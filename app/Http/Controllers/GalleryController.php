@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 
+use App\Models\PageMeta;
 use App\Services\GalleryService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -38,6 +39,7 @@ class GalleryController extends LayoutController
         $years = range(Carbon::now()->year, 2019);
 
         return view('gallery', [
+            'meta' => $this->getMeta(),
             'settings' => $this->getLayoutSettings(),
             'pictures' => $pictures,
             'years' => $years

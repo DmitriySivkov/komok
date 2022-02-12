@@ -19,6 +19,12 @@ Breadcrumbs::for('reviews', function ($trail) {
     $trail->push('Отзывы', route('reviews'));
 });
 
+// Главная > Вопросы и ответы
+Breadcrumbs::for('faq', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Вопросы и ответы', route('faq'));
+});
+
 // Home > Blog > [Category]
 //Breadcrumbs::for('category', function ($trail, $category) {
 //    $trail->parent('blog');

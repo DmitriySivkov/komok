@@ -2,23 +2,30 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\PageMeta;
 use App\Models\Setting;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Cache;
 
 class LayoutController extends Controller
 {
     protected $layoutSettings = [];
+    protected $meta = [];
 
-    public function __construct()
+    public function __construct(Request $request)
     {
-        $this->layoutSettings = Cache::remember('layout_settings', 300, function () {
-            return Setting::all()->keyBy('key');
-        });
+        $this->layoutSettings = Setting::all()->keyBy('key');
+        $this->meta = PageMeta::query()
+            ->where('route', $request->route()->getName())
+            ->first();
     }
 
     public function getLayoutSettings()
     {
         return $this->layoutSettings;
+    }
+
+    public function getMeta()
+    {
+        return $this->meta;
     }
 }

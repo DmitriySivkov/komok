@@ -13,9 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [\App\Http\Controllers\HomeController::class, "index"]);
-Route::get('/gallery', [\App\Http\Controllers\GalleryController::class, "index"]);
-Route::get('/reviews', [\App\Http\Controllers\ReviewController::class, "index"]);
+Route::get('/', [\App\Http\Controllers\HomeController::class, "index"])->name('home');
+Route::get('/gallery', [\App\Http\Controllers\GalleryController::class, "index"])->name('gallery');
+Route::get('/reviews', [\App\Http\Controllers\ReviewController::class, "index"])->name('reviews');
+Route::get('/faq', [\App\Http\Controllers\FaqController::class, "index"])->name('faq');
+
+/** forms */
+Route::post('/orderTicket', [\App\Http\Controllers\OrderTicketController::class, "store"]);
+Route::post('/askQuestion', [\App\Http\Controllers\AskQuestionController::class, "store"]);
 
 
 Route::group(['prefix' => 'admin'], function () {
