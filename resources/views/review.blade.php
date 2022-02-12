@@ -12,67 +12,7 @@
             </div>
         </div>
         <br><br>
-        @if ($blocks_on_review && $blocks_on_review->lastPage() != 1)
-            <ul class="pagination">
-                @if (!request()->has('page') || request()->query('page') <= 1)
-                    <li class="pagination-previous disabled">Назад</li>
-                @else
-                    <li class="pagination-previous">
-                        <a
-                            href="{{ request()->fullUrlWithQuery(['page' => (request()->query('page')-1)]) }}"
-                            title=""
-                            aria-label="Предыдущая страница"
-                        >
-                            Назад
-                        </a>
-                    </li>
-                @endif
-
-                @foreach(range(1, $blocks_on_review->lastPage()) as $page)
-                    @if (request()->query('page') == $page)
-                        <li class="current">
-                            <span class="show-for-sr">Вы на странице</span> {{ $page }}
-                        </li>
-                    @else
-                        @if (request()->has('page'))
-                            <li class="pagination">
-                                <a href="{{ request()->fullUrlWithQuery(['page' => $page]) }}" title="" aria-label="Страница {{ $page }}">
-                                    {{ $page }}
-                                </a>
-                            </li>
-                        @else
-                            @if ($page <= 1)
-                                <li class="current">
-                                    <span class="show-for-sr">Вы на странице</span> {{ $page }}
-                                </li>
-                            @else
-                                <li class="pagination">
-                                    <a href="{{ request()->fullUrlWithQuery(['page' => $page]) }}" title="" aria-label="Страница {{ $page }}">
-                                        {{ $page }}
-                                    </a>
-                                </li>
-                            @endif
-                        @endif
-                    @endif
-                @endforeach
-                @if ($blocks_on_review->lastPage() == 1 || request()->query('page') == $blocks_on_review->lastPage())
-                    <li class="pagination-next disabled">Дальше</li>
-                @else
-                    <li class="pagination-next">
-                        @php
-                            $incr = request()->has('page') ? 1 : 2
-                        @endphp
-                        <a
-                            href="{{ request()->fullUrlWithQuery(['page' => (request()->query('page')+$incr)]) }}"
-                            title=""
-                            aria-label="Следующая страница"
-                        >
-                            Дальше
-                        </a>
-                    </li>
-                @endif
-            </ul>
-        @endif
+        <x-pagination.simple-paginator :paginator="$blocks_on_review" />
         <div class="card">
             <div class="card__col">
                 @foreach($blocks_on_review as $index => $item)
@@ -126,67 +66,7 @@
                 @endforeach
             </div>
         </div>
-        @if ($blocks_on_review && $blocks_on_review->lastPage() != 1)
-            <ul class="pagination">
-                @if (!request()->has('page') || request()->query('page') <= 1)
-                    <li class="pagination-previous disabled">Назад</li>
-                @else
-                    <li class="pagination-previous">
-                        <a
-                            href="{{ request()->fullUrlWithQuery(['page' => (request()->query('page')-1)]) }}"
-                            title=""
-                            aria-label="Предыдущая страница"
-                        >
-                            Назад
-                        </a>
-                    </li>
-                @endif
-
-                @foreach(range(1, $blocks_on_review->lastPage()) as $page)
-                    @if (request()->query('page') == $page)
-                        <li class="current">
-                            <span class="show-for-sr">Вы на странице</span> {{ $page }}
-                        </li>
-                    @else
-                        @if (request()->has('page'))
-                            <li class="pagination">
-                                <a href="{{ request()->fullUrlWithQuery(['page' => $page]) }}" title="" aria-label="Страница {{ $page }}">
-                                    {{ $page }}
-                                </a>
-                            </li>
-                        @else
-                            @if ($page <= 1)
-                                <li class="current">
-                                    <span class="show-for-sr">Вы на странице</span> {{ $page }}
-                                </li>
-                            @else
-                                <li class="pagination">
-                                    <a href="{{ request()->fullUrlWithQuery(['page' => $page]) }}" title="" aria-label="Страница {{ $page }}">
-                                        {{ $page }}
-                                    </a>
-                                </li>
-                            @endif
-                        @endif
-                    @endif
-                @endforeach
-                @if ($blocks_on_review->lastPage() == 1 || request()->query('page') == $blocks_on_review->lastPage())
-                    <li class="pagination-next disabled">Дальше</li>
-                @else
-                    <li class="pagination-next">
-                        @php
-                            $incr = request()->has('page') ? 1 : 2
-                        @endphp
-                        <a
-                            href="{{ request()->fullUrlWithQuery(['page' => (request()->query('page')+$incr)]) }}"
-                            title=""
-                            aria-label="Следующая страница"
-                        >
-                            Дальше
-                        </a>
-                    </li>
-                @endif
-            </ul>
-        @endif
+        <x-pagination.simple-paginator :paginator="$blocks_on_review" />
         <section class="section">
             <div class="grid-container">
                 <div class="section__background section__background_review"><img class="section__img section__img_1"

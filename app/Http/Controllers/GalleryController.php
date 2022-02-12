@@ -36,7 +36,7 @@ class GalleryController extends LayoutController
 
         $pictures = $gallery->getList($filter);
         $years = range(Carbon::now()->year, 2019);
-//        dump($pictures);
+
         return view('gallery', [
             'settings' => $this->getLayoutSettings(),
             'pictures' => $pictures,
