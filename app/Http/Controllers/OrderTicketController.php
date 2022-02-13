@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\OrderTicket;
+use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Validator;
@@ -27,7 +29,14 @@ class OrderTicketController extends Controller
                 ->withErrors($validator)
                 ->withInput();
 
-        OrderTicket::create($validator->validated());
+        /** @var OrderTicket $orderTicket */
+        $orderTicket = OrderTicket::create($validator->validated());
+
+        Mail::to(
+            Setting::query()
+                ->where('key', 'site.form_email')
+                ->first()->value
+        )->send(new \App\Mail\OrderTicket($orderTicket));
 
         return Redirect::to(URL::previous() . "#orderTicket")
             ->with('success', 'Заявка отправлена, скоро наш менеджер с вами свяжется.');

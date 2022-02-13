@@ -41,3 +41,10 @@ services:
     environment:
       - MYSQL_ROOT_PASSWORD=root
       - MYSQL_DATABASE=komok_db
+
+  mailcatcher:
+      image: yappabe/mailcatcher
+      container_name: komok-mailcatcher
+      ports:
+          - 127.0.0.1:1025:1025
+          - 127.0.0.1:1080:1080

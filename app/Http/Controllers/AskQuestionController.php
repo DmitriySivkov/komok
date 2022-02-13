@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\AskQuestion;
+use App\Models\Setting;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\URL;
 use Illuminate\Support\Facades\Validator;
@@ -27,7 +29,13 @@ class AskQuestionController extends Controller
                 ->withErrors($validator)
                 ->withInput();
 
-        AskQuestion::create($validator->validated());
+        $askQuestion = AskQuestion::create($validator->validated());
+
+        Mail::to(
+            Setting::query()
+                ->where('key', 'site.form_email')
+                ->first()->value
+        )->send(new \App\Mail\AskQuestion($askQuestion));
 
         return Redirect::to(URL::previous() . "#askQuestion")
             ->with('success', 'Вопрос отправлен, скоро наш менеджер с вами свяжется.');
