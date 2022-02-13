@@ -1,0 +1,47 @@
+.show{
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
+
+    &__title{
+        font-weight: 800;
+        font-size: rem-calc(45);
+        line-height: rem-calc(51);
+        margin-bottom: rem-calc(30);
+        margin-top: rem-calc(8);
+    }
+    &__item{
+        width: 28%;
+    }
+    &__content{
+        font-size: rem-calc(20);
+        line-height: rem-calc(31);
+        & h5{
+            font-weight: 800;
+            font-size: rem-calc(20);
+            line-height: 114.4%;
+        }
+        & p{
+            margin-bottom: rem-calc(50);
+        }
+    }
+
+    @include breakpoint(medium only){
+        &{
+            justify-content: space-around;
+        }
+        &__item{
+            width: 45%;
+        }
+    }
+    @include breakpoint(small only){
+        &__item{
+            width: 100%;
+            text-align: center;
+
+            margin-bottom: rem-calc(30);
+        }
+    }
+}

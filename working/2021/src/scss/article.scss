@@ -12,12 +12,14 @@
         line-height: 114.4%;
 
     }
+    &__title + &__subtitle{
+        margin-top: rem-calc(43);
+    }
     &__subtitle{
         font-weight: 800;
         font-size: rem-calc(45);
         line-height: rem-calc(51);
 
-        margin-top: rem-calc(43);
         color: #000000;
     }
     &__underline{

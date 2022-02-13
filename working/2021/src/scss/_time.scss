@@ -1,0 +1,31 @@
+.time{
+    font-size: rem-calc(30);
+    line-height: 153.9%;
+    text-align: center;
+    color: #8B57A3;
+    font-weight: 800;
+
+    position: relative;
+    margin: rem-calc(100) 0;
+
+    &__age{
+        background: #FFFFFF;
+        border: 1px solid #E1E1E1;
+        box-sizing: border-box;
+        border-radius: 63px;
+
+        padding: rem-calc(7) rem-calc(51) rem-calc(7) rem-calc(52);
+    }
+    &__crossline{
+        border-bottom: 0.0625rem solid #E1E1E1;
+        width: 100%;
+        z-index: -1;
+        position: absolute;
+        margin:0;
+        top: 50%;
+    }
+
+    @include breakpoint(small only){
+        margin: rem-calc(40) 0;
+    }
+}

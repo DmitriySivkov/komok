@@ -10,6 +10,11 @@
         padding: rem-calc(150) 0;
         display: flex;
         justify-content: center;
+
+
+        &_second{
+            background-image: url("/i/board-2.png");
+        }
     }
     &__content{
         font-weight: 800;
@@ -18,6 +23,11 @@
 
         color: #FFFFFF;
         width: 70%;
+
+        &_center{
+            text-align: center;
+            width: 80%;
+        }
     }
     &__img{
         bottom: 22%;
@@ -26,6 +36,9 @@
     }
 
     @include breakpoint(small only){
+        &{
+            margin: 2rem 0;
+        }
         &__wrapper{
             padding: 4.375rem 0;
         }
