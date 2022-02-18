@@ -1,0 +1,122 @@
+extends site-regular
+block page
+  .grid-container
+    .breadcrumbs
+      a.breadcrumbs__item Главная
+      span.breadcrumbs__item.breadcrumbs__item_active Местонахождение
+
+  .article
+    img(src="images/place/circle-1.png").article__circle
+    .grid-container
+      .article__header
+        h1.article__title Местонахождение
+        .article__img
+          img.article__photo(src="i/article/home.png")
+      .article__subtitle
+        | <span class="article__underline">Дом отдыха</span> «Подмосковье»
+      .grid-x.grid-padding-y
+        .cell.large-8
+          p Именно тут мы проводим наш лагерь и приглашаем ваших детей окунуться в атмосферу активного полезного отдыха, творчества и креативности. Скучать будет некогда!
+
+  .place
+    img(src="images/place/circle-2.png").place__circle
+    .grid-container
+      .place__wrapper#place
+        a.place__item(href='i/place/place.png', data-fancybox='gallery', data-caption='Фото #1')
+          img(src="i/place/place.png")
+        a.place__item(href='i/place/place.png', data-fancybox='gallery', data-caption='Фото #2')
+          img(src="i/place/place.png")
+        a.place__item(href='i/place/place.png', data-fancybox='gallery', data-caption='Фото #3')
+          img(src="i/place/place.png")
+        a.place__item(href='i/place/place.png', data-fancybox='gallery', data-caption='Фото #4')
+          img(src="i/place/place.png")
+  .grid-container
+    .skill.skill_center
+      .skill__item.skill__item_large
+        .skill__image
+          img(src="./images/place/Board.png")
+        .skill__title
+          | Интерактивные классы
+          | творческих и бизнес занятий
+      .skill__item.skill__item_large
+        .skill__image
+          img(src="./images/place/Shield.png")
+        .skill__title
+          | Круглосуточная охрана
+      .skill__item.skill__item_large
+        .skill__image
+          img(src="./images/place/Cinema.png")
+        .skill__title
+          | Просторный концертный зал
+      .skill__item.skill__item_large
+        .skill__image
+          img(src="./images/place/Money.png")
+        .skill__title
+          | Государственная компенсация
+      .skill__item.skill__item_large
+        .skill__image
+          img(src="./images/place/Forest.png")
+        .skill__title
+          | Лесной массив, экологически чистая территория
+      .skill__item.skill__item_large
+        .skill__image
+          img(src="./images/place/Medication.png")
+        .skill__title
+          | Квалифицированный
+          | медперсонал
+      .skill__item.skill__item_large
+        .skill__image
+          img(src="./images/place/Ball.png")
+        .skill__title
+          | Футбольные и волейбольные площадки
+      .skill__item.skill__item_large
+        .skill__image
+          img(src="./images/place/Building.png")
+        .skill__title
+          | Обширная инфраструктура
+
+  .article
+    img(src="images/place/circle-1.png").article__circle
+    .grid-container
+      .article__subtitle
+        | Лагерь <span class="article__underline">на карте</span>
+
+      .grid-x.grid-padding-y
+        .cell.large-8
+          p Мытищинский район,  с. Троицкое <br> В 12 км от Москвы
+  .grid-container
+    .map
+      img(src="images/place/circle-4.png").map__circle
+      <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3A32ccd814582e6108bdb38de47b241f33b21c13b8138663940bc1bbfac6058679&amp;source=constructor" width="938" height="571" frameborder="0"></iframe>
+  .bus
+    img(src="images/place/bus.png").bus__image
+    .grid-container
+      .grid-x
+        .cell.large-13
+          .article.article_no-padding
+            .article__subtitle.article__subtitle_no-margin
+              | Примите участие <br><span class="article__underline">в ознакомительной поездке</span>
+            .grid-x.grid-padding-y
+              .cell.large-13
+                p Сомневаетесь, соответствуют ли условия проживания вашим ожиданиям? Мы предоставляем вам возможность своими глазами увидеть номера, оснащение и территорию лагеря. Выезды организуются по предварительной записи. Просто заполните заявку и мы подберем для вас подходящую дату. Все увидите сами!
+        .cell.large-10.bus__form
+          form
+            .grid-x.justify-content-center
+              .cell.large-18
+                .grid-x.grid-margin-x.grid-padding-y
+                  .cell
+                    .custom-input
+                      input(type="text" placeholder=" ")
+                      label Имя и фамилия
+                  .cell
+                    .custom-input
+                      input(placeholder=" " type="tel" name="phone")#phone
+                      label Номер телефона
+                  .cell
+                    .custom-input
+                      input(placeholder=" " type="mail")
+                      label Электронная почта
+                  .cell.text-align-center
+                    br
+                    a(href="#" type="submit").button.z-index-1 Забронировать место
+

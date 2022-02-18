@@ -1,0 +1,11 @@
+.map{
+    position: relative;
+    &__frame{
+        width: 100%;
+    }
+    &__circle{
+        position: absolute;
+        bottom: -7.5%;
+        left:10%;
+    }
+}

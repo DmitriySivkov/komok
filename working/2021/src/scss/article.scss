@@ -2,6 +2,10 @@
     padding-top: rem-calc(65);
     position: relative;
     color:#000;
+
+    &_no-padding{
+        padding:0;
+    }
     &__header{
         border-bottom: 1px solid #E1E1E1;
     }
@@ -12,6 +16,11 @@
         line-height: 114.4%;
 
     }
+    &__circle{
+        position: absolute;
+        right: 0;
+        top: rem-calc(-10);
+    }
     &__title + &__subtitle{
         margin-top: rem-calc(43);
     }
@@ -21,6 +30,12 @@
         line-height: rem-calc(51);
 
         color: #000000;
+        margin: rem-calc(46) 0 rem-calc(30) 0;
+
+        &_no-margin{
+            margin:0;
+            margin-bottom: rem-calc(30);
+        }
     }
     &__underline{
         color: #8B57A3;
@@ -28,7 +43,7 @@
         background-position: bottom;
         background-size: 100% 11%;
         background-repeat: no-repeat;
-        background-image: url(/images/Underline-2.png);
+        background-image: url(/images/Underline-3.png);
     }
     &__img{
         position: absolute;
@@ -43,16 +58,41 @@
 
         &{
             padding-top: rem-calc(15);
+            &__circle{
+                top: rem-calc(-80);
+                width: rem-calc(30);
+            }
             &__img{
                 width: 20%;
             }
             &__title{
                 max-width: 80%;
             }
+            &__subtitle{
+                margin: rem-calc(26) 0 rem-calc(15) 0;
+                font-size: 2.1rem;
+
+                &_no-margin{
+                    margin:0;
+                    margin-bottom: rem-calc(15);
+                }
+            }
         }
     }
     @include breakpoint(small only){
         &{
+            &__circle{
+                width: rem-calc(20);
+            }
+            &__subtitle{
+                margin: rem-calc(16) 0 rem-calc(10) 0;
+                font-size: 1.7rem;
+
+                &_no-margin{
+                    margin:0;
+                    margin-bottom: rem-calc(10);
+                }
+            }
             &__img{
                 right: 0;
             }

@@ -1,0 +1,22 @@
+.bus{
+    position: relative;
+    margin-top: rem-calc(180);
+    &__form{
+        padding-top: rem-calc(30);
+        background: center no-repeat url("/images/place/bus-form.png");
+        background-size: contain;
+    }
+    &__image{
+        bottom: -2.6rem;
+        position: absolute;
+        right: 50%;
+    }
+
+    @include breakpoint(medium down){
+        margin-top: rem-calc(70);
+        padding-bottom: rem-calc(96);
+        &__image{
+            left:0;
+        }
+    }
+}
