@@ -25,6 +25,21 @@ Breadcrumbs::for('faq', function ($trail) {
     $trail->push('Вопросы и ответы', route('faq'));
 });
 
+Breadcrumbs::for('team', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Команда', route('team'));
+});
+
+Breadcrumbs::for('place', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Местонахождение', route('place'));
+});
+
+Breadcrumbs::for('about', function ($trail) {
+    $trail->parent('home');
+    $trail->push('О лагере', route('about'));
+});
+
 // Home > Blog > [Category]
 //Breadcrumbs::for('category', function ($trail, $category) {
 //    $trail->parent('blog');

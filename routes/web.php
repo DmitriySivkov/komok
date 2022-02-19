@@ -17,6 +17,9 @@ Route::get('/', [\App\Http\Controllers\HomeController::class, "index"])->name('h
 Route::get('/gallery', [\App\Http\Controllers\GalleryController::class, "index"])->name('gallery');
 Route::get('/reviews', [\App\Http\Controllers\ReviewController::class, "index"])->name('reviews');
 Route::get('/faq', [\App\Http\Controllers\FaqController::class, "index"])->name('faq');
+Route::get('/team', [\App\Http\Controllers\TeamController::class, "index"])->name('team');
+Route::get('/place', [\App\Http\Controllers\PlaceController::class, "index"])->name('place');
+Route::get('/about', [\App\Http\Controllers\AboutController::class, "index"])->name('about');
 
 /** forms */
 Route::post('/orderTicket', [\App\Http\Controllers\OrderTicketController::class, "store"]);
