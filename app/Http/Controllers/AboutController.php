@@ -3,6 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\AboutBlock;
+use App\Models\Program;
+use App\Models\Shift;
+use App\Models\Skill;
 
 class AboutController extends LayoutController
 {
@@ -15,10 +18,19 @@ class AboutController extends LayoutController
                 $item->headline = str_replace($item->emphasized_text, '', $item->headline);
         });
 
+        $shifts = Shift::all();
+        $shifts->each(function($item) {
+            $item->programs = Program::query()->whereIn('id', json_decode($item->programs, true))->get();
+        });
+
+        $skills = Skill::all();
+
         return view('about', [
             'blocks_on_about' => $data['blocks_on_about'],
             'settings'=> $this->getLayoutSettings(),
-            'meta' => $this->getMeta()
+            'meta' => $this->getMeta(),
+            'shifts' => $shifts,
+            'skills' => $skills
         ]);
     }
 }
