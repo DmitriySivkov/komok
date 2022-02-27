@@ -3,10 +3,12 @@
     <div class="grid-container">
         {{ Breadcrumbs::render('about') }}
         <div class="article">
-            <div class="article__subtitle">Каждая смена лагеря «Комок» имеет<br>свое&ensp;<span class="article__underline">уникальное направление</span>
+            <div class="article__subtitle">
+                {{ $blocks_on_about[1]->headline }}<span class="article__underline">{{ $blocks_on_about[1]->emphasized_text }}</span>
             </div>
         </div>
-        <div class="time"><span class="time__age">7-12 лет</span>
+        <div class="time">
+            <span class="time__age">7-12 лет</span>
             <div class="time__crossline"></div>
         </div>
         <div class="show">
@@ -71,14 +73,15 @@
                     <div class="grid-x">
                         <div class="cell large-11">
                             <div class="section__content">
-                                <div class="section__head">Лагерь «Комок» –&thinsp;<span class="section__violet section__violet_6">это новые навыки&thinsp;</span>для
-                                    вашего ребенка
+                                <div class="section__head">{{ $blocks_on_about[2]->headline }}
+                                    <span class="section__violet section__violet_6">{{ $blocks_on_about[2]->emphasized_text }}</span>
                                 </div>
-                                <div class="section__text"><p>Помимо основной программы, ребенок попробует себя в увлекательных центрах.
-                                        Каждый сможет открыть для себя что-то новое и интересное!</p></div>
+                                <div class="section__text">{!! $blocks_on_about[2]->description !!}</div>
                             </div>
                         </div>
-                        <div class="cell large-9 large-offset-2"><img class="section__slide" src="./i/camera.png"></div>
+                        <div class="cell large-9 large-offset-2">
+                            <img class="section__slide" src="{{ asset('i/camera.png') }}">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -137,44 +140,82 @@
         <div class="board">
             <div class="grid-container">
                 <div class="board__wrapper board__wrapper_second">
-                    <div class="board__content board__content_center">Более 20 лет мы помогаем детям становиться увереннее в себе,
-                        быть общительнее и раскрывать свои возможности
-                    </div>
+                    <div class="board__content board__content_center">{!! $blocks_on_about[3]->text !!}</div>
                 </div>
             </div>
         </div>
         <section class="section">
             <div class="grid-container">
-                <div class="section__background section__background_review"><img class="section__img section__img_1"
-                                                                                 src="images/review/review-circle-1.png"><img
-                        class="section__img section__img_2" src="images/review/review-circle-2.png"><img
-                        class="section__img section__img_3" src="images/review/review-frame-1.png"><img
-                        class="section__img section__img_4" src="images/review/review-frame-2.png">
-                    <div class="grid-x">
+                <div class="section__background section__background_review">
+                    <img class="section__img section__img_1" src="images/review/review-circle-1.png">
+                    <img class="section__img section__img_2" src="images/review/review-circle-2.png">
+                    <img class="section__img section__img_3" src="images/review/review-frame-1.png">
+                    <img class="section__img section__img_4" src="images/review/review-frame-2.png">
+                    <div class="grid-x" id="orderTicket">
                         <div class="cell">
                             <div class="section__content section__content_center">
-                                <div class="section__head"><span
-                                        class="section__violet section__violet_2">Забронируйте путевку&nbsp;</span>в лагерь
+                                <div class="section__head">
+                                    <span class="section__violet section__violet_2">Забронируйте путевку&nbsp;</span>в лагерь
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <form>
+                    @if ($errors->any())
                         <div class="grid-x justify-content-center">
                             <div class="cell large-10">
                                 <div class="grid-x grid-margin-x grid-padding-y">
                                     <div class="cell">
-                                        <div class="custom-input"><input placeholder=" "><label>Имя и фамилия</label></div>
+                                        <div class="callout callout_alert">
+                                            <ul>
+                                                @foreach(array_unique($errors->all()) as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                    @if(session()->has('success'))
+                        <div class="grid-x justify-content-center">
+                            <div class="cell large-10">
+                                <div class="grid-x grid-margin-x grid-padding-y">
+                                    <div class="cell">
+                                        <div class="callout callout_success">
+                                            {{ session()->get('success') }}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    @endif
+                    <form method="post" action="/orderTicket">
+                        @csrf
+                        <div class="grid-x justify-content-center">
+                            <div class="cell large-10">
+                                <div class="grid-x grid-margin-x grid-padding-y">
+                                    <div class="cell">
+                                        <div class="custom-input">
+                                            <input name="name" placeholder=" " value="{{ old('name') }}">
+                                            <label>Имя и фамилия</label>
+                                        </div>
                                     </div>
                                     <div class="cell">
-                                        <div class="custom-input"><input placeholder=" " type="tel" name="phone" id="phone"><label>Номер
-                                                телефона</label></div>
+                                        <div class="custom-input">
+                                            <input placeholder=" " type="tel" name="phone" id="phone" value="{{ old('phone') }}">
+                                            <label>Номер телефона</label>
+                                        </div>
                                     </div>
                                     <div class="cell">
-                                        <div class="custom-input"><input placeholder=" " type="mail"><label>Электронная почта</label></div>
+                                        <div class="custom-input">
+                                            <input name="mail" placeholder=" " type="mail" value="{{ old('mail') }}">
+                                            <label>Электронная почта</label>
+                                        </div>
                                     </div>
-                                    <div class="cell text-align-center"><a class="button z-index-1" href="#" type="submit">Забронировать
-                                            место</a></div>
+                                    <div class="cell text-align-center">
+                                        <button class="button z-index-1" type="submit">Забронировать место</button>
+                                    </div>
                                 </div>
                             </div>
                         </div>

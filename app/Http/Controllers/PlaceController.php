@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Feature;
 use App\Models\PlaceBlock;
 
 class PlaceController extends LayoutController
@@ -20,7 +21,8 @@ class PlaceController extends LayoutController
         return view('place', [
             'blocks_on_place' => $data['blocks_on_place'],
             'settings'=> $this->getLayoutSettings(),
-            'meta' => $this->getMeta()
+            'meta' => $this->getMeta(),
+            'features' => Feature::all()
         ]);
     }
 }

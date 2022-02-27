@@ -9,6 +9,7 @@ class TeamBlock extends Model
 {
     use HasFactory;
 
+    /** custom voyager enhancement for select */
     public function employeesList()
     {
         return Employee::all();

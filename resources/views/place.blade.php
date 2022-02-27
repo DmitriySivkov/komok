@@ -35,38 +35,12 @@
     </div>
     <div class="grid-container">
         <div class="skill skill_center">
+            @foreach($features as $feature)
             <div class="skill__item skill__item_large">
-                <div class="skill__image"><img src="{{ asset('images/place/Board.png') }}"></div>
-                <div class="skill__title">Интерактивные классы творческих и бизнес занятий</div>
+                <div class="skill__image"><img src="{{ asset('storage/' . $feature->picture) }}"></div>
+                <div class="skill__title">{{ $feature->headline }}</div>
             </div>
-            <div class="skill__item skill__item_large">
-                <div class="skill__image"><img src="{{ asset('images/place/Shield.png') }}"></div>
-                <div class="skill__title">Круглосуточная охрана</div>
-            </div>
-            <div class="skill__item skill__item_large">
-                <div class="skill__image"><img src="{{ asset('images/place/Cinema.png') }}"></div>
-                <div class="skill__title">Просторный концертный зал</div>
-            </div>
-            <div class="skill__item skill__item_large">
-                <div class="skill__image"><img src="{{ asset('images/place/Money.png') }}"></div>
-                <div class="skill__title">Государственная компенсация</div>
-            </div>
-            <div class="skill__item skill__item_large">
-                <div class="skill__image"><img src="{{ asset('images/place/Forest.png') }}"></div>
-                <div class="skill__title">Лесной массив, экологически чистая территория</div>
-            </div>
-            <div class="skill__item skill__item_large">
-                <div class="skill__image"><img src="{{ asset('images/place/Medication.png') }}"></div>
-                <div class="skill__title">Квалифицированный медперсонал</div>
-            </div>
-            <div class="skill__item skill__item_large">
-                <div class="skill__image"><img src="{{ asset('images/place/Ball.png') }}"></div>
-                <div class="skill__title">Футбольные и волейбольные площадки</div>
-            </div>
-            <div class="skill__item skill__item_large">
-                <div class="skill__image"><img src="{{ asset('images/place/Building.png') }}"></div>
-                <div class="skill__title">Обширная инфраструктура</div>
-            </div>
+            @endforeach
         </div>
     </div>
     <div class="article"><img class="article__circle" src="{{ asset('images/place/circle-1.png') }}">
