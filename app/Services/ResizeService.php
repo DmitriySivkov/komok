@@ -16,6 +16,6 @@ class ResizeService
         $hash = md5($resize->__toString());
         $resizePath = "resize/{$hash}.jpg";
         $resize->save(Storage::path($resizeDisk . '/' . $resizePath));
-        return '/' . $resizePath;
+        return $resizePath;
     }
 }
