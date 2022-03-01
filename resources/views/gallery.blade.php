@@ -147,8 +147,15 @@
                         ]))
                         <div class="grid-x">
                             <div class="cell">
-                                <a class="gallery__link" href="{{ asset('storage' . $picPath) }}" data-fancybox="gallery">
-                                    <img class="gallery__photo" src="{{ asset('storage' . $picPath) }}">
+                                <a
+                                    class="gallery__link"
+                                    href="{{ asset('storage/' . App\Services\ResizeService::resize(Storage::path('public/' . $picPath),'public', 701, 526)) }}"
+                                    data-fancybox="gallery"
+                                >
+                                    <img
+                                        class="gallery__photo"
+                                        src="{{ asset('storage/' . App\Services\ResizeService::resize(Storage::path('public/' . $picPath),'public', 701, 526)) }}"
+                                    >
                                 </a>
                             </div>
                         </div>
@@ -164,8 +171,15 @@
                                     2 + (request()->query('page') >= 2 ? $pictures->perPage() * (request()->query('page')-1) : 0)
                                 ]))
                                 <div class="cell medium-12">
-                                    <a class="gallery__link" href="{{ asset('storage' . $picPath) }}" data-fancybox="gallery">
-                                        <img class="gallery__photo" src="{{ asset('storage' . $picPath) }}">
+                                    <a
+                                        class="gallery__link"
+                                        href="{{ asset('storage/' . App\Services\ResizeService::resize(Storage::path('public/' . $picPath),'public', 356, 245)) }}"
+                                        data-fancybox="gallery"
+                                    >
+                                        <img
+                                            class="gallery__photo"
+                                            src="{{ asset('storage/' . App\Services\ResizeService::resize(Storage::path('public/' . $picPath),'public', 356, 245)) }}"
+                                        >
                                     </a>
                                 </div>
                             @endif
@@ -184,8 +198,15 @@
                                         4 + (request()->query('page') >= 2 ? $pictures->perPage() * (request()->query('page')-1) : 0)
                                     ]))
                                     <div class="cell medium-12">
-                                        <a class="gallery__link" href="{{ asset('storage' . $picPath) }}" data-fancybox="gallery">
-                                            <img class="gallery__photo" src="{{ asset('storage' . $picPath) }}">
+                                        <a
+                                            class="gallery__link"
+                                            href="{{ asset('storage/' . App\Services\ResizeService::resize(Storage::path('public/' . $picPath),'public', 356, 245)) }}"
+                                            data-fancybox="gallery"
+                                        >
+                                            <img
+                                                class="gallery__photo"
+                                                src="{{ asset('storage/' . App\Services\ResizeService::resize(Storage::path('public/' . $picPath),'public', 356, 245)) }}"
+                                            >
                                         </a>
                                     </div>
                                 @endif
@@ -199,8 +220,15 @@
                                     5 + (request()->query('page') >= 2 ? $pictures->perPage() * (request()->query('page')-1) : 0)
                                 ]))
                             <div class="cell">
-                                <a class="gallery__link" href="{{ asset('storage' . $picPath) }}" data-fancybox="gallery">
-                                    <img class="gallery__photo" src="{{ asset('storage' . $picPath) }}" zxc>
+                                <a
+                                    class="gallery__link"
+                                    href="{{ asset('storage/' . App\Services\ResizeService::resize(Storage::path('public/' . $picPath),'public', 701, 526)) }}"
+                                    data-fancybox="gallery"
+                                >
+                                    <img
+                                        class="gallery__photo"
+                                        src="{{ asset('storage/' . App\Services\ResizeService::resize(Storage::path('public/' . $picPath),'public', 701, 526)) }}"
+                                    >
                                 </a>
                             </div>
                             @endif
@@ -215,8 +243,15 @@
                             6 + (request()->query('page') >= 2 ? $pictures->perPage() * (request()->query('page')-1) : 0)
                         ]))
                         <div class="cell">
-                            <a class="gallery__link" href="{{ asset('storage' . $picPath) }}" data-fancybox="gallery">
-                                <img class="gallery__photo" src="{{ asset('storage' . $picPath) }}">
+                            <a
+                                class="gallery__link"
+                                href="{{ asset('storage/' . App\Services\ResizeService::resize(Storage::path('public/' . $picPath),'public', 1412, 618)) }}"
+                                data-fancybox="gallery"
+                            >
+                                <img
+                                    class="gallery__photo"
+                                    src="{{ asset('storage/' . App\Services\ResizeService::resize(Storage::path('public/' . $picPath),'public', 1412, 618)) }}"
+                                >
                             </a>
                         </div>
                         @endif

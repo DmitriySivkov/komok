@@ -3,11 +3,12 @@
 namespace App\Http\Controllers;
 
 
-use App\Models\PageMeta;
 use App\Services\GalleryService;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Validator;
+use App\Services\ResizeService;
+use Illuminate\Support\Facades\Storage;
 
 class GalleryController extends LayoutController
 {
