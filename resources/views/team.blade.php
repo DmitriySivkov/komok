@@ -23,7 +23,7 @@
                 @foreach($blocks_on_team[1]->employees as $employee)
                 <div class="card__item card__item_slider">
                     <div class="card__img">
-                        <img class="card__photo" width="128" src="{{ asset('storage/' . $employee->picture) }}">
+                        <img class="card__photo" src="{{ asset('storage/' . $employee->picture) }}">
                         <img class="card__circle" src="{{ asset('i/reviews/circle.png') }}">
                     </div>
                     <div class="card__header">
@@ -47,7 +47,7 @@
                 @foreach($blocks_on_team[3]->employees as $employee)
                 <div class="card__item card__item_slider">
                     <div class="card__img">
-                        <img class="card__photo" width="128" src="{{ asset('storage/' . $employee->picture) }}">
+                        <img class="card__photo" src="{{ asset('storage/' . $employee->picture) }}">
                         <img class="card__circle" src="{{ asset('i/reviews/circle.png') }}"></div>
                     <div class="card__header">
                         <div class="card__name card__name_slider">{{ $employee->name }}</div>
@@ -72,7 +72,7 @@
                 @foreach($blocks_on_team[4]->employees as $employee)
                 <div class="card__item card__item_large">
                     <div class="card__img">
-                        <img class="card__photo" width="225" src="{{ asset('storage/' . $employee->picture) }}">
+                        <img class="card__photo" src="{{ asset('storage/' . $employee->picture) }}">
                         <img class="card__circle card__circle_large" src="{{ asset('i/reviews/circle.png') }}">
                     </div>
                     <div class="card__header">

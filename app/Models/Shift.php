@@ -5,13 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TeamBlock extends Model
+class Shift extends Model
 {
     use HasFactory;
 
     /** custom voyager enhancement for select */
-    public function employeesList()
+    public function programsList()
     {
-        return Employee::all();
+        return Program::all();
     }
 }

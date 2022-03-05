@@ -1,11 +1,11 @@
 @if ($paginator && $paginator->lastPage() != 1)
-    <ul class="pagination">
+    <ul class="pagination" id="pagination">
         @if (!request()->has('page') || request()->query('page') <= 1)
             <li class="pagination-previous disabled">Назад</li>
         @else
             <li class="pagination-previous">
                 <a
-                    href="{{ request()->fullUrlWithQuery(['page' => (request()->query('page')-1)]) }}"
+                    href="{{ request()->fullUrlWithQuery(['page' => (request()->query('page')-1)]) . '#pagination' }}"
                     title=""
                     aria-label="Предыдущая страница"
                 >
@@ -22,7 +22,7 @@
             @else
                 @if (request()->has('page'))
                     <li class="pagination">
-                        <a href="{{ request()->fullUrlWithQuery(['page' => $page]) }}" title="" aria-label="Страница {{ $page }}">
+                        <a href="{{ request()->fullUrlWithQuery(['page' => $page]) . '#pagination'}}" title="" aria-label="Страница {{ $page }}">
                             {{ $page }}
                         </a>
                     </li>
@@ -33,7 +33,7 @@
                         </li>
                     @else
                         <li class="pagination">
-                            <a href="{{ request()->fullUrlWithQuery(['page' => $page]) }}" title="" aria-label="Страница {{ $page }}">
+                            <a href="{{ request()->fullUrlWithQuery(['page' => $page]) . '#pagination'}}" title="" aria-label="Страница {{ $page }}">
                                 {{ $page }}
                             </a>
                         </li>
@@ -49,7 +49,7 @@
                     $incr = request()->has('page') ? 1 : 2
                 @endphp
                 <a
-                    href="{{ request()->fullUrlWithQuery(['page' => (request()->query('page')+$incr)]) }}"
+                    href="{{ request()->fullUrlWithQuery(['page' => (request()->query('page')+$incr)]) . '#pagination' }}"
                     title=""
                     aria-label="Следующая страница"
                 >
