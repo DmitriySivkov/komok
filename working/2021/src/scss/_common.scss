@@ -151,8 +151,8 @@ h4,
 h5,
 h6 {
     font-style: normal;
-    font-weight: 300;
-    color: inherit;
+    font-weight: 800;
+    color: black;
     text-rendering: optimizeLegibility;
 }
 
@@ -170,9 +170,21 @@ h2 {
 
 .h3,
 h3 {
-    line-height: 1.2;
-    font-size: rem-calc(23);
     margin-bottom: rem-calc(12);
+
+    font-weight: 800;
+    font-size: rem-calc(30);
+    line-height: 114.4%;
+
+
+    &__underline{
+        color: #8B57A3;
+        padding-bottom: .35rem;
+        background-position: bottom;
+        background-size: 100% 11%;
+        background-repeat: no-repeat;
+        background-image: url(/images/Underline-3.png);
+    }
 }
 
 .h4,

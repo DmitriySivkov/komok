@@ -1,0 +1,38 @@
+.raider{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    color:black;
+    &__col{
+        display: flex;
+        flex-direction: column;
+
+        width: 47%;
+    }
+    &__item{
+
+        margin-top: rem-calc(20);
+        font-size: rem-calc(20);
+        line-height: rem-calc(31);
+
+        padding-left: rem-calc(33);
+        position: relative;
+        &:before{
+            content:"";
+            display: block;
+            width: rem-calc(23.49);
+            height: rem-calc(24.49);
+            position: absolute;
+            left:0;
+            top:rem-calc(3);
+
+            background: url(/images/check.png) center center no-repeat;
+            background-size: contain;
+        }
+    }
+    @include breakpoint(small only){
+        &__col{
+            width: 100%;
+        }
+    }
+}

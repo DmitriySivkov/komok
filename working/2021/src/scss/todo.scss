@@ -1,0 +1,47 @@
+.todo{
+
+    &__item{
+        padding: rem-calc(14) rem-calc(47);
+        padding-left: rem-calc(29);
+        border-radius: 63px;
+        border: 1px solid #FFC01E;
+        margin-bottom: rem-calc(25);
+        text-align: center;
+
+        position: relative;
+
+        display: block;
+        align-items: center;
+        padding-right: rem-calc(0);
+    }
+    &__link{
+        padding-right: rem-calc(32);
+        color: black;
+        display: block;
+        &:after{
+            position: absolute;
+            content: "";
+            width: rem-calc(11);
+            height: rem-calc(11);
+            background: url(/images/arrow.png) center center no-repeat;
+            display: block;
+            background-size: contain;
+
+            right: rem-calc(18);
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+    @media only screen
+    and (max-width : 975px) {
+        &__link{
+            font-size: .8rem;
+            &:after{
+                right: rem-calc(10);
+            }
+        }
+    }
+    @include breakpoint(medium down){
+        margin-bottom: rem-calc(20);
+    }
+}

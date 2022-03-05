@@ -1,0 +1,97 @@
+.tabs{
+    border:none;
+    display: flex;
+    flex-direction: column;
+
+    &-panel_no-padding{
+        padding:0;
+    }
+    &-panel_program{
+        padding:0;
+        color: black;
+
+        & > h3{
+            font-weight: 800;
+            font-size: rem-calc(30);
+            line-height: 114.4%;
+        }
+    }
+    &-title{
+        background: #FFFFFF;
+        font-size: rem-calc(20);
+        line-height: rem-calc(31);
+
+        color: #000000;
+        width: 100%;
+        display: flex;
+        & > a{
+            border: 1px solid #E1E1E1;
+            box-sizing: border-box;
+            border-radius: 63px;
+            color: black;
+
+            width: 100%;
+            padding-left: rem-calc(38);
+
+            transition: color 300ms ease-in-out, background-color 300ms ease-in-out;
+        }
+        & > a:hover {
+            background: linear-gradient(90deg, #5F48B0 3.24%, #6048B0 4.96%, #7F53A6 63.89%, #8B57A3 96.77%);
+            color: white;
+        }
+
+        & > a:focus, & > a[aria-selected='true'] {
+            background: linear-gradient(90deg, #5F48B0 3.24%, #6048B0 4.96%, #7F53A6 63.89%, #8B57A3 96.77%);
+            color: white;
+        }
+
+        margin-bottom: rem-calc(25);
+        &:last-child{
+            margin-bottom: 0;
+        }
+
+        &_program{
+            display: flex;
+            flex-direction: column;
+
+            &:last-child{
+                margin-bottom: rem-calc(44);
+            }
+            & div > a{
+                font-size: rem-calc(20);
+                line-height: rem-calc(31);
+
+                display: inline;
+
+                color: #8B57A3;
+                padding:0;
+                border:none;
+                border-bottom: 1px dashed #8B57A3;
+            }
+            & div > a:hover {
+                background: none;
+                color: #8B57A3;
+            }
+            & div > a:focus, & > a[aria-selected='true'] {
+                background: none;
+                color: #8B57A3;
+            }
+        }
+    }
+    &__subtitle{
+        margin-top: rem-calc(10);
+        font-weight: bold;
+    }
+    &-content{
+        &.vertical{
+            border:none;
+        }
+    }
+    @include breakpoint(small only){
+
+        &-panel_no-padding{
+            padding:.4rem;
+        }
+    }
+
+}
