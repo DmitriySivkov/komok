@@ -135,6 +135,7 @@
             </form>
         </div>
         <div class="gallery">
+            <x-pagination.simple-paginator :paginator="$pictures" />
             @if($pictures && $pictures->total() > 0)
             <div class="grid-x grid-padding-x grid-padding-y">
                 <div class="cell large-12">

@@ -6,6 +6,7 @@ namespace App\Services;
 
 use App\Helpers\DirectoryHelper;
 use Illuminate\Pagination\LengthAwarePaginator;
+use Illuminate\Support\Facades\Storage;
 
 class GalleryService
 {
@@ -18,10 +19,15 @@ class GalleryService
     public function getList($filter = [])
     {
         $tree = DirectoryHelper::makeTree(storage_path('app/public') . self::GALLERY_ROOT);
-
         $result = [];
-        if (!$filter)
-            return $result;
+        if (!$filter) {
+            $result = array_slice(
+                Storage::disk('public')->files(self::GALLERY_ROOT, true),
+                -49,
+                49
+            );
+            return new LengthAwarePaginator($result, count($result), 7);
+        }
 
         foreach ($tree[$filter['age']][$filter['year']][$filter['season']][$filter['shift']] as $picName)
         {
