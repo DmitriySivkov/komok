@@ -266,7 +266,9 @@ import "../scss/style.scss";
     prevArrow: "",
     adaptiveHeight: true,
   });
-  $('.elements').equalHeight();
+  if (document.documentElement.clientWidth > 960) {
+    $('.elements').equalHeight();
+  }
   $('.js-todo-item').equalHeight();
 
 })(jQuery);
