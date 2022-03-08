@@ -161,4 +161,98 @@
         }
     }
 }
-#events .slick-list{padding:0 20% 0 0;}
+
+.slick-active{
+    & .card__mainwrapper div div{
+        .card__photo{
+            &_lines{
+                width: auto;
+            }
+        }
+    }
+    & .card__mainwrapper{
+        position: static;
+    }
+
+}
+
+.card__mainwrapper{
+        position: absolute;
+        top: calc(50% - 42px);
+    }
+
+.card__header{
+    margin-bottom:rem-calc(10);
+}
+
+.card__photo{
+    &_lines{
+        transition: width .2s linear;
+        & + .card__circle{
+            transform: translateX(-195%);
+        }
+    }
+}
+#life .slick-list{
+    margin: 0 10% 0 0;
+}
+#events .slick-list{
+    padding: 0 25% 0 0;
+
+    & .slick-track{
+        & .slick-active .card__mainwrapper .grid-x .cell {
+            & .card__img .card__circle{
+                transform: translateX(-20%);
+            }
+            & .card__header, .card__content{
+                opacity: 1;
+            }
+        }
+        & .card__item:not(.slick-active) .card__mainwrapper .grid-x .cell{
+            &.card__img-container{
+                width:auto;
+                &{
+                    .card__img .card__photo{
+                        width: 50%;
+                    }
+                }
+            }
+
+            &{
+                & .card__header,& .card__content{
+                    opacity: 0;
+                }
+            }
+        }
+
+
+    }
+}
+
+@include breakpoint(large down){
+    #life .slick-list{
+        margin: auto;
+    }
+    #events .slick-list{
+        padding: 0 30% 0 0;
+    }
+}
+@include breakpoint(medium down){
+    .card__slider .slick-active .card__mainwrapper .grid-x .cell {
+        & .card__content{
+            padding-bottom: 2rem;
+        }
+    }
+    #events .slick-list{
+        padding: 0 0 0 0;
+    }
+    #events .counselors__next_place,#events .counselors__prev_place {
+        top:auto;
+        bottom: rem-calc(-30);
+    }
+}
+@include breakpoint(small only){
+    #events .counselors__next_place,#events .counselors__prev_place {
+        bottom: rem-calc(-10);
+    }
+}

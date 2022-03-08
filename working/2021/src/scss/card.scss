@@ -4,6 +4,7 @@
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
+    position: relative;
     &_large, &_slider{
         color:#000;
         display: block;
@@ -37,6 +38,17 @@
         flex-direction: row;
         justify-content: space-around;
     }
+    &__back-image{
+        position: absolute;
+        &_1{
+            right: 0;
+            bottom: rem-calc(40);
+        }
+        &_2{
+            left:rem-calc(20);
+            bottom: rem-calc(40);
+        }
+    }
     &__underline{
         padding-bottom: .35rem;
         background-position: bottom;
@@ -52,6 +64,11 @@
         background: linear-gradient(90deg, #5F48B0 3.24%, #6048B0 4.96%, #7F53A6 63.89%, #8B57A3 96.77%);
         border-radius: rem-calc(60);
         color: #fff;
+        &-image{
+            background-image: url("/images/card-slider-bg.png");
+            background-position-x: 35%;
+            background-size: 108% 100%;
+        }
     }
     &__col{
         width: 32%;
@@ -70,12 +87,14 @@
             width: 45%;
             border:none;
         }
-        &_lines{
+        &_life{
+            border:none;
+            padding:0;
         }
     }
-/*    &__mainwrapper{
-        display: flex;
-    }*/
+    &__life{
+        border-radius: rem-calc(30);
+    }
     &__item_slider{
         border:none;
         padding-left: 2rem;
@@ -138,10 +157,15 @@
                 margin-bottom: rem-calc(20);
             }
         }
+        &_violet{
+            &-image{
+                background-size: 126% 100%;
+            }
+        }
         &__item{
             &_slider {
-                padding-right: 6rem;
-                padding-left: 1rem;
+                padding-right: .5rem;
+                padding-left: .5rem;
             }
         }
 
@@ -150,14 +174,31 @@
         &__title{
             font-size: 1.9rem;
         }
+        &_violet{
+            &-image{
+                background-size: cover;
+            }
+        }
         &__item{
             &_slider {
-                padding-right: 6rem;
-                padding-left: 1rem;
+                padding-right: .5rem;
+                padding-left: .5rem;
+                padding-top: 0.7rem;
+                margin-right: 1.2rem;
             }
             &_large{
                 width: 100%;
             }
         }
+        &_violet{
+            & .card__mainheader{
+                margin-left: 2rem;
+                margin-top: .5rem;
+                padding-right: 0.4rem;
+                padding-bottom: 0;
+                margin-bottom: 0;
+            }
+        }
+
     }
 }

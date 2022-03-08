@@ -53,7 +53,12 @@
         width: 30%;
         background: #fff;
     }
-
+    &__content{
+        & a{
+            color: black;
+            text-decoration: underline;
+        }
+    }
     @include breakpoint(medium down){
 
         &{

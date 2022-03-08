@@ -2,7 +2,7 @@
   display: inline-block;
   vertical-align: middle;
   margin: 0 0 0.25rem;
-  border: rem-calc(2) solid #ff9c07;
+  border: 2px solid transparent;
   transition: background 0.4s linear, color 0.25s ease-out;
   font-family: inherit;
   line-height: rem-calc(22);
@@ -20,6 +20,7 @@
     &:active,
   &:focus,
   &:hover {
+    border: rem-calc(2) solid #ff9c07;
     color: #ff9c07;
     background: $white;
   }
@@ -98,14 +99,14 @@
 
 .button_hollow {
   background: none;
-  border: rem-calc(1) solid $primary-color;
+  border: rem-calc(2) solid $primary-color;
   color: $primary-color;
 
   &:active,
   &:focus,
   &:hover {
-    background: $primary-color;
-    border-color: $primary-color;
+    background: linear-gradient(90deg, #FFC01E 0.66%, #FFBB1B 9.01%, #FF9C07 67.61%, #FF9000 100.3%);
+    border-color:transparent;
     color: $white;
   }
 }

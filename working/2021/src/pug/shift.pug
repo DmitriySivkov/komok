@@ -6,435 +6,556 @@ block page
       span.breadcrumbs__item.breadcrumbs__item_active Смены
 
   .article
-    img(src="images/place/circle-1.png").article__circle
+    img(src="images/place/circle.png").article__circle
     .grid-container
       .article__subtitle
         | Смены <span class="article__underline">для подростков</span> 13-17 лет
 
-
-  .grid-container
-    .grid-x.grid-padding-x.grid-margin-x.grid-padding-y.grid-margin-y
-      .cell.large-4
-        #example-tabs.vertical.tabs(data-responsive-accordion-tabs="accordion medium-tabs" data-multi-expand="true" data-allow-all-closed="true" data-deep-link="true" data-update-history="false")
-          .tabs-title.is-active.elements
-            a(href='#panel1v', aria-selected='true') Весенняя смена
-              .tabs__subtitle 22 — 26 марта
-          .tabs-title.elements
-            a(href='#panel2v') 1 смена
-              .tabs__subtitle 6 — 19 июня
-          .tabs-title.elements
-            a(href='#panel3v') 2 смена
-              .tabs__subtitle 25 июня — 8 июля
-          .tabs-title.elements
-            a(href='#panel4v') 3 смена
-              .tabs__subtitle 11 — 24 июля
-          .tabs-title.elements
-            a(href='#panel5v') 4 смена
-              .tabs__subtitle 30 июля — 12 августа
-      .cell.large-19.large-offset-1
-        .tabs-content.vertical(data-tabs-content='example-tabs')
-          #panel1v.tabs-panel.is-active.tabs-panel_no-padding
-            .tabs-content.vertical(data-tabs-content='second-tabs')
-              #second-tabs.vertical.tabs(data-tabs='')
-                #second1v.tabs-panel.tabs-panel_no-padding
-                  .grid-x
-                    .cell.large-14
-                      .grid-x
-                        .cell
-                          div
-                            h3 Программирование
-                            p Текст про программирование
-                        .cell
-                          .tabs-title.tabs-title_program
+  br
+  br
+  .shift
+    .grid-container
+      .grid-x.grid-padding-x.grid-margin-x.grid-padding-y.grid-margin-y
+        .cell.large-4
+          #example-tabs.vertical.tabs(data-responsive-accordion-tabs="accordion medium-tabs" data-multi-expand="true" data-allow-all-closed="true" data-deep-link="true" data-update-history="false")
+            .tabs-title.is-active.elements
+              a(href='#panel1v', aria-selected='true') Весенняя смена
+                .tabs__subtitle 22 — 26 марта
+            .tabs-title.elements
+              a(href='#panel2v') 1 смена
+                .tabs__subtitle 6 — 19 июня
+            .tabs-title.elements
+              a(href='#panel3v') 2 смена
+                .tabs__subtitle 25 июня — 8 июля
+            .tabs-title.elements
+              a(href='#panel4v') 3 смена
+                .tabs__subtitle 11 — 24 июля
+            .tabs-title.elements
+              a(href='#panel5v') 4 смена
+                .tabs__subtitle 30 июля — 12 августа
+        .cell.large-19.large-offset-1
+          .tabs-content.vertical(data-tabs-content='example-tabs')
+            #panel1v.tabs-panel.is-active.tabs-panel_no-padding
+              .tabs-content.vertical(data-tabs-content='second-tabs')
+                #second-tabs.vertical.tabs(data-tabs='')
+                  #second1v.tabs-panel.tabs-panel_no-padding
+                    .grid-x
+                      .cell.large-14
+                        .grid-x
+                          .cell
                             div
-                              a(href='#second1v') Программирование
-                          .tabs-title.tabs-title_program.is-active
+                              h3 Программирование
+                              p Текст про программирование
+                          .cell
+                            .tabs-title.tabs-title_program
+                              div
+                                a(href='#second1v') Программирование
+                            .tabs-title.tabs-title_program.is-active
+                              div
+                                a(href='#second2v', aria-selected='true') Каменные джунгли 21 века
+                            .tabs-title.tabs-title_program
+                              div
+                                a(href='#second3v') Инженеры до нашей эры
+                      .cell.large-5.large-offset-2
+                        .todo
+                          .todo__item
+                            a(href="#").todo__link Распорядок дня
+                          .todo__item
+                            a(href="#").todo__link
+                              | Необходимые
+                              | документы
+                          .todo__item
+                            a(href="#").todo__link
+                              | Список вещей
+                              | для лагеря
+                      .cell
+                        h3
+                          | Путевка <span class="h3__underline">включает в себя</span>
+                        .raider
+                          .raider__col
+                            .raider__item Трансфер Москва — Лагерь — Москва
+                            .raider__item Проживание в 2-х местных номерах
+                            .raider__item Бассейн
+                            .raider__item Тренинги и мастер-классы
+                          .raider__col
+                            .raider__item 5-ти разовое питание
+                            .raider__item Тематическая программа
+                            .raider__item Спортивные и творческие мероприятия
+
+                      .cell.large-16
+                        .amount
+                          h3.amount__title Стоимость
+                          .amount__content
+                            .amount__price
+                              | 49 600 ₽
+                              .amount__price_old
+                                | 59 000 ₽
                             div
-                              a(href='#second2v', aria-selected='true') Каменные джунгли 21 века
-                          .tabs-title.tabs-title_program
+                              a(href="#" type="submit").button Купить путевку
+                          .amount__description
+                            .amount__text Торопитесь! Количество мест ограничено. Указанная стоимость действует до 1 апреля. Успейте получить скидку уже сегодня!
+                            //a(href="#").amount__link Способы оплаты
+
+
+                  #second2v.tabs-panel.is-active.tabs-panel_no-padding
+                    .grid-x
+                      .cell.large-14
+                        .grid-x
+                          .cell
                             div
-                              a(href='#second3v') Инженеры до нашей эры
-                    .cell.large-5.large-offset-2
-                      .todo
-                        .todo__item
-                          a(href="#").todo__link Распорядок дня
-                        .todo__item
-                          a(href="#").todo__link
-                            | Необходимые
-                            | документы
-                        .todo__item
-                          a(href="#").todo__link
-                            | Список вещей
-                            | для лагеря
-                    .cell
-                      h3
-                        | Путевка <span class="h3__underline">включает в себя</span>
-                      .raider
-                        .raider__col
-                          .raider__item Трансфер Москва — Лагерь — Москва
-                          .raider__item Проживание в 2-х местных номерах
-                          .raider__item Бассейн
-                          .raider__item Тренинги и мастер-классы
-                        .raider__col
-                          .raider__item 5-ти разовое питание
-                          .raider__item Тематическая программа
-                          .raider__item Спортивные и творческие мероприятия
+                              h3 Каменные джунгли 21 века
+                              p Смена для тех, кто готов взять ответственность за себя и стать независимым. Научим разбираться в тайнах бытовых вещей и основам выживания в любом большом городе 21 века!
+                              p Так же вы сможете выбрать направление смены для вашего ребенка, в рамках которого будут проводиться тренинги на тему:
+                          .cell
+                            .tabs-title.tabs-title_program
+                              div
+                                a(href='#second1v') Программирование
+                            .tabs-title.tabs-title_program.is-active
+                              div
+                                a(href='#second2v', aria-selected='true') Каменные джунгли 21 века
+                            .tabs-title.tabs-title_program
+                              div
+                                a(href='#second3v') Инженеры до нашей эры
+                      .cell.large-5.large-offset-2
+                        .todo
+                          .todo__item
+                            a(href="#" data-open="exampleModal2").todo__link Распорядок дня
+                          .todo__item
+                            a(href="#" data-open="exampleModal3").todo__link
+                              | Необходимые
+                              | документы
+                          .todo__item
+                            a(href="#" data-open="exampleModal4").todo__link
+                              | Список вещей
+                              | для лагеря
+                      .cell
+                        h3
+                          | Путевка <span class="h3__underline">включает в себя</span>
+                        .raider
+                          .raider__col
+                            .raider__item Трансфер Москва — Лагерь — Москва
+                            .raider__item Проживание в 2-х местных номерах
+                            .raider__item Бассейн
+                            .raider__item Тренинги и мастер-классы
+                          .raider__col
+                            .raider__item 5-ти разовое питание
+                            .raider__item Тематическая программа
+                            .raider__item Спортивные и творческие мероприятия
 
-                    .cell.large-16
-                      .amount
-                        h3.amount__title Стоимость
-                        .amount__content
-                          .amount__price
-                            | 49 600 ₽
-                            .amount__price_old
-                              | 59 000 ₽
-                          div
-                            a(href="#" type="submit").button Купить путевку
-                        .amount__description
-                          .amount__text Торопитесь! Количество мест ограничено. Указанная стоимость действует до 1 апреля. Успейте получить скидку уже сегодня!
-                          //a(href="#").amount__link Способы оплаты
-
-
-                #second2v.tabs-panel.is-active.tabs-panel_no-padding
-                  .grid-x
-                    .cell.large-14
-                      .grid-x
-                        .cell
-                          div
-                            h3 Каменные джунгли 21 века
-                            p Смена для тех, кто готов взять ответственность за себя и стать независимым. Научим разбираться в тайнах бытовых вещей и основам выживания в любом большом городе 21 века!
-                            p Так же вы сможете выбрать направление смены для вашего ребенка, в рамках которого будут проводиться тренинги на тему:
-                        .cell
-                          .tabs-title.tabs-title_program
+                      .cell.large-16
+                        .amount
+                          h3.amount__title Стоимость
+                          .amount__content
+                            .amount__price
+                              | 49 600 ₽
+                              .amount__price_old
+                                | 59 000 ₽
                             div
-                              a(href='#second1v') Программирование
-                          .tabs-title.tabs-title_program.is-active
-                            div
-                              a(href='#second2v', aria-selected='true') Каменные джунгли 21 века
-                          .tabs-title.tabs-title_program
-                            div
-                              a(href='#second3v') Инженеры до нашей эры
-                    .cell.large-5.large-offset-2
-                      .todo
-                        .todo__item
-                          a(href="#" data-open="exampleModal2").todo__link Распорядок дня
-                        .todo__item
-                          a(href="#" data-open="exampleModal3").todo__link
-                            | Необходимые
-                            | документы
-                        .todo__item
-                          a(href="#" data-open="exampleModal4").todo__link
-                            | Список вещей
-                            | для лагеря
-                    .cell
-                      h3
-                        | Путевка <span class="h3__underline">включает в себя</span>
-                      .raider
-                        .raider__col
-                          .raider__item Трансфер Москва — Лагерь — Москва
-                          .raider__item Проживание в 2-х местных номерах
-                          .raider__item Бассейн
-                          .raider__item Тренинги и мастер-классы
-                        .raider__col
-                          .raider__item 5-ти разовое питание
-                          .raider__item Тематическая программа
-                          .raider__item Спортивные и творческие мероприятия
-
-                    .cell.large-16
-                      .amount
-                        h3.amount__title Стоимость
-                        .amount__content
-                          .amount__price
-                            | 49 600 ₽
-                            .amount__price_old
-                              | 59 000 ₽
-                          div
-                            a(href="#" type="submit" data-open="exampleModal1").button Купить путевку
-                        .amount__description
-                          .amount__text Торопитесь! Количество мест ограничено. Указанная стоимость действует до 1 апреля. Успейте получить скидку уже сегодня!
-                          //a(href="#").amount__link Способы оплаты
-                    #exampleModal1.reveal(data-reveal='' data-animation-in="spin-in" data-animation-out="spin-out").large
-                      section.section
-                        .grid-container
-                          .section__background.section__background_review
-                            img(src="images/review/review-circle-1.png").section__img.section__img_1.section__img_z-minus
-                            img(src="images/review/review-circle-2.png").section__img.section__img_2.section__img_z-minus
-                            img(src="images/review/review-frame-1.png").section__img.section__img_3.section__img_z-minus
-                            img(src="images/review/review-frame-2.png").section__img.section__img_4.section__img_z-minus
-                            .grid-x
-                              .cell
-                                .section__content.section__content_center
-                                  .section__head
-                                    span.section__violet.section__violet_2 Забронируйте путевку&nbsp;
-                                    | в лагерь
-                            form
-                              .grid-x.justify-content-center
-                                .cell.large-10
-                                  .grid-x.grid-margin-x.grid-padding-y
-                                    .cell
-                                      .custom-input
-                                        input(type="text" placeholder=" ")
-                                        label Имя и фамилия
-                                    .cell
-                                      .custom-input
-                                        input(placeholder=" " type="tel" name="phone")#phone
-                                        label Номер телефона
-                                    .cell
-                                      .custom-input
-                                        input(placeholder=" " type="mail")
-                                        label Электронная почта
-                                    .cell.text-align-center
-                                      a(href="#" type="submit").button.z-index-1 Забронировать место
-                                    .amount
-                                      h3.amount__title.amount__title_center Стоимость
-                                      .amount__content.amount__content_center
-                                        .amount__price
-                                          | 49 600 ₽
-                                          .amount__price_old
-                                            | 59 000 ₽
-                                      .amount__description.amount__description_center
-                                        .amount__text Торопитесь! Количество мест ограничено. Указанная стоимость действует до 1 апреля. Успейте получить скидку уже сегодня!
+                              a(href="#" type="submit" data-open="exampleModal1").button Купить путевку
+                          .amount__description
+                            .amount__text Торопитесь! Количество мест ограничено. Указанная стоимость действует до 1 апреля. Успейте получить скидку уже сегодня!
+                            //a(href="#").amount__link Способы оплаты
+                      #exampleModal1.reveal(data-reveal='' data-animation-in="spin-in" data-animation-out="spin-out").large
+                        section.section
+                          .grid-container
+                            .section__background.section__background_review
+                              img(src="images/review/review-circle-1.png").section__img.section__img_1.section__img_z-minus
+                              img(src="images/review/review-circle-2.png").section__img.section__img_2.section__img_z-minus
+                              img(src="images/review/review-frame-1.png").section__img.section__img_3.section__img_z-minus
+                              img(src="images/review/review-frame-2.png").section__img.section__img_4.section__img_z-minus
+                              .grid-x
+                                .cell
+                                  .section__content.section__content_center
+                                    .section__head
+                                      span.section__violet.section__violet_2 Забронируйте путевку&nbsp;
+                                      | в лагерь
+                              form
+                                .grid-x.justify-content-center
+                                  .cell.large-10
+                                    .grid-x.grid-margin-x.grid-padding-y
+                                      .cell
+                                        .custom-input
+                                          input(type="text" placeholder=" ")
+                                          label Имя и фамилия
+                                      .cell
+                                        .custom-input
+                                          input(placeholder=" " type="tel" name="phone")#phone
+                                          label Номер телефона
+                                      .cell
+                                        .custom-input
+                                          input(placeholder=" " type="mail")
+                                          label Электронная почта
+                                      .cell.text-align-center
+                                        a(href="#" type="submit").button.z-index-1 Забронировать место
+                                      .amount
+                                        h3.amount__title.amount__title_center Стоимость
+                                        .amount__content.amount__content_center
+                                          .amount__price
+                                            | 49 600 ₽
+                                            .amount__price_old
+                                              | 59 000 ₽
+                                        .amount__description.amount__description_center
+                                          .amount__text Торопитесь! Количество мест ограничено. Указанная стоимость действует до 1 апреля. Успейте получить скидку уже сегодня!
 
 
-                      button.close-button(data-close='', aria-label='Close modal', type='button')
-                        span(aria-hidden='true') &times;
-                    #exampleModal2.reveal(data-reveal='' data-animation-in="spin-in" data-animation-out="spin-out").large
-                      h2 Примерный распорядок дня
-                      div
+                        button.close-button(data-close='', aria-label='Close modal', type='button')
+                          span(aria-hidden='true') &times;
+                      #exampleModal2.reveal(data-reveal='' data-animation-in="spin-in" data-animation-out="spin-out").large
+                        h2 Примерный распорядок дня
+                        div
+                          p
+                            | &Rcy;&iecy;&zhcy;&icy;&mcy; &dcy;&ncy;&yacy; &mcy;&ocy;&zhcy;&iecy;&tcy; &ocy;&tcy;&lcy;&icy;&chcy;&acy;&tcy;&softcy;&scy;&yacy; &vcy; &rcy;&acy;&zcy;&lcy;&icy;&chcy;&ncy;&ycy;&khcy; &dcy;&iecy;&tcy;&scy;&kcy;&icy;&khcy; &ocy;&zcy;&dcy;&ocy;&rcy;&ocy;&vcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&khcy; &lcy;&acy;&gcy;&iecy;&rcy;&yacy;&khcy;. &Ocy;&dcy;&ncy;&acy;&kcy;&ocy; &vcy;&scy;&iecy; &rcy;&iecy;&zhcy;&icy;&mcy;&ncy;&ycy;&iecy; &mcy;&ocy;&mcy;&iecy;&ncy;&tcy;&ycy; &dcy;&ocy;&lcy;&zhcy;&ncy;&ycy; &ocy;&bcy;&yacy;&zcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy; &scy;&ocy;&ocy;&tcy;&vcy;&iecy;&tcy;&scy;&tcy;&vcy;&ocy;&vcy;&acy;&tcy;&softcy; &Scy;&acy;&ncy;&Pcy;&icy;&Ncy;.
+                          p
+                            | &Ocy;&bcy;&rcy;&acy;&shchcy;&acy;&iecy;&mcy; &vcy;&acy;&shcy;&iecy; &vcy;&ncy;&icy;&mcy;&acy;&ncy;&icy;&iecy;, &chcy;&tcy;&ocy; &dcy;&acy;&ncy;&ncy;&ycy;&mcy; &rcy;&iecy;&zhcy;&icy;&mcy; &dcy;&ncy;&yacy; &scy;&ocy;&scy;&tcy;&acy;&vcy;&lcy;&iecy;&ncy; &dcy;&lcy;&yacy; &dcy;&iecy;&tcy;&iecy;&jcy;. &Rcy;&acy;&scy;&pcy;&ocy;&rcy;&yacy;&dcy;&ocy;&kcy; &dcy;&ncy;&yacy; &pcy;&iecy;&dcy;&acy;&gcy;&ocy;&gcy;&icy;&chcy;&iecy;&scy;&kcy;&icy;&khcy; &rcy;&acy;&bcy;&ocy;&tcy;&ncy;&icy;&kcy;&ocy;&vcy; &rcy;&iecy;&gcy;&lcy;&acy;&mcy;&iecy;&ncy;&tcy;&icy;&rcy;&ucy;&iecy;&tcy;&scy;&yacy; &vcy;&ncy;&ucy;&tcy;&rcy;&iecy;&ncy;&ncy;&icy;&mcy;&icy; &rcy;&acy;&scy;&pcy;&ocy;&rcy;&yacy;&zhcy;&iecy;&ncy;&icy;&yacy;&mcy;&icy; &lcy;&acy;&gcy;&iecy;&rcy;&yacy;.
+                          p
+                            | &Scy;&acy;&ncy;&icy;&tcy;&acy;&rcy;&ncy;&ycy;&iecy; &pcy;&rcy;&acy;&vcy;&icy;&lcy;&acy; &icy; &ncy;&ocy;&rcy;&mcy;&ycy; &ocy;&pcy;&icy;&scy;&ycy;&vcy;&acy;&yucy;&tcy;
+                            b &nbsp; &ocy;&bcy;&yacy;&zcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &tcy;&rcy;&iecy;&bcy;&ocy;&vcy;&acy;&ncy;&icy;&yacy; &kcy; &rcy;&iecy;&zhcy;&icy;&mcy;&ucy; &dcy;&ncy;&yacy;
+                            | :
+                          ul
+                            li
+                              | &pcy;&rcy;&ocy;&dcy;&ocy;&lcy;&zhcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy;&scy;&tcy;&softcy; &ncy;&ocy;&chcy;&ncy;&ocy;&gcy;&ocy; &scy;&ncy;&acy; &dcy;&ocy;&lcy;&zhcy;&ncy;&acy; &scy;&ocy;&scy;&tcy;&acy;&vcy;&lcy;&yacy;&tcy;&softcy; &ncy;&iecy; &mcy;&iecy;&ncy;&iecy;&iecy; 9 &chcy;&acy;&scy;&ocy;&vcy;, &dcy;&lcy;&yacy; &dcy;&iecy;&tcy;&iecy;&jcy; &ocy;&tcy; 7 &dcy;&ocy; 10 &lcy;&iecy;&tcy; &ndash; &ncy;&iecy; &mcy;&iecy;&ncy;&iecy;&iecy; 10 &chcy;&acy;&scy;&ocy;&vcy;,
+                            li &pcy;&rcy;&ocy;&dcy;&ocy;&lcy;&zhcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy;&scy;&tcy;&softcy; &dcy;&ncy;&iecy;&vcy;&ncy;&ocy;&gcy;&ocy; &scy;&ncy;&acy; (&ocy;&tcy;&dcy;&ycy;&khcy;&acy;) - &ncy;&iecy; &mcy;&iecy;&ncy;&iecy;&iecy; 1,5 &chcy;&acy;&scy;&acy;;
+                            li &pcy;&icy;&tcy;&acy;&ncy;&icy;&iecy; &dcy;&iecy;&tcy;&iecy;&jcy; &ncy;&iecy; &mcy;&iecy;&ncy;&iecy;&iecy; 5 &rcy;&acy;&zcy;(&zcy;&acy;&vcy;&tcy;&rcy;&acy;&kcy;, &ocy;&bcy;&iecy;&dcy;, &pcy;&ocy;&lcy;&dcy;&ncy;&icy;&kcy;, &ucy;&zhcy;&icy;&ncy;, &vcy;&tcy;&ocy;&rcy;&ocy;&jcy; &ucy;&zhcy;&icy;&ncy;);
+                            li
+                              | &ucy;&tcy;&rcy;&iecy;&ncy;&ncy;&yacy;&yacy; &zcy;&acy;&rcy;&yacy;&dcy;&kcy;&acy; &ncy;&iecy; &mcy;&iecy;&ncy;&iecy;&iecy; 15 &mcy;&icy;&ncy;&ucy;&tcy; &ncy;&acy; &ocy;&tcy;&kcy;&rcy;&ycy;&tcy;&ocy;&mcy; &vcy;&ocy;&zcy;&dcy;&ucy;&khcy;&iecy; (&vcy; &dcy;&ocy;&zhcy;&dcy;&lcy;&icy;&vcy;&ucy;&yucy; &pcy;&ocy;&gcy;&ocy;&dcy;&ucy; &vcy; &khcy;&ocy;&rcy;&ocy;&shcy;&ocy; &pcy;&rcy;&ocy;&vcy;&iecy;&tcy;&rcy;&icy;&vcy;&acy;&iecy;&mcy;&ocy;&mcy; &pcy;&ocy;&mcy;&iecy;&shchcy;&iecy;&ncy;&icy;&icy;);
+                            li &ucy;&tcy;&rcy;&iecy;&ncy;&ncy;&icy;&jcy; &pcy;&ocy;&dcy;&hardcy;&iecy;&mcy; &dcy;&iecy;&tcy;&iecy;&jcy; &pcy;&rcy;&ocy;&vcy;&ocy;&dcy;&icy;&tcy;&scy;&yacy; &ncy;&iecy; &rcy;&acy;&ncy;&iecy;&iecy; 8 &chcy;&acy;&scy;&ocy;&vcy;;
+                            li &pcy;&rcy;&ocy;&vcy;&iecy;&dcy;&iecy;&ncy;&icy;&iecy; &scy;&pcy;&ocy;&rcy;&tcy;&icy;&vcy;&ncy;&ycy;&khcy; &mcy;&iecy;&rcy;&ocy;&pcy;&rcy;&icy;&yacy;&tcy;&icy;&jcy;;
+                            li &pcy;&rcy;&ocy;&vcy;&iecy;&dcy;&iecy;&ncy;&icy;&iecy; &kcy;&ucy;&lcy;&softcy;&tcy;&ucy;&rcy;&ncy;&ocy;-&mcy;&acy;&scy;&scy;&ocy;&vcy;&ycy;&khcy; &mcy;&iecy;&rcy;&ocy;&pcy;&rcy;&icy;&yacy;&tcy;&icy;&jcy;;
+                            li
+                              | &pcy;&rcy;&ocy;&vcy;&iecy;&dcy;&iecy;&ncy;&icy;&iecy; &gcy;&icy;&gcy;&icy;&iecy;&ncy;&icy;&chcy;&iecy;&scy;&kcy;&icy;&khcy;, &ocy;&zcy;&dcy;&ocy;&rcy;&ocy;&vcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&khcy; &icy; &zcy;&acy;&kcy;&acy;&lcy;&icy;&vcy;&acy;&yucy;&shchcy;&icy;&khcy; (&vcy;&ocy;&dcy;&ncy;&ycy;&khcy;, &vcy;&ocy;&zcy;&dcy;&ucy;&shcy;&ncy;&ycy;&khcy;) &pcy;&rcy;&ocy;&tscy;&iecy;&dcy;&ucy;&rcy;;
+                            li &pcy;&rcy;&iecy;&dcy;&ocy;&scy;&tcy;&acy;&vcy;&lcy;&iecy;&ncy;&icy;&iecy; &scy;&vcy;&ocy;&bcy;&ocy;&dcy;&ncy;&ocy;&gcy;&ocy; &vcy;&rcy;&iecy;&mcy;&iecy;&ncy;&icy;.
+                          p
+                            b &Pcy;&rcy;&icy;&mcy;&iecy;&rcy;&ncy;&ycy;&jcy; &rcy;&iecy;&zhcy;&icy;&mcy; &dcy;&ncy;&yacy; &vcy; &dcy;&iecy;&tcy;&scy;&kcy;&ocy;&mcy; &ocy;&zcy;&dcy;&ocy;&rcy;&ocy;&vcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy;&mcy; &lcy;&acy;&gcy;&iecy;&rcy;&iecy;:
+                            br
+                            | &#x9; 8:00 &ndash; &pcy;&ocy;&dcy;&hardcy;&iecy;&mcy;
+                            br
+                            | &#x9; 8:15 &ndash; &zcy;&acy;&rcy;&yacy;&dcy;&kcy;&acy;
+                            br
+                            | &#x9; 8:30 &ndash; &ucy;&bcy;&ocy;&rcy;&kcy;&acy; &kcy;&ocy;&mcy;&ncy;&acy;&tcy;
+                            br
+                            | &#x9; 9:00 &ndash; &zcy;&acy;&vcy;&tcy;&rcy;&acy;&kcy;
+                            br
+                            | &#x9; 10:00 &ndash; 13:00 &ndash; &acy;&kcy;&tcy;&icy;&vcy;&ncy;&ycy;&jcy; &ocy;&tcy;&dcy;&ycy;&khcy;, &ocy;&zcy;&dcy;&ocy;&rcy;&ocy;&vcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &pcy;&rcy;&ocy;&tscy;&iecy;&dcy;&ucy;&rcy;&ycy;: &vcy;&ocy;&zcy;&dcy;&ucy;&shcy;&ncy;&ycy;&iecy; &vcy;&acy;&ncy;&ncy;&ycy;, &kcy;&ucy;&pcy;&acy;&ncy;&icy;&iecy;, &scy;&ocy;&lcy;&ncy;&iecy;&chcy;&ncy;&ycy;&iecy; &vcy;&acy;&ncy;&ncy;&ycy;, &vcy;&ncy;&ucy;&tcy;&rcy;&icy;&ocy;&tcy;&rcy;&yacy;&dcy;&ncy;&ycy;&iecy; &icy; &ocy;&bcy;&shchcy;&iecy;&lcy;&acy;&gcy;&iecy;&rcy;&ncy;&ycy;&iecy; &mcy;&iecy;&rcy;&ocy;&pcy;&rcy;&icy;&yacy;&tcy;&icy;&yacy;.
+                            br
+                            | &#x9; 13:00 &ndash; 13:30 &ndash; &scy;&vcy;&ocy;&bcy;&ocy;&dcy;&ncy;&ocy;&iecy; &vcy;&rcy;&iecy;&mcy;&yacy;
+                            br
+                            | &#x9; 13:30 &ndash; &ocy;&bcy;&iecy;&dcy;
+                            br
+                            | &#x9; 14:00 &ndash; 15:30 &ndash; &tcy;&icy;&khcy;&icy;&jcy; &chcy;&acy;&scy;
+                            br
+                            | &#x9; 15:30 &ndash; &pcy;&ocy;&lcy;&dcy;&ncy;&icy;&kcy;
+                            br
+                            | &#x9; 16:00 &ndash; 18:00 &ndash; &acy;&kcy;&tcy;&icy;&vcy;&ncy;&ycy;&jcy; &ocy;&tcy;&dcy;&ycy;&khcy;, &ocy;&zcy;&dcy;&ocy;&rcy;&ocy;&vcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &pcy;&rcy;&ocy;&tscy;&iecy;&dcy;&ucy;&rcy;&ycy;: &vcy;&ocy;&zcy;&dcy;&ucy;&shcy;&ncy;&ycy;&iecy; &vcy;&acy;&ncy;&ncy;&ycy;, &kcy;&ucy;&pcy;&acy;&ncy;&icy;&iecy;, &scy;&ocy;&lcy;&ncy;&iecy;&chcy;&ncy;&ycy;&iecy; &vcy;&acy;&ncy;&ncy;&ycy;, &vcy;&ncy;&ucy;&tcy;&rcy;&icy;&ocy;&tcy;&rcy;&yacy;&dcy;&ncy;&ycy;&iecy; &icy; &ocy;&bcy;&shchcy;&iecy;&lcy;&acy;&gcy;&iecy;&rcy;&ncy;&ycy;&iecy; &mcy;&iecy;&rcy;&ocy;&pcy;&rcy;&icy;&yacy;&tcy;&icy;&yacy;.
+                            br
+                            | &#x9; 18:00 &ndash; 19:00 &ndash; &scy;&vcy;&ocy;&bcy;&ocy;&dcy;&ncy;&ocy;&iecy; &vcy;&rcy;&iecy;&mcy;&yacy;
+                            br
+                            | &#x9; 19:00 &ndash; &ucy;&zhcy;&icy;&ncy;
+                            br
+                            | &#x9; 20:00 &ndash; &ocy;&bcy;&shchcy;&iecy;&lcy;&acy;&gcy;&iecy;&rcy;&ncy;&ycy;&iecy; &mcy;&iecy;&rcy;&ocy;&pcy;&rcy;&icy;&yacy;&tcy;&icy;&yacy;
+                            br
+                            | &#x9; 21:30 &ndash; &vcy;&tcy;&ocy;&rcy;&ocy;&jcy; &ucy;&zhcy;&icy;&ncy;
+                            br
+                            | &#x9; 22:00 &ndash; &pcy;&ocy;&dcy;&gcy;&ocy;&tcy;&ocy;&vcy;&kcy;&acy; &kcy;&ocy; &scy;&ncy;&ucy;
+                            br
+                            | &#x9; 22:30 &ndash; &scy;&ocy;&ncy;.
+                            br
+                          p
+                            | &Pcy;&rcy;&icy; &pcy;&lcy;&acy;&ncy;&icy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&icy; &rcy;&acy;&scy;&pcy;&ocy;&rcy;&yacy;&dcy;&kcy;&acy; &dcy;&ncy;&yacy; &scy;&lcy;&iecy;&dcy;&ucy;&iecy;&tcy; &ocy;&bcy;&yacy;&zcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy; &ucy;&chcy;&icy;&tcy;&ycy;&vcy;&acy;&tcy;&softcy; &vcy;&ocy;&zcy;&rcy;&acy;&scy;&tcy;&ncy;&ycy;&iecy; &ocy;&scy;&ocy;&bcy;&iecy;&ncy;&ncy;&ocy;&scy;&tcy;&icy; &dcy;&iecy;&tcy;&iecy;&jcy;, &mcy;&iecy;&scy;&tcy;&ocy;&rcy;&acy;&scy;&pcy;&ocy;&lcy;&ocy;&zhcy;&iecy;&ncy;&icy;&yacy; &icy; &icy;&ncy;&fcy;&rcy;&acy;&scy;&tcy;&rcy;&ucy;&kcy;&tcy;&ucy;&rcy;&ucy; &lcy;&acy;&gcy;&iecy;&rcy;&yacy;.
+
+                        button.close-button(data-close='', aria-label='Close modal', type='button')
+                          span(aria-hidden='true') &times;
+                      #exampleModal3.reveal(data-reveal='' data-animation-in="spin-in" data-animation-out="spin-out").large
+                        h2 &Kcy;&acy;&kcy;&icy;&iecy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&ycy; &ncy;&ucy;&zhcy;&ncy;&ycy; &dcy;&lcy;&yacy; &lcy;&acy;&gcy;&iecy;&rcy;&yacy; &rcy;&iecy;&bcy;&iecy;&ncy;&kcy;&ucy;
                         p
-                          | &Rcy;&iecy;&zhcy;&icy;&mcy; &dcy;&ncy;&yacy; &mcy;&ocy;&zhcy;&iecy;&tcy; &ocy;&tcy;&lcy;&icy;&chcy;&acy;&tcy;&softcy;&scy;&yacy; &vcy; &rcy;&acy;&zcy;&lcy;&icy;&chcy;&ncy;&ycy;&khcy; &dcy;&iecy;&tcy;&scy;&kcy;&icy;&khcy; &ocy;&zcy;&dcy;&ocy;&rcy;&ocy;&vcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&khcy; &lcy;&acy;&gcy;&iecy;&rcy;&yacy;&khcy;. &Ocy;&dcy;&ncy;&acy;&kcy;&ocy; &vcy;&scy;&iecy; &rcy;&iecy;&zhcy;&icy;&mcy;&ncy;&ycy;&iecy; &mcy;&ocy;&mcy;&iecy;&ncy;&tcy;&ycy; &dcy;&ocy;&lcy;&zhcy;&ncy;&ycy; &ocy;&bcy;&yacy;&zcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy; &scy;&ocy;&ocy;&tcy;&vcy;&iecy;&tcy;&scy;&tcy;&vcy;&ocy;&vcy;&acy;&tcy;&softcy; &Scy;&acy;&ncy;&Pcy;&icy;&Ncy;.
-                        p
-                          | &Ocy;&bcy;&rcy;&acy;&shchcy;&acy;&iecy;&mcy; &vcy;&acy;&shcy;&iecy; &vcy;&ncy;&icy;&mcy;&acy;&ncy;&icy;&iecy;, &chcy;&tcy;&ocy; &dcy;&acy;&ncy;&ncy;&ycy;&mcy; &rcy;&iecy;&zhcy;&icy;&mcy; &dcy;&ncy;&yacy; &scy;&ocy;&scy;&tcy;&acy;&vcy;&lcy;&iecy;&ncy; &dcy;&lcy;&yacy; &dcy;&iecy;&tcy;&iecy;&jcy;. &Rcy;&acy;&scy;&pcy;&ocy;&rcy;&yacy;&dcy;&ocy;&kcy; &dcy;&ncy;&yacy; &pcy;&iecy;&dcy;&acy;&gcy;&ocy;&gcy;&icy;&chcy;&iecy;&scy;&kcy;&icy;&khcy; &rcy;&acy;&bcy;&ocy;&tcy;&ncy;&icy;&kcy;&ocy;&vcy; &rcy;&iecy;&gcy;&lcy;&acy;&mcy;&iecy;&ncy;&tcy;&icy;&rcy;&ucy;&iecy;&tcy;&scy;&yacy; &vcy;&ncy;&ucy;&tcy;&rcy;&iecy;&ncy;&ncy;&icy;&mcy;&icy; &rcy;&acy;&scy;&pcy;&ocy;&rcy;&yacy;&zhcy;&iecy;&ncy;&icy;&yacy;&mcy;&icy; &lcy;&acy;&gcy;&iecy;&rcy;&yacy;.
-                        p
-                          | &Scy;&acy;&ncy;&icy;&tcy;&acy;&rcy;&ncy;&ycy;&iecy; &pcy;&rcy;&acy;&vcy;&icy;&lcy;&acy; &icy; &ncy;&ocy;&rcy;&mcy;&ycy; &ocy;&pcy;&icy;&scy;&ycy;&vcy;&acy;&yucy;&tcy;
-                          b &nbsp; &ocy;&bcy;&yacy;&zcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &tcy;&rcy;&iecy;&bcy;&ocy;&vcy;&acy;&ncy;&icy;&yacy; &kcy; &rcy;&iecy;&zhcy;&icy;&mcy;&ucy; &dcy;&ncy;&yacy;
-                          | :
+                          | &Vcy; &scy;&ocy;&ocy;&tcy;&vcy;&iecy;&tcy;&scy;&tcy;&vcy;&icy;&icy; &scy; &zcy;&acy;&kcy;&ocy;&ncy;&ocy;&dcy;&acy;&tcy;&iecy;&lcy;&softcy;&scy;&tcy;&vcy;&ocy;&mcy; &Rcy;&Fcy;
+                          strong &nbsp; &ocy;&bcy;&yacy;&zcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&mcy;&icy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&acy;&mcy;&icy; &dcy;&lcy;&yacy; &lcy;&iecy;&tcy;&ncy;&iecy;&gcy;&ocy; &lcy;&acy;&gcy;&iecy;&rcy;&yacy;
+                          |  &bcy;&iecy;&zcy; &lcy;&iecy;&chcy;&iecy;&ncy;&icy;&yacy; &yacy;&vcy;&lcy;&yacy;&yucy;&tcy;&scy;&yacy;:
                         ul
-                          li
-                            | &pcy;&rcy;&ocy;&dcy;&ocy;&lcy;&zhcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy;&scy;&tcy;&softcy; &ncy;&ocy;&chcy;&ncy;&ocy;&gcy;&ocy; &scy;&ncy;&acy; &dcy;&ocy;&lcy;&zhcy;&ncy;&acy; &scy;&ocy;&scy;&tcy;&acy;&vcy;&lcy;&yacy;&tcy;&softcy; &ncy;&iecy; &mcy;&iecy;&ncy;&iecy;&iecy; 9 &chcy;&acy;&scy;&ocy;&vcy;, &dcy;&lcy;&yacy; &dcy;&iecy;&tcy;&iecy;&jcy; &ocy;&tcy; 7 &dcy;&ocy; 10 &lcy;&iecy;&tcy; &ndash; &ncy;&iecy; &mcy;&iecy;&ncy;&iecy;&iecy; 10 &chcy;&acy;&scy;&ocy;&vcy;,
-                          li &pcy;&rcy;&ocy;&dcy;&ocy;&lcy;&zhcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy;&scy;&tcy;&softcy; &dcy;&ncy;&iecy;&vcy;&ncy;&ocy;&gcy;&ocy; &scy;&ncy;&acy; (&ocy;&tcy;&dcy;&ycy;&khcy;&acy;) - &ncy;&iecy; &mcy;&iecy;&ncy;&iecy;&iecy; 1,5 &chcy;&acy;&scy;&acy;;
-                          li &pcy;&icy;&tcy;&acy;&ncy;&icy;&iecy; &dcy;&iecy;&tcy;&iecy;&jcy; &ncy;&iecy; &mcy;&iecy;&ncy;&iecy;&iecy; 5 &rcy;&acy;&zcy;(&zcy;&acy;&vcy;&tcy;&rcy;&acy;&kcy;, &ocy;&bcy;&iecy;&dcy;, &pcy;&ocy;&lcy;&dcy;&ncy;&icy;&kcy;, &ucy;&zhcy;&icy;&ncy;, &vcy;&tcy;&ocy;&rcy;&ocy;&jcy; &ucy;&zhcy;&icy;&ncy;);
-                          li
-                            | &ucy;&tcy;&rcy;&iecy;&ncy;&ncy;&yacy;&yacy; &zcy;&acy;&rcy;&yacy;&dcy;&kcy;&acy; &ncy;&iecy; &mcy;&iecy;&ncy;&iecy;&iecy; 15 &mcy;&icy;&ncy;&ucy;&tcy; &ncy;&acy; &ocy;&tcy;&kcy;&rcy;&ycy;&tcy;&ocy;&mcy; &vcy;&ocy;&zcy;&dcy;&ucy;&khcy;&iecy; (&vcy; &dcy;&ocy;&zhcy;&dcy;&lcy;&icy;&vcy;&ucy;&yucy; &pcy;&ocy;&gcy;&ocy;&dcy;&ucy; &vcy; &khcy;&ocy;&rcy;&ocy;&shcy;&ocy; &pcy;&rcy;&ocy;&vcy;&iecy;&tcy;&rcy;&icy;&vcy;&acy;&iecy;&mcy;&ocy;&mcy; &pcy;&ocy;&mcy;&iecy;&shchcy;&iecy;&ncy;&icy;&icy;);
-                          li &ucy;&tcy;&rcy;&iecy;&ncy;&ncy;&icy;&jcy; &pcy;&ocy;&dcy;&hardcy;&iecy;&mcy; &dcy;&iecy;&tcy;&iecy;&jcy; &pcy;&rcy;&ocy;&vcy;&ocy;&dcy;&icy;&tcy;&scy;&yacy; &ncy;&iecy; &rcy;&acy;&ncy;&iecy;&iecy; 8 &chcy;&acy;&scy;&ocy;&vcy;;
-                          li &pcy;&rcy;&ocy;&vcy;&iecy;&dcy;&iecy;&ncy;&icy;&iecy; &scy;&pcy;&ocy;&rcy;&tcy;&icy;&vcy;&ncy;&ycy;&khcy; &mcy;&iecy;&rcy;&ocy;&pcy;&rcy;&icy;&yacy;&tcy;&icy;&jcy;;
-                          li &pcy;&rcy;&ocy;&vcy;&iecy;&dcy;&iecy;&ncy;&icy;&iecy; &kcy;&ucy;&lcy;&softcy;&tcy;&ucy;&rcy;&ncy;&ocy;-&mcy;&acy;&scy;&scy;&ocy;&vcy;&ycy;&khcy; &mcy;&iecy;&rcy;&ocy;&pcy;&rcy;&icy;&yacy;&tcy;&icy;&jcy;;
-                          li
-                            | &pcy;&rcy;&ocy;&vcy;&iecy;&dcy;&iecy;&ncy;&icy;&iecy; &gcy;&icy;&gcy;&icy;&iecy;&ncy;&icy;&chcy;&iecy;&scy;&kcy;&icy;&khcy;, &ocy;&zcy;&dcy;&ocy;&rcy;&ocy;&vcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&khcy; &icy; &zcy;&acy;&kcy;&acy;&lcy;&icy;&vcy;&acy;&yucy;&shchcy;&icy;&khcy; (&vcy;&ocy;&dcy;&ncy;&ycy;&khcy;, &vcy;&ocy;&zcy;&dcy;&ucy;&shcy;&ncy;&ycy;&khcy;) &pcy;&rcy;&ocy;&tscy;&iecy;&dcy;&ucy;&rcy;;
-                          li &pcy;&rcy;&iecy;&dcy;&ocy;&scy;&tcy;&acy;&vcy;&lcy;&iecy;&ncy;&icy;&iecy; &scy;&vcy;&ocy;&bcy;&ocy;&dcy;&ncy;&ocy;&gcy;&ocy; &vcy;&rcy;&iecy;&mcy;&iecy;&ncy;&icy;.
+                          li &Mcy;&iecy;&dcy;&icy;&tscy;&icy;&ncy;&scy;&kcy;&acy;&yacy; &scy;&pcy;&rcy;&acy;&vcy;&kcy;&acy; &fcy;&ocy;&rcy;&mcy;&acy; &numero; 079/&ucy;;
+                          li &Scy;&pcy;&rcy;&acy;&vcy;&kcy;&acy; &ocy;&bcy; &ecy;&pcy;&icy;&dcy;. &ocy;&kcy;&rcy;&ucy;&zhcy;&iecy;&ncy;&icy;&icy;;
+                          li &Rcy;&iecy;&zcy;&ucy;&lcy;&softcy;&tcy;&acy;&tcy;&ycy; &acy;&ncy;&acy;&lcy;&icy;&zcy;&ocy;&vcy;;
+                          li &Vcy;&ycy;&pcy;&icy;&scy;&kcy;&acy; &icy;&zcy; &pcy;&rcy;&icy;&vcy;&icy;&vcy;&ocy;&chcy;&ncy;&ocy;&jcy; &kcy;&acy;&rcy;&tcy;&ycy;;
+                          li &Scy;&pcy;&rcy;&acy;&vcy;&kcy;&acy; &ocy;&tcy; &dcy;&iecy;&rcy;&mcy;&acy;&tcy;&ocy;&lcy;&ocy;&gcy;&acy;;
+                          li &Kcy;&ocy;&pcy;&icy;&yacy; &scy;&vcy;&icy;&dcy;&iecy;&tcy;&iecy;&lcy;&softcy;&scy;&tcy;&vcy;&acy; &ocy; &rcy;&ocy;&zhcy;&dcy;&iecy;&ncy;&icy;&icy;;
+                          li &Kcy;&ocy;&pcy;&icy;&yacy; &pcy;&ocy;&lcy;&icy;&scy;&acy; &mcy;&iecy;&dcy;&icy;&tscy;&icy;&ncy;&scy;&kcy;&ocy;&gcy;&ocy; &scy;&tcy;&rcy;&acy;&khcy;&ocy;&vcy;&acy;&ncy;&icy;&yacy;;
+                          li &Kcy;&vcy;&icy;&tcy;&acy;&ncy;&tscy;&icy;&yacy; &ocy;&bcy; &ocy;&pcy;&lcy;&acy;&tcy;&iecy; &icy; &dcy;&ocy;&gcy;&ocy;&vcy;&ocy;&rcy;;
+                          li &Pcy;&ocy;&lcy;&icy;&scy; &Ocy;&Mcy;&Scy;;
+                          li &Scy;&tcy;&rcy;&acy;&khcy;&ocy;&vcy;&kcy;&acy; &ocy;&tcy; &ucy;&kcy;&ucy;&scy;&acy; &kcy;&lcy;&iecy;&shchcy;&acy;.
                         p
-                          b &Pcy;&rcy;&icy;&mcy;&iecy;&rcy;&ncy;&ycy;&jcy; &rcy;&iecy;&zhcy;&icy;&mcy; &dcy;&ncy;&yacy; &vcy; &dcy;&iecy;&tcy;&scy;&kcy;&ocy;&mcy; &ocy;&zcy;&dcy;&ocy;&rcy;&ocy;&vcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy;&mcy; &lcy;&acy;&gcy;&iecy;&rcy;&iecy;:
-                          br
-                          | &#x9; 8:00 &ndash; &pcy;&ocy;&dcy;&hardcy;&iecy;&mcy;
-                          br
-                          | &#x9; 8:15 &ndash; &zcy;&acy;&rcy;&yacy;&dcy;&kcy;&acy;
-                          br
-                          | &#x9; 8:30 &ndash; &ucy;&bcy;&ocy;&rcy;&kcy;&acy; &kcy;&ocy;&mcy;&ncy;&acy;&tcy;
-                          br
-                          | &#x9; 9:00 &ndash; &zcy;&acy;&vcy;&tcy;&rcy;&acy;&kcy;
-                          br
-                          | &#x9; 10:00 &ndash; 13:00 &ndash; &acy;&kcy;&tcy;&icy;&vcy;&ncy;&ycy;&jcy; &ocy;&tcy;&dcy;&ycy;&khcy;, &ocy;&zcy;&dcy;&ocy;&rcy;&ocy;&vcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &pcy;&rcy;&ocy;&tscy;&iecy;&dcy;&ucy;&rcy;&ycy;: &vcy;&ocy;&zcy;&dcy;&ucy;&shcy;&ncy;&ycy;&iecy; &vcy;&acy;&ncy;&ncy;&ycy;, &kcy;&ucy;&pcy;&acy;&ncy;&icy;&iecy;, &scy;&ocy;&lcy;&ncy;&iecy;&chcy;&ncy;&ycy;&iecy; &vcy;&acy;&ncy;&ncy;&ycy;, &vcy;&ncy;&ucy;&tcy;&rcy;&icy;&ocy;&tcy;&rcy;&yacy;&dcy;&ncy;&ycy;&iecy; &icy; &ocy;&bcy;&shchcy;&iecy;&lcy;&acy;&gcy;&iecy;&rcy;&ncy;&ycy;&iecy; &mcy;&iecy;&rcy;&ocy;&pcy;&rcy;&icy;&yacy;&tcy;&icy;&yacy;.
-                          br
-                          | &#x9; 13:00 &ndash; 13:30 &ndash; &scy;&vcy;&ocy;&bcy;&ocy;&dcy;&ncy;&ocy;&iecy; &vcy;&rcy;&iecy;&mcy;&yacy;
-                          br
-                          | &#x9; 13:30 &ndash; &ocy;&bcy;&iecy;&dcy;
-                          br
-                          | &#x9; 14:00 &ndash; 15:30 &ndash; &tcy;&icy;&khcy;&icy;&jcy; &chcy;&acy;&scy;
-                          br
-                          | &#x9; 15:30 &ndash; &pcy;&ocy;&lcy;&dcy;&ncy;&icy;&kcy;
-                          br
-                          | &#x9; 16:00 &ndash; 18:00 &ndash; &acy;&kcy;&tcy;&icy;&vcy;&ncy;&ycy;&jcy; &ocy;&tcy;&dcy;&ycy;&khcy;, &ocy;&zcy;&dcy;&ocy;&rcy;&ocy;&vcy;&icy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&iecy; &pcy;&rcy;&ocy;&tscy;&iecy;&dcy;&ucy;&rcy;&ycy;: &vcy;&ocy;&zcy;&dcy;&ucy;&shcy;&ncy;&ycy;&iecy; &vcy;&acy;&ncy;&ncy;&ycy;, &kcy;&ucy;&pcy;&acy;&ncy;&icy;&iecy;, &scy;&ocy;&lcy;&ncy;&iecy;&chcy;&ncy;&ycy;&iecy; &vcy;&acy;&ncy;&ncy;&ycy;, &vcy;&ncy;&ucy;&tcy;&rcy;&icy;&ocy;&tcy;&rcy;&yacy;&dcy;&ncy;&ycy;&iecy; &icy; &ocy;&bcy;&shchcy;&iecy;&lcy;&acy;&gcy;&iecy;&rcy;&ncy;&ycy;&iecy; &mcy;&iecy;&rcy;&ocy;&pcy;&rcy;&icy;&yacy;&tcy;&icy;&yacy;.
-                          br
-                          | &#x9; 18:00 &ndash; 19:00 &ndash; &scy;&vcy;&ocy;&bcy;&ocy;&dcy;&ncy;&ocy;&iecy; &vcy;&rcy;&iecy;&mcy;&yacy;
-                          br
-                          | &#x9; 19:00 &ndash; &ucy;&zhcy;&icy;&ncy;
-                          br
-                          | &#x9; 20:00 &ndash; &ocy;&bcy;&shchcy;&iecy;&lcy;&acy;&gcy;&iecy;&rcy;&ncy;&ycy;&iecy; &mcy;&iecy;&rcy;&ocy;&pcy;&rcy;&icy;&yacy;&tcy;&icy;&yacy;
-                          br
-                          | &#x9; 21:30 &ndash; &vcy;&tcy;&ocy;&rcy;&ocy;&jcy; &ucy;&zhcy;&icy;&ncy;
-                          br
-                          | &#x9; 22:00 &ndash; &pcy;&ocy;&dcy;&gcy;&ocy;&tcy;&ocy;&vcy;&kcy;&acy; &kcy;&ocy; &scy;&ncy;&ucy;
-                          br
-                          | &#x9; 22:30 &ndash; &scy;&ocy;&ncy;.
-                          br
-                        p
-                          | &Pcy;&rcy;&icy; &pcy;&lcy;&acy;&ncy;&icy;&rcy;&ocy;&vcy;&acy;&ncy;&icy;&icy; &rcy;&acy;&scy;&pcy;&ocy;&rcy;&yacy;&dcy;&kcy;&acy; &dcy;&ncy;&yacy; &scy;&lcy;&iecy;&dcy;&ucy;&iecy;&tcy; &ocy;&bcy;&yacy;&zcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy; &ucy;&chcy;&icy;&tcy;&ycy;&vcy;&acy;&tcy;&softcy; &vcy;&ocy;&zcy;&rcy;&acy;&scy;&tcy;&ncy;&ycy;&iecy; &ocy;&scy;&ocy;&bcy;&iecy;&ncy;&ncy;&ocy;&scy;&tcy;&icy; &dcy;&iecy;&tcy;&iecy;&jcy;, &mcy;&iecy;&scy;&tcy;&ocy;&rcy;&acy;&scy;&pcy;&ocy;&lcy;&ocy;&zhcy;&iecy;&ncy;&icy;&yacy; &icy; &icy;&ncy;&fcy;&rcy;&acy;&scy;&tcy;&rcy;&ucy;&kcy;&tcy;&ucy;&rcy;&ucy; &lcy;&acy;&gcy;&iecy;&rcy;&yacy;.
-
-                      button.close-button(data-close='', aria-label='Close modal', type='button')
-                        span(aria-hidden='true') &times;
-                    #exampleModal3.reveal(data-reveal='' data-animation-in="spin-in" data-animation-out="spin-out").large
-                      h2 &Kcy;&acy;&kcy;&icy;&iecy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&ycy; &ncy;&ucy;&zhcy;&ncy;&ycy; &dcy;&lcy;&yacy; &lcy;&acy;&gcy;&iecy;&rcy;&yacy; &rcy;&iecy;&bcy;&iecy;&ncy;&kcy;&ucy;
-                      p
-                        | &Vcy; &scy;&ocy;&ocy;&tcy;&vcy;&iecy;&tcy;&scy;&tcy;&vcy;&icy;&icy; &scy; &zcy;&acy;&kcy;&ocy;&ncy;&ocy;&dcy;&acy;&tcy;&iecy;&lcy;&softcy;&scy;&tcy;&vcy;&ocy;&mcy; &Rcy;&Fcy;
-                        strong &nbsp; &ocy;&bcy;&yacy;&zcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&mcy;&icy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&acy;&mcy;&icy; &dcy;&lcy;&yacy; &lcy;&iecy;&tcy;&ncy;&iecy;&gcy;&ocy; &lcy;&acy;&gcy;&iecy;&rcy;&yacy;
-                        |  &bcy;&iecy;&zcy; &lcy;&iecy;&chcy;&iecy;&ncy;&icy;&yacy; &yacy;&vcy;&lcy;&yacy;&yucy;&tcy;&scy;&yacy;:
-                      ul
-                        li &Mcy;&iecy;&dcy;&icy;&tscy;&icy;&ncy;&scy;&kcy;&acy;&yacy; &scy;&pcy;&rcy;&acy;&vcy;&kcy;&acy; &fcy;&ocy;&rcy;&mcy;&acy; &numero; 079/&ucy;;
-                        li &Scy;&pcy;&rcy;&acy;&vcy;&kcy;&acy; &ocy;&bcy; &ecy;&pcy;&icy;&dcy;. &ocy;&kcy;&rcy;&ucy;&zhcy;&iecy;&ncy;&icy;&icy;;
-                        li &Rcy;&iecy;&zcy;&ucy;&lcy;&softcy;&tcy;&acy;&tcy;&ycy; &acy;&ncy;&acy;&lcy;&icy;&zcy;&ocy;&vcy;;
-                        li &Vcy;&ycy;&pcy;&icy;&scy;&kcy;&acy; &icy;&zcy; &pcy;&rcy;&icy;&vcy;&icy;&vcy;&ocy;&chcy;&ncy;&ocy;&jcy; &kcy;&acy;&rcy;&tcy;&ycy;;
-                        li &Scy;&pcy;&rcy;&acy;&vcy;&kcy;&acy; &ocy;&tcy; &dcy;&iecy;&rcy;&mcy;&acy;&tcy;&ocy;&lcy;&ocy;&gcy;&acy;;
-                        li &Kcy;&ocy;&pcy;&icy;&yacy; &scy;&vcy;&icy;&dcy;&iecy;&tcy;&iecy;&lcy;&softcy;&scy;&tcy;&vcy;&acy; &ocy; &rcy;&ocy;&zhcy;&dcy;&iecy;&ncy;&icy;&icy;;
-                        li &Kcy;&ocy;&pcy;&icy;&yacy; &pcy;&ocy;&lcy;&icy;&scy;&acy; &mcy;&iecy;&dcy;&icy;&tscy;&icy;&ncy;&scy;&kcy;&ocy;&gcy;&ocy; &scy;&tcy;&rcy;&acy;&khcy;&ocy;&vcy;&acy;&ncy;&icy;&yacy;;
-                        li &Kcy;&vcy;&icy;&tcy;&acy;&ncy;&tscy;&icy;&yacy; &ocy;&bcy; &ocy;&pcy;&lcy;&acy;&tcy;&iecy; &icy; &dcy;&ocy;&gcy;&ocy;&vcy;&ocy;&rcy;;
-                        li &Pcy;&ocy;&lcy;&icy;&scy; &Ocy;&Mcy;&Scy;;
-                        li &Scy;&tcy;&rcy;&acy;&khcy;&ocy;&vcy;&kcy;&acy; &ocy;&tcy; &ucy;&kcy;&ucy;&scy;&acy; &kcy;&lcy;&iecy;&shchcy;&acy;.
-                      p
-                        | &Dcy;&lcy;&yacy; &ocy;&fcy;&ocy;&rcy;&mcy;&lcy;&iecy;&ncy;&icy;&yacy; &scy;&tcy;&rcy;&acy;&khcy;&ocy;&vcy;&kcy;&icy; &ocy;&tcy; &ucy;&kcy;&ucy;&scy;&acy; &kcy;&lcy;&iecy;&shchcy;&acy; &rcy;&ocy;&dcy;&icy;&tcy;&iecy;&lcy;&icy; &mcy;&ocy;&gcy;&ucy;&tcy; &vcy;&ycy;&bcy;&rcy;&acy;&tcy;&softcy; &lcy;&yucy;&bcy;&ucy;&yucy; &scy;&tcy;&rcy;&acy;&khcy;&ocy;&vcy;&ucy;&yucy; &kcy;&ocy;&mcy;&pcy;&acy;&ncy;&icy;&yucy;. &Scy;&pcy;&iecy;&tscy;&icy;&acy;&lcy;&icy;&scy;&tcy;&ycy; &scy;&ocy;&vcy;&iecy;&tcy;&ucy;&yucy;&tcy; &pcy;&rcy;&icy;&ocy;&bcy;&rcy;&iecy;&tcy;&acy;&tcy;&softcy;
-                        | &nbsp;
-                        a(href='/', target='_blank') &scy;&tcy;&rcy;&acy;&khcy;&ocy;&vcy;&kcy;&ucy; &dcy;&lcy;&yacy; &lcy;&iecy;&tcy;&ncy;&iecy;&gcy;&ocy; &lcy;&acy;&gcy;&iecy;&rcy;&yacy;
-                        |  &scy; &pcy;&ocy;&lcy;&ncy;&ycy;&mcy; &pcy;&ocy;&kcy;&rcy;&ycy;&tcy;&icy;&iecy;&mcy;, &kcy;&ocy;&tcy;&ocy;&rcy;&acy;&yacy; &pcy;&ocy;&kcy;&rcy;&ycy;&vcy;&acy;&iecy;&tcy; &ncy;&iecy; &tcy;&ocy;&lcy;&softcy;&kcy;&ocy; &ucy;&kcy;&ucy;&scy;&ycy; &kcy;&lcy;&iecy;&shchcy;&iecy;&jcy;, &ncy;&ocy; &icy; &lcy;&yucy;&bcy;&ycy;&iecy; &ncy;&iecy;&scy;&chcy;&acy;&scy;&tcy;&ncy;&ycy;&iecy; &scy;&lcy;&ucy;&chcy;&acy;&icy; &pcy;&ocy;&lcy;&ucy;&chcy;&iecy;&ncy;&ncy;&ycy;&iecy; &vcy; &pcy;&iecy;&rcy;&icy;&ocy;&dcy; &dcy;&iecy;&jcy;&scy;&tcy;&vcy;&icy;&yacy; &pcy;&ocy;&lcy;&icy;&scy;&acy;. &Scy;&tcy;&rcy;&acy;&khcy;&ocy;&vcy;&acy;&yacy; &zcy;&acy;&shchcy;&icy;&tcy;&acy; &rcy;&acy;&bcy;&ocy;&tcy;&acy;&iecy;&tcy; 24/7 &icy; &pcy;&ocy;&zcy;&vcy;&ocy;&lcy;&yacy;&iecy;&tcy; &pcy;&ocy;&lcy;&ucy;&chcy;&icy;&tcy;&softcy; &iecy;&dcy;&icy;&ncy;&ocy;&vcy;&rcy;&iecy;&mcy;&iecy;&ncy;&ncy;&ucy;&yucy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&softcy;&ncy;&ucy;&yucy; &kcy;&ocy;&mcy;&pcy;&iecy;&ncy;&scy;&acy;&tscy;&icy;&yucy; &pcy;&rcy;&icy; &ncy;&acy;&scy;&tcy;&ucy;&pcy;&lcy;&iecy;&ncy;&icy;&icy; &scy;&tcy;&rcy;&acy;&khcy;&ocy;&vcy;&ocy;&gcy;&ocy; &scy;&lcy;&ucy;&chcy;&acy;&yacy;. &Kcy;&ucy;&pcy;&icy;&tcy;&softcy; &tcy;&acy;&kcy;&ucy;&yucy; &scy;&tcy;&rcy;&acy;&khcy;&ocy;&vcy;&kcy;&ucy; &mcy;&ocy;&zhcy;&ncy;&ocy; &ncy;&acy; &ncy;&acy;&shcy;&iecy;&mcy; &scy;&acy;&jcy;&tcy;&iecy;
-                        | &nbsp;
-                        a(href='/', target='_blank') sport.insure
-                        |  &zcy;&acy; &ncy;&iecy;&scy;&kcy;&ocy;&lcy;&softcy;&kcy;&ocy; &mcy;&icy;&ncy;&ucy;&tcy; &mcy;&icy;&ncy;&ucy;&tcy; &vcy; &rcy;&iecy;&zhcy;&icy;&mcy;&iecy; &ocy;&ncy;&lcy;&acy;&jcy;&ncy;, &ecy;&tcy;&ocy; &ocy;&chcy;&iecy;&ncy;&softcy; &ucy;&dcy;&ocy;&bcy;&ncy;&ocy;.
-                      p
-                        | &Vcy; &scy;&lcy;&ucy;&chcy;&acy;&iecy; &iecy;&scy;&lcy;&icy; &rcy;&ocy;&dcy;&icy;&tcy;&iecy;&lcy;&icy; &pcy;&icy;&scy;&acy;&lcy;&icy; &ocy;&tcy;&kcy;&acy;&zcy; &ocy;&tcy; &pcy;&rcy;&ocy;&vcy;&iecy;&dcy;&iecy;&ncy;&icy;&yacy; &pcy;&lcy;&acy;&ncy;&ocy;&vcy;&ocy;&jcy; &vcy;&acy;&kcy;&tscy;&icy;&ncy;&acy;&tscy;&icy;&icy; &icy;&lcy;&icy; &pcy;&rcy;&ocy;&bcy; &mcy;&acy;&ncy;&tcy;&ucy;, &ncy;&ucy;&zhcy;&ncy;&ocy; &pcy;&rcy;&iecy;&dcy;&hardcy;&yacy;&vcy;&icy;&tcy;&softcy; &kcy;&ocy;&pcy;&icy;&yucy; &acy;&kcy;&tcy;&ocy;&vcy; &ocy;&bcy; &ocy;&tcy;&kcy;&acy;&zcy;&iecy;. &Tcy;&acy;&kcy;&zhcy;&iecy; &mcy;&ocy;&zhcy;&iecy;&tcy; &pcy;&ocy;&tcy;&rcy;&iecy;&bcy;&ocy;&vcy;&acy;&tcy;&softcy;&scy;&yacy; &Pcy;&TScy;&Rcy; &tcy;&iecy;&scy;&tcy;, &scy;&dcy;&iecy;&lcy;&acy;&tcy;&softcy; &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&jcy; &ncy;&iecy;&ocy;&bcy;&khcy;&ocy;&dcy;&icy;&mcy;&ocy; &zcy;&acy; 72 &chcy;&acy;&scy;&acy; &dcy;&ocy; &pcy;&rcy;&icy;&iecy;&zcy;&dcy;&acy;.
-                      p
-                        | &Ocy;&tcy;&scy;&ucy;&tcy;&scy;&tcy;&vcy;&icy;&iecy; &lcy;&yucy;&bcy;&ocy;&gcy;&ocy; &icy;&zcy; &ecy;&tcy;&icy;&khcy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&ocy;&vcy; &mcy;&ocy;&zhcy;&iecy;&tcy; &scy;&tcy;&acy;&tcy;&softcy; &pcy;&rcy;&icy;&chcy;&icy;&ncy;&ocy;&jcy; &ocy;&tcy;&kcy;&acy;&zcy;&acy; &zcy;&acy;&scy;&iecy;&lcy;&iecy;&ncy;&icy;&yacy; &rcy;&iecy;&bcy;&iecy;&ncy;&kcy;&acy;. &Scy;&pcy;&icy;&scy;&ocy;&kcy; &ncy;&iecy;&ocy;&bcy;&khcy;&ocy;&dcy;&icy;&mcy;&ycy;&khcy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&ocy;&vcy; &ucy;&tcy;&ocy;&chcy;&ncy;&yacy;&jcy;&tcy;&iecy; &ncy;&acy; &ocy;&fcy;&icy;&tscy;&icy;&acy;&lcy;&softcy;&ncy;&ocy;&mcy; &scy;&acy;&jcy;&tcy;&iecy; &lcy;&acy;&gcy;&iecy;&rcy;&yacy; &ocy;&tcy;&dcy;&ycy;&khcy;&acy;.
-                      button.close-button(data-close='', aria-label='Close modal', type='button')
-                        span(aria-hidden='true') &times;
-                    #exampleModal4.reveal(data-reveal='' data-animation-in="spin-in" data-animation-out="spin-out").large
-                      h2
-                        strong &Scy;&pcy;&icy;&scy;&ocy;&kcy; &vcy;&iecy;&shchcy;&iecy;&jcy;, &ncy;&iecy;&ocy;&bcy;&khcy;&ocy;&dcy;&icy;&mcy;&ycy;&khcy; &rcy;&iecy;&bcy;&iecy;&ncy;&kcy;&ucy; &vcy; &dcy;&iecy;&tcy;&scy;&kcy;&ocy;&mcy; &lcy;&acy;&gcy;&iecy;&rcy;&iecy;:
-                      ul
-                        li 2 &pcy;&acy;&rcy;&ycy; &lcy;&iecy;&gcy;&kcy;&ocy;&jcy; &ocy;&bcy;&ucy;&vcy;&icy; (&scy;&acy;&ncy;&dcy;&acy;&lcy;&icy;&icy; &scy; &ucy;&dcy;&ocy;&bcy;&ncy;&ycy;&mcy;&icy; &zcy;&acy;&scy;&tcy;&iecy;&zhcy;&kcy;&acy;&mcy;&icy;)
-                        li &Scy;&pcy;&ocy;&rcy;&tcy;&icy;&vcy;&ncy;&acy;&yacy; &ocy;&bcy;&ucy;&vcy;&softcy; (&kcy;&iecy;&dcy;&ycy;, &kcy;&rcy;&ocy;&scy;&scy;&ocy;&vcy;&kcy;&icy;)
-                        li &SHcy;&lcy;&iecy;&pcy;&acy;&ncy;&tscy;&ycy; &icy;&lcy;&icy; &scy;&lcy;&acy;&ncy;&tscy;&ycy;
-                        li 2 &pcy;&acy;&rcy;&ycy; &ocy;&bcy;&ucy;&vcy;&icy; &ncy;&acy; &khcy;&ocy;&lcy;&ocy;&dcy;&ncy;&ucy;&yucy; &pcy;&ocy;&gcy;&ocy;&dcy;&ucy; (&zhcy;&iecy;&lcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy; &vcy;&ocy;&dcy;&ocy;&ncy;&iecy;&pcy;&rcy;&ocy;&ncy;&icy;&tscy;&acy;&iecy;&mcy;&ocy;&jcy;)
-                        li
-                          | &Lcy;&iecy;&gcy;&kcy;&icy;&jcy; &gcy;&ocy;&lcy;&ocy;&vcy;&ncy;&ocy;&jcy; &ucy;&bcy;&ocy;&rcy; (&ncy;&acy;&pcy;&rcy;&icy;&mcy;&iecy;&rcy;, &kcy;&iecy;&pcy;&kcy;&acy;, &pcy;&acy;&ncy;&acy;&mcy;&acy; &icy;&lcy;&icy; &bcy;&acy;&ncy;&dcy;&acy;&ncy;&acy;) &icy; &gcy;&ocy;&lcy;&ocy;&vcy;&ncy;&ocy;&jcy; &ucy;&bcy;&ocy;&rcy; &pcy;&ocy;&tcy;&iecy;&pcy;&lcy;&iecy;&iecy;
-                        li &Pcy;&acy;&rcy;&acy; &pcy;&lcy;&acy;&vcy;&ocy;&kcy; &dcy;&lcy;&yacy; &mcy;&acy;&lcy;&softcy;&chcy;&icy;&kcy;&acy; &icy;&lcy;&icy; &kcy;&ucy;&pcy;&acy;&lcy;&softcy;&ncy;&icy;&kcy;&ocy;&vcy; &dcy;&lcy;&yacy; &dcy;&iecy;&vcy;&ocy;&chcy;&kcy;&icy;
-                        li &Ocy;&chcy;&kcy;&icy; &icy; &shcy;&acy;&pcy;&ocy;&chcy;&kcy;&acy; &dcy;&lcy;&yacy; &pcy;&lcy;&acy;&vcy;&acy;&ncy;&icy;&yacy; (&pcy;&rcy;&icy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy; &vcy; &lcy;&acy;&gcy;&iecy;&rcy;&iecy; &bcy;&acy;&scy;&scy;&iecy;&jcy;&ncy;&acy;)
-                        li &Lcy;&iecy;&gcy;&kcy;&icy;&iecy; &mcy;&acy;&jcy;&kcy;&icy;, &fcy;&ucy;&tcy;&bcy;&ocy;&lcy;&kcy;&icy; &ndash; &ncy;&iecy; &mcy;&iecy;&ncy;&iecy;&iecy; 4-5 &shcy;&tcy;
-                        li &Pcy;&acy;&rcy;&acy; &lcy;&iecy;&gcy;&kcy;&icy;&khcy; &vcy;&iecy;&shchcy;&iecy;&jcy; &scy; &dcy;&lcy;&icy;&ncy;&ncy;&ycy;&mcy; &rcy;&ucy;&kcy;&acy;&vcy;&ocy;&mcy; (&fcy;&ucy;&tcy;&bcy;&ocy;&lcy;&ocy;&kcy; &icy;&lcy;&icy; &rcy;&ucy;&bcy;&acy;&shcy;&iecy;&kcy;)
-                        li &SHcy;&ocy;&rcy;&tcy;&ycy; &ndash; 2 &pcy;&acy;&rcy;&ycy;
-                        li &Dcy;&zhcy;&icy;&ncy;&scy;&ycy; (&bcy;&rcy;&yucy;&kcy;&icy;) &ndash; 2 &pcy;&acy;&rcy;&ycy;
-                        li &YUcy;&bcy;&kcy;&icy; (&pcy;&lcy;&acy;&tcy;&softcy;&yacy;) &dcy;&lcy;&yacy; &dcy;&iecy;&vcy;&ocy;&chcy;&iecy;&kcy; &ndash; 2 &shcy;&tcy;
-                        li &Pcy;&lcy;&yacy;&zhcy;&ncy;&ocy;&iecy; &pcy;&lcy;&acy;&tcy;&softcy;&iecy; (&iecy;&scy;&lcy;&icy; &lcy;&acy;&gcy;&iecy;&rcy;&softcy; &ncy;&acy; &mcy;&ocy;&rcy;&iecy;)
-                        li &Tcy;&ocy;&lcy;&scy;&tcy;&ocy;&vcy;&kcy;&acy;, &fcy;&lcy;&icy;&scy;&ocy;&vcy;&acy;&yacy; &kcy;&ocy;&fcy;&tcy;&acy; &ndash; 2 &shcy;&tcy;
-                        li &Kcy;&ucy;&rcy;&tcy;&kcy;&acy; (&vcy;&iecy;&tcy;&rcy;&ocy;&vcy;&kcy;&acy;) &scy; &kcy;&acy;&pcy;&yucy;&shcy;&ocy;&ncy;&ocy;&mcy; &ncy;&acy; &pcy;&rcy;&ocy;&khcy;&lcy;&acy;&dcy;&ncy;&ucy;&yucy; &pcy;&ocy;&gcy;&ocy;&dcy;&ucy; (&zhcy;&iecy;&lcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy; &ncy;&iecy;&pcy;&rcy;&ocy;&mcy;&ocy;&kcy;&acy;&iecy;&mcy;&acy;&yacy;)
-                        li &Ucy;&lcy;&icy;&chcy;&ncy;&acy;&yacy; &scy;&pcy;&ocy;&rcy;&tcy;&icy;&vcy;&ncy;&acy;&yacy; &fcy;&ocy;&rcy;&mcy;&acy;
-                        li
-                          | &Tcy;&rcy;&ucy;&scy;&ycy; (&icy;&zcy; &rcy;&acy;&scy;&chcy;&iecy;&tcy;&acy; &ncy;&acy; &vcy;&scy;&yucy; &scy;&mcy;&iecy;&ncy;&ucy;, &vcy;&ocy; &icy;&zcy;&bcy;&iecy;&zhcy;&acy;&ncy;&icy;&iecy;
+                          | &Dcy;&lcy;&yacy; &ocy;&fcy;&ocy;&rcy;&mcy;&lcy;&iecy;&ncy;&icy;&yacy; &scy;&tcy;&rcy;&acy;&khcy;&ocy;&vcy;&kcy;&icy; &ocy;&tcy; &ucy;&kcy;&ucy;&scy;&acy; &kcy;&lcy;&iecy;&shchcy;&acy; &rcy;&ocy;&dcy;&icy;&tcy;&iecy;&lcy;&icy; &mcy;&ocy;&gcy;&ucy;&tcy; &vcy;&ycy;&bcy;&rcy;&acy;&tcy;&softcy; &lcy;&yucy;&bcy;&ucy;&yucy; &scy;&tcy;&rcy;&acy;&khcy;&ocy;&vcy;&ucy;&yucy; &kcy;&ocy;&mcy;&pcy;&acy;&ncy;&icy;&yucy;. &Scy;&pcy;&iecy;&tscy;&icy;&acy;&lcy;&icy;&scy;&tcy;&ycy; &scy;&ocy;&vcy;&iecy;&tcy;&ucy;&yucy;&tcy; &pcy;&rcy;&icy;&ocy;&bcy;&rcy;&iecy;&tcy;&acy;&tcy;&softcy;
                           | &nbsp;
-                          a(href='http://materinstvo.ru/art/11885') &ncy;&iecy;&pcy;&rcy;&icy;&yacy;&tcy;&ncy;&ocy;&scy;&tcy;&iecy;&jcy;
-                          | )
-                        li &Ncy;&ocy;&scy;&kcy;&icy; (&icy;&zcy; &rcy;&acy;&scy;&chcy;&iecy;&tcy;&acy; &ncy;&acy; &vcy;&scy;&yucy; &scy;&mcy;&iecy;&ncy;&ucy;)
-                        li &Pcy;&icy;&zhcy;&acy;&mcy;&acy; (&ncy;&ocy;&chcy;&ncy;&acy;&yacy; &rcy;&ucy;&bcy;&acy;&shcy;&kcy;&acy;), &khcy;&acy;&lcy;&acy;&tcy; (&pcy;&rcy;&icy; &zhcy;&iecy;&lcy;&acy;&ncy;&icy;&icy;)
-                        li &Kcy;&ocy;&scy;&tcy;&yucy;&mcy;&ycy; &icy; &ncy;&acy;&rcy;&yacy;&dcy;&ycy; &dcy;&lcy;&yacy; &dcy;&icy;&scy;&kcy;&ocy;&tcy;&iecy;&kcy;, &tcy;&vcy;&ocy;&rcy;&chcy;&iecy;&scy;&kcy;&icy;&khcy; &vcy;&iecy;&chcy;&iecy;&rcy;&ocy;&vcy;
-                      p
-                        | &IEcy;&scy;&lcy;&icy; &ucy; &rcy;&iecy;&bcy;&iecy;&ncy;&kcy;&acy; &iecy;&scy;&tcy;&softcy; &ncy;&acy;&rcy;&ocy;&dcy;&ncy;&ycy;&iecy; &kcy;&ocy;&scy;&tcy;&yucy;&mcy;&ycy;, &scy;&tscy;&iecy;&ncy;&icy;&chcy;&iecy;&scy;&kcy;&icy;&iecy; &kcy;&ocy;&scy;&tcy;&yucy;&mcy;&ycy;, &bcy;&acy;&lcy;&softcy;&ncy;&ycy;&iecy; &pcy;&lcy;&acy;&tcy;&softcy;&yacy; &icy;&lcy;&icy; &scy;&pcy;&iecy;&tscy;&icy;&acy;&lcy;&softcy;&ncy;&acy;&yacy; &fcy;&ocy;&rcy;&mcy;&acy; &dcy;&lcy;&yacy; &pcy;&ocy;&kcy;&acy;&zcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&khcy; &scy;&pcy;&ocy;&rcy;&tcy;&icy;&vcy;&ncy;&ycy;&khcy; &vcy;&ycy;&scy;&tcy;&ucy;&pcy;&lcy;&iecy;&ncy;&icy;&jcy; &ndash; &pcy;&iecy;&rcy;&iecy;&dcy;&acy;&jcy;&tcy;&iecy; &icy;&khcy; &vcy; &chcy;&iecy;&khcy;&lcy;&iecy; &vcy;&ocy;&zhcy;&acy;&tcy;&ocy;&mcy;&ucy; &dcy;&lcy;&yacy; &ucy;&chcy;&acy;&scy;&tcy;&icy;&yacy; &Vcy;&acy;&shcy;&iecy;&gcy;&ocy; &rcy;&iecy;&bcy;&iecy;&ncy;&kcy;&acy; &vcy; &rcy;&acy;&zcy;&lcy;&icy;&chcy;&ncy;&ycy;&khcy; &lcy;&icy;&chcy;&ncy;&ycy;&khcy; &kcy;&ocy;&ncy;&kcy;&ucy;&rcy;&scy;&ncy;&ycy;&khcy; &pcy;&rcy;&ocy;&gcy;&rcy;&acy;&mcy;&mcy;&acy;&khcy;.
+                          a(href='/', target='_blank') &scy;&tcy;&rcy;&acy;&khcy;&ocy;&vcy;&kcy;&ucy; &dcy;&lcy;&yacy; &lcy;&iecy;&tcy;&ncy;&iecy;&gcy;&ocy; &lcy;&acy;&gcy;&iecy;&rcy;&yacy;
+                          |  &scy; &pcy;&ocy;&lcy;&ncy;&ycy;&mcy; &pcy;&ocy;&kcy;&rcy;&ycy;&tcy;&icy;&iecy;&mcy;, &kcy;&ocy;&tcy;&ocy;&rcy;&acy;&yacy; &pcy;&ocy;&kcy;&rcy;&ycy;&vcy;&acy;&iecy;&tcy; &ncy;&iecy; &tcy;&ocy;&lcy;&softcy;&kcy;&ocy; &ucy;&kcy;&ucy;&scy;&ycy; &kcy;&lcy;&iecy;&shchcy;&iecy;&jcy;, &ncy;&ocy; &icy; &lcy;&yucy;&bcy;&ycy;&iecy; &ncy;&iecy;&scy;&chcy;&acy;&scy;&tcy;&ncy;&ycy;&iecy; &scy;&lcy;&ucy;&chcy;&acy;&icy; &pcy;&ocy;&lcy;&ucy;&chcy;&iecy;&ncy;&ncy;&ycy;&iecy; &vcy; &pcy;&iecy;&rcy;&icy;&ocy;&dcy; &dcy;&iecy;&jcy;&scy;&tcy;&vcy;&icy;&yacy; &pcy;&ocy;&lcy;&icy;&scy;&acy;. &Scy;&tcy;&rcy;&acy;&khcy;&ocy;&vcy;&acy;&yacy; &zcy;&acy;&shchcy;&icy;&tcy;&acy; &rcy;&acy;&bcy;&ocy;&tcy;&acy;&iecy;&tcy; 24/7 &icy; &pcy;&ocy;&zcy;&vcy;&ocy;&lcy;&yacy;&iecy;&tcy; &pcy;&ocy;&lcy;&ucy;&chcy;&icy;&tcy;&softcy; &iecy;&dcy;&icy;&ncy;&ocy;&vcy;&rcy;&iecy;&mcy;&iecy;&ncy;&ncy;&ucy;&yucy; &mcy;&acy;&tcy;&iecy;&rcy;&icy;&acy;&lcy;&softcy;&ncy;&ucy;&yucy; &kcy;&ocy;&mcy;&pcy;&iecy;&ncy;&scy;&acy;&tscy;&icy;&yucy; &pcy;&rcy;&icy; &ncy;&acy;&scy;&tcy;&ucy;&pcy;&lcy;&iecy;&ncy;&icy;&icy; &scy;&tcy;&rcy;&acy;&khcy;&ocy;&vcy;&ocy;&gcy;&ocy; &scy;&lcy;&ucy;&chcy;&acy;&yacy;. &Kcy;&ucy;&pcy;&icy;&tcy;&softcy; &tcy;&acy;&kcy;&ucy;&yucy; &scy;&tcy;&rcy;&acy;&khcy;&ocy;&vcy;&kcy;&ucy; &mcy;&ocy;&zhcy;&ncy;&ocy; &ncy;&acy; &ncy;&acy;&shcy;&iecy;&mcy; &scy;&acy;&jcy;&tcy;&iecy;
+                          | &nbsp;
+                          a(href='/', target='_blank') sport.insure
+                          |  &zcy;&acy; &ncy;&iecy;&scy;&kcy;&ocy;&lcy;&softcy;&kcy;&ocy; &mcy;&icy;&ncy;&ucy;&tcy; &mcy;&icy;&ncy;&ucy;&tcy; &vcy; &rcy;&iecy;&zhcy;&icy;&mcy;&iecy; &ocy;&ncy;&lcy;&acy;&jcy;&ncy;, &ecy;&tcy;&ocy; &ocy;&chcy;&iecy;&ncy;&softcy; &ucy;&dcy;&ocy;&bcy;&ncy;&ocy;.
+                        p
+                          | &Vcy; &scy;&lcy;&ucy;&chcy;&acy;&iecy; &iecy;&scy;&lcy;&icy; &rcy;&ocy;&dcy;&icy;&tcy;&iecy;&lcy;&icy; &pcy;&icy;&scy;&acy;&lcy;&icy; &ocy;&tcy;&kcy;&acy;&zcy; &ocy;&tcy; &pcy;&rcy;&ocy;&vcy;&iecy;&dcy;&iecy;&ncy;&icy;&yacy; &pcy;&lcy;&acy;&ncy;&ocy;&vcy;&ocy;&jcy; &vcy;&acy;&kcy;&tscy;&icy;&ncy;&acy;&tscy;&icy;&icy; &icy;&lcy;&icy; &pcy;&rcy;&ocy;&bcy; &mcy;&acy;&ncy;&tcy;&ucy;, &ncy;&ucy;&zhcy;&ncy;&ocy; &pcy;&rcy;&iecy;&dcy;&hardcy;&yacy;&vcy;&icy;&tcy;&softcy; &kcy;&ocy;&pcy;&icy;&yucy; &acy;&kcy;&tcy;&ocy;&vcy; &ocy;&bcy; &ocy;&tcy;&kcy;&acy;&zcy;&iecy;. &Tcy;&acy;&kcy;&zhcy;&iecy; &mcy;&ocy;&zhcy;&iecy;&tcy; &pcy;&ocy;&tcy;&rcy;&iecy;&bcy;&ocy;&vcy;&acy;&tcy;&softcy;&scy;&yacy; &Pcy;&TScy;&Rcy; &tcy;&iecy;&scy;&tcy;, &scy;&dcy;&iecy;&lcy;&acy;&tcy;&softcy; &kcy;&ocy;&tcy;&ocy;&rcy;&ycy;&jcy; &ncy;&iecy;&ocy;&bcy;&khcy;&ocy;&dcy;&icy;&mcy;&ocy; &zcy;&acy; 72 &chcy;&acy;&scy;&acy; &dcy;&ocy; &pcy;&rcy;&icy;&iecy;&zcy;&dcy;&acy;.
+                        p
+                          | &Ocy;&tcy;&scy;&ucy;&tcy;&scy;&tcy;&vcy;&icy;&iecy; &lcy;&yucy;&bcy;&ocy;&gcy;&ocy; &icy;&zcy; &ecy;&tcy;&icy;&khcy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&ocy;&vcy; &mcy;&ocy;&zhcy;&iecy;&tcy; &scy;&tcy;&acy;&tcy;&softcy; &pcy;&rcy;&icy;&chcy;&icy;&ncy;&ocy;&jcy; &ocy;&tcy;&kcy;&acy;&zcy;&acy; &zcy;&acy;&scy;&iecy;&lcy;&iecy;&ncy;&icy;&yacy; &rcy;&iecy;&bcy;&iecy;&ncy;&kcy;&acy;. &Scy;&pcy;&icy;&scy;&ocy;&kcy; &ncy;&iecy;&ocy;&bcy;&khcy;&ocy;&dcy;&icy;&mcy;&ycy;&khcy; &dcy;&ocy;&kcy;&ucy;&mcy;&iecy;&ncy;&tcy;&ocy;&vcy; &ucy;&tcy;&ocy;&chcy;&ncy;&yacy;&jcy;&tcy;&iecy; &ncy;&acy; &ocy;&fcy;&icy;&tscy;&icy;&acy;&lcy;&softcy;&ncy;&ocy;&mcy; &scy;&acy;&jcy;&tcy;&iecy; &lcy;&acy;&gcy;&iecy;&rcy;&yacy; &ocy;&tcy;&dcy;&ycy;&khcy;&acy;.
+                        button.close-button(data-close='', aria-label='Close modal', type='button')
+                          span(aria-hidden='true') &times;
+                      #exampleModal4.reveal(data-reveal='' data-animation-in="spin-in" data-animation-out="spin-out").large
+                        h2
+                          strong &Scy;&pcy;&icy;&scy;&ocy;&kcy; &vcy;&iecy;&shchcy;&iecy;&jcy;, &ncy;&iecy;&ocy;&bcy;&khcy;&ocy;&dcy;&icy;&mcy;&ycy;&khcy; &rcy;&iecy;&bcy;&iecy;&ncy;&kcy;&ucy; &vcy; &dcy;&iecy;&tcy;&scy;&kcy;&ocy;&mcy; &lcy;&acy;&gcy;&iecy;&rcy;&iecy;:
+                        ul
+                          li 2 &pcy;&acy;&rcy;&ycy; &lcy;&iecy;&gcy;&kcy;&ocy;&jcy; &ocy;&bcy;&ucy;&vcy;&icy; (&scy;&acy;&ncy;&dcy;&acy;&lcy;&icy;&icy; &scy; &ucy;&dcy;&ocy;&bcy;&ncy;&ycy;&mcy;&icy; &zcy;&acy;&scy;&tcy;&iecy;&zhcy;&kcy;&acy;&mcy;&icy;)
+                          li &Scy;&pcy;&ocy;&rcy;&tcy;&icy;&vcy;&ncy;&acy;&yacy; &ocy;&bcy;&ucy;&vcy;&softcy; (&kcy;&iecy;&dcy;&ycy;, &kcy;&rcy;&ocy;&scy;&scy;&ocy;&vcy;&kcy;&icy;)
+                          li &SHcy;&lcy;&iecy;&pcy;&acy;&ncy;&tscy;&ycy; &icy;&lcy;&icy; &scy;&lcy;&acy;&ncy;&tscy;&ycy;
+                          li 2 &pcy;&acy;&rcy;&ycy; &ocy;&bcy;&ucy;&vcy;&icy; &ncy;&acy; &khcy;&ocy;&lcy;&ocy;&dcy;&ncy;&ucy;&yucy; &pcy;&ocy;&gcy;&ocy;&dcy;&ucy; (&zhcy;&iecy;&lcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy; &vcy;&ocy;&dcy;&ocy;&ncy;&iecy;&pcy;&rcy;&ocy;&ncy;&icy;&tscy;&acy;&iecy;&mcy;&ocy;&jcy;)
+                          li
+                            | &Lcy;&iecy;&gcy;&kcy;&icy;&jcy; &gcy;&ocy;&lcy;&ocy;&vcy;&ncy;&ocy;&jcy; &ucy;&bcy;&ocy;&rcy; (&ncy;&acy;&pcy;&rcy;&icy;&mcy;&iecy;&rcy;, &kcy;&iecy;&pcy;&kcy;&acy;, &pcy;&acy;&ncy;&acy;&mcy;&acy; &icy;&lcy;&icy; &bcy;&acy;&ncy;&dcy;&acy;&ncy;&acy;) &icy; &gcy;&ocy;&lcy;&ocy;&vcy;&ncy;&ocy;&jcy; &ucy;&bcy;&ocy;&rcy; &pcy;&ocy;&tcy;&iecy;&pcy;&lcy;&iecy;&iecy;
+                          li &Pcy;&acy;&rcy;&acy; &pcy;&lcy;&acy;&vcy;&ocy;&kcy; &dcy;&lcy;&yacy; &mcy;&acy;&lcy;&softcy;&chcy;&icy;&kcy;&acy; &icy;&lcy;&icy; &kcy;&ucy;&pcy;&acy;&lcy;&softcy;&ncy;&icy;&kcy;&ocy;&vcy; &dcy;&lcy;&yacy; &dcy;&iecy;&vcy;&ocy;&chcy;&kcy;&icy;
+                          li &Ocy;&chcy;&kcy;&icy; &icy; &shcy;&acy;&pcy;&ocy;&chcy;&kcy;&acy; &dcy;&lcy;&yacy; &pcy;&lcy;&acy;&vcy;&acy;&ncy;&icy;&yacy; (&pcy;&rcy;&icy; &ncy;&acy;&lcy;&icy;&chcy;&icy;&icy; &vcy; &lcy;&acy;&gcy;&iecy;&rcy;&iecy; &bcy;&acy;&scy;&scy;&iecy;&jcy;&ncy;&acy;)
+                          li &Lcy;&iecy;&gcy;&kcy;&icy;&iecy; &mcy;&acy;&jcy;&kcy;&icy;, &fcy;&ucy;&tcy;&bcy;&ocy;&lcy;&kcy;&icy; &ndash; &ncy;&iecy; &mcy;&iecy;&ncy;&iecy;&iecy; 4-5 &shcy;&tcy;
+                          li &Pcy;&acy;&rcy;&acy; &lcy;&iecy;&gcy;&kcy;&icy;&khcy; &vcy;&iecy;&shchcy;&iecy;&jcy; &scy; &dcy;&lcy;&icy;&ncy;&ncy;&ycy;&mcy; &rcy;&ucy;&kcy;&acy;&vcy;&ocy;&mcy; (&fcy;&ucy;&tcy;&bcy;&ocy;&lcy;&ocy;&kcy; &icy;&lcy;&icy; &rcy;&ucy;&bcy;&acy;&shcy;&iecy;&kcy;)
+                          li &SHcy;&ocy;&rcy;&tcy;&ycy; &ndash; 2 &pcy;&acy;&rcy;&ycy;
+                          li &Dcy;&zhcy;&icy;&ncy;&scy;&ycy; (&bcy;&rcy;&yucy;&kcy;&icy;) &ndash; 2 &pcy;&acy;&rcy;&ycy;
+                          li &YUcy;&bcy;&kcy;&icy; (&pcy;&lcy;&acy;&tcy;&softcy;&yacy;) &dcy;&lcy;&yacy; &dcy;&iecy;&vcy;&ocy;&chcy;&iecy;&kcy; &ndash; 2 &shcy;&tcy;
+                          li &Pcy;&lcy;&yacy;&zhcy;&ncy;&ocy;&iecy; &pcy;&lcy;&acy;&tcy;&softcy;&iecy; (&iecy;&scy;&lcy;&icy; &lcy;&acy;&gcy;&iecy;&rcy;&softcy; &ncy;&acy; &mcy;&ocy;&rcy;&iecy;)
+                          li &Tcy;&ocy;&lcy;&scy;&tcy;&ocy;&vcy;&kcy;&acy;, &fcy;&lcy;&icy;&scy;&ocy;&vcy;&acy;&yacy; &kcy;&ocy;&fcy;&tcy;&acy; &ndash; 2 &shcy;&tcy;
+                          li &Kcy;&ucy;&rcy;&tcy;&kcy;&acy; (&vcy;&iecy;&tcy;&rcy;&ocy;&vcy;&kcy;&acy;) &scy; &kcy;&acy;&pcy;&yucy;&shcy;&ocy;&ncy;&ocy;&mcy; &ncy;&acy; &pcy;&rcy;&ocy;&khcy;&lcy;&acy;&dcy;&ncy;&ucy;&yucy; &pcy;&ocy;&gcy;&ocy;&dcy;&ucy; (&zhcy;&iecy;&lcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ocy; &ncy;&iecy;&pcy;&rcy;&ocy;&mcy;&ocy;&kcy;&acy;&iecy;&mcy;&acy;&yacy;)
+                          li &Ucy;&lcy;&icy;&chcy;&ncy;&acy;&yacy; &scy;&pcy;&ocy;&rcy;&tcy;&icy;&vcy;&ncy;&acy;&yacy; &fcy;&ocy;&rcy;&mcy;&acy;
+                          li
+                            | &Tcy;&rcy;&ucy;&scy;&ycy; (&icy;&zcy; &rcy;&acy;&scy;&chcy;&iecy;&tcy;&acy; &ncy;&acy; &vcy;&scy;&yucy; &scy;&mcy;&iecy;&ncy;&ucy;, &vcy;&ocy; &icy;&zcy;&bcy;&iecy;&zhcy;&acy;&ncy;&icy;&iecy;
+                            | &nbsp;
+                            a(href='http://materinstvo.ru/art/11885') &ncy;&iecy;&pcy;&rcy;&icy;&yacy;&tcy;&ncy;&ocy;&scy;&tcy;&iecy;&jcy;
+                            | )
+                          li &Ncy;&ocy;&scy;&kcy;&icy; (&icy;&zcy; &rcy;&acy;&scy;&chcy;&iecy;&tcy;&acy; &ncy;&acy; &vcy;&scy;&yucy; &scy;&mcy;&iecy;&ncy;&ucy;)
+                          li &Pcy;&icy;&zhcy;&acy;&mcy;&acy; (&ncy;&ocy;&chcy;&ncy;&acy;&yacy; &rcy;&ucy;&bcy;&acy;&shcy;&kcy;&acy;), &khcy;&acy;&lcy;&acy;&tcy; (&pcy;&rcy;&icy; &zhcy;&iecy;&lcy;&acy;&ncy;&icy;&icy;)
+                          li &Kcy;&ocy;&scy;&tcy;&yucy;&mcy;&ycy; &icy; &ncy;&acy;&rcy;&yacy;&dcy;&ycy; &dcy;&lcy;&yacy; &dcy;&icy;&scy;&kcy;&ocy;&tcy;&iecy;&kcy;, &tcy;&vcy;&ocy;&rcy;&chcy;&iecy;&scy;&kcy;&icy;&khcy; &vcy;&iecy;&chcy;&iecy;&rcy;&ocy;&vcy;
+                        p
+                          | &IEcy;&scy;&lcy;&icy; &ucy; &rcy;&iecy;&bcy;&iecy;&ncy;&kcy;&acy; &iecy;&scy;&tcy;&softcy; &ncy;&acy;&rcy;&ocy;&dcy;&ncy;&ycy;&iecy; &kcy;&ocy;&scy;&tcy;&yucy;&mcy;&ycy;, &scy;&tscy;&iecy;&ncy;&icy;&chcy;&iecy;&scy;&kcy;&icy;&iecy; &kcy;&ocy;&scy;&tcy;&yucy;&mcy;&ycy;, &bcy;&acy;&lcy;&softcy;&ncy;&ycy;&iecy; &pcy;&lcy;&acy;&tcy;&softcy;&yacy; &icy;&lcy;&icy; &scy;&pcy;&iecy;&tscy;&icy;&acy;&lcy;&softcy;&ncy;&acy;&yacy; &fcy;&ocy;&rcy;&mcy;&acy; &dcy;&lcy;&yacy; &pcy;&ocy;&kcy;&acy;&zcy;&acy;&tcy;&iecy;&lcy;&softcy;&ncy;&ycy;&khcy; &scy;&pcy;&ocy;&rcy;&tcy;&icy;&vcy;&ncy;&ycy;&khcy; &vcy;&ycy;&scy;&tcy;&ucy;&pcy;&lcy;&iecy;&ncy;&icy;&jcy; &ndash; &pcy;&iecy;&rcy;&iecy;&dcy;&acy;&jcy;&tcy;&iecy; &icy;&khcy; &vcy; &chcy;&iecy;&khcy;&lcy;&iecy; &vcy;&ocy;&zhcy;&acy;&tcy;&ocy;&mcy;&ucy; &dcy;&lcy;&yacy; &ucy;&chcy;&acy;&scy;&tcy;&icy;&yacy; &Vcy;&acy;&shcy;&iecy;&gcy;&ocy; &rcy;&iecy;&bcy;&iecy;&ncy;&kcy;&acy; &vcy; &rcy;&acy;&zcy;&lcy;&icy;&chcy;&ncy;&ycy;&khcy; &lcy;&icy;&chcy;&ncy;&ycy;&khcy; &kcy;&ocy;&ncy;&kcy;&ucy;&rcy;&scy;&ncy;&ycy;&khcy; &pcy;&rcy;&ocy;&gcy;&rcy;&acy;&mcy;&mcy;&acy;&khcy;.
 
-                      button.close-button(data-close='', aria-label='Close modal', type='button')
-                        span(aria-hidden='true') &times;
-                #second3v.tabs-panel.tabs-panel_no-padding
-                  .grid-x
-                    .cell.large-14
-                      .grid-x
-                        .cell
-                          div
-                            h3 Инженеры до нашей эры
-                            p Текст про инженеров
-                        .cell
-                          .tabs-title.tabs-title_program
+                        button.close-button(data-close='', aria-label='Close modal', type='button')
+                          span(aria-hidden='true') &times;
+                  #second3v.tabs-panel.tabs-panel_no-padding
+                    .grid-x
+                      .cell.large-14
+                        .grid-x
+                          .cell
                             div
-                              a(href='#second1v') Программирование
-                          .tabs-title.tabs-title_program.is-active
+                              h3 Инженеры до нашей эры
+                              p Текст про инженеров
+                          .cell
+                            .tabs-title.tabs-title_program
+                              div
+                                a(href='#second1v') Программирование
+                            .tabs-title.tabs-title_program.is-active
+                              div
+                                a(href='#second2v', aria-selected='true') Каменные джунгли 21 века
+                            .tabs-title.tabs-title_program
+                              div
+                                a(href='#second3v') Инженеры до нашей эры
+                      .cell.large-5.large-offset-2
+                        .todo
+                          .todo__item
+                            a(href="#").todo__link Распорядок дня
+                          .todo__item
+                            a(href="#").todo__link
+                              | Необходимые
+                              | документы
+                          .todo__item
+                            a(href="#").todo__link
+                              | Список вещей
+                              | для лагеря
+                      .cell
+                        h3
+                          | Путевка <span class="h3__underline">включает в себя</span>
+                        .raider
+                          .raider__col
+                            .raider__item Трансфер Москва — Лагерь — Москва
+                            .raider__item Проживание в 2-х местных номерах
+                            .raider__item Бассейн
+                            .raider__item Тренинги и мастер-классы
+                          .raider__col
+                            .raider__item 5-ти разовое питание
+                            .raider__item Тематическая программа
+                            .raider__item Спортивные и творческие мероприятия
+
+                      .cell.large-16
+                        .amount
+                          h3.amount__title Стоимость
+                          .amount__content
+                            .amount__price
+                              | 49 600 ₽
+                              .amount__price_old
+                                | 59 000 ₽
                             div
-                              a(href='#second2v', aria-selected='true') Каменные джунгли 21 века
-                          .tabs-title.tabs-title_program
-                            div
-                              a(href='#second3v') Инженеры до нашей эры
-                    .cell.large-5.large-offset-2
-                      .todo
-                        .todo__item
-                          a(href="#").todo__link Распорядок дня
-                        .todo__item
-                          a(href="#").todo__link
-                            | Необходимые
-                            | документы
-                        .todo__item
-                          a(href="#").todo__link
-                            | Список вещей
-                            | для лагеря
-                    .cell
-                      h3
-                        | Путевка <span class="h3__underline">включает в себя</span>
-                      .raider
-                        .raider__col
-                          .raider__item Трансфер Москва — Лагерь — Москва
-                          .raider__item Проживание в 2-х местных номерах
-                          .raider__item Бассейн
-                          .raider__item Тренинги и мастер-классы
-                        .raider__col
-                          .raider__item 5-ти разовое питание
-                          .raider__item Тематическая программа
-                          .raider__item Спортивные и творческие мероприятия
-
-                    .cell.large-16
-                      .amount
-                        h3.amount__title Стоимость
-                        .amount__content
-                          .amount__price
-                            | 49 600 ₽
-                            .amount__price_old
-                              | 59 000 ₽
-                          div
-                            a(href="#" type="submit").button Купить путевку
-                        .amount__description
-                          .amount__text Торопитесь! Количество мест ограничено. Указанная стоимость действует до 1 апреля. Успейте получить скидку уже сегодня!
-                          //a(href="#").amount__link Способы оплаты
+                              a(href="#" type="submit").button Купить путевку
+                          .amount__description
+                            .amount__text Торопитесь! Количество мест ограничено. Указанная стоимость действует до 1 апреля. Успейте получить скидку уже сегодня!
+                            //a(href="#").amount__link Способы оплаты
 
 
 
 
 
-          #panel2v.tabs-panel.tabs-panel_no-padding
-            h2 1 смена
-            p Смена для тех, кто готов взять ответственность за себя и стать независимым. Научим разбираться в тайнах бытовых вещей и основам выживания в любом большом городе 21 века!
-            p Так же вы сможете выбрать направление смены для вашего ребенка, в рамках которого будут проводиться тренинги на тему:
-          #panel3v.tabs-panel.tabs-panel_no-padding
-            h2 2 смена
-            p Смена для тех, кто готов взять ответственность за себя и стать независимым. Научим разбираться в тайнах бытовых вещей и основам выживания в любом большом городе 21 века!
-            p Так же вы сможете выбрать направление смены для вашего ребенка, в рамках которого будут проводиться тренинги на тему:
-          #panel4v.tabs-panel.tabs-panel_no-padding
-            h2 3 смена
-            p Смена для тех, кто готов взять ответственность за себя и стать независимым. Научим разбираться в тайнах бытовых вещей и основам выживания в любом большом городе 21 века!
-            p Так же вы сможете выбрать направление смены для вашего ребенка, в рамках которого будут проводиться тренинги на тему:
-          #panel5v.tabs-panel.tabs-panel_no-padding
-            h2 4 смена
-            p Смена для тех, кто готов взять ответственность за себя и стать независимым. Научим разбираться в тайнах бытовых вещей и основам выживания в любом большом городе 21 века!
-            p Так же вы сможете выбрать направление смены для вашего ребенка, в рамках которого будут проводиться тренинги на тему:
-          #panel6v.tabs-panel.tabs-panel_no-padding
-            h2 5 смена
-            p Смена для тех, кто готов взять ответственность за себя и стать независимым. Научим разбираться в тайнах бытовых вещей и основам выживания в любом большом городе 21 века!
-            p Так же вы сможете выбрать направление смены для вашего ребенка, в рамках которого будут проводиться тренинги на тему:
-    .card.card_slider.card_violet
+            #panel2v.tabs-panel.tabs-panel_no-padding
+              h2 1 смена
+              p Смена для тех, кто готов взять ответственность за себя и стать независимым. Научим разбираться в тайнах бытовых вещей и основам выживания в любом большом городе 21 века!
+              p Так же вы сможете выбрать направление смены для вашего ребенка, в рамках которого будут проводиться тренинги на тему:
+            #panel3v.tabs-panel.tabs-panel_no-padding
+              h2 2 смена
+              p Смена для тех, кто готов взять ответственность за себя и стать независимым. Научим разбираться в тайнах бытовых вещей и основам выживания в любом большом городе 21 века!
+              p Так же вы сможете выбрать направление смены для вашего ребенка, в рамках которого будут проводиться тренинги на тему:
+            #panel4v.tabs-panel.tabs-panel_no-padding
+              h2 3 смена
+              p Смена для тех, кто готов взять ответственность за себя и стать независимым. Научим разбираться в тайнах бытовых вещей и основам выживания в любом большом городе 21 века!
+              p Так же вы сможете выбрать направление смены для вашего ребенка, в рамках которого будут проводиться тренинги на тему:
+            #panel5v.tabs-panel.tabs-panel_no-padding
+              h2 4 смена
+              p Смена для тех, кто готов взять ответственность за себя и стать независимым. Научим разбираться в тайнах бытовых вещей и основам выживания в любом большом городе 21 века!
+              p Так же вы сможете выбрать направление смены для вашего ребенка, в рамках которого будут проводиться тренинги на тему:
+            #panel6v.tabs-panel.tabs-panel_no-padding
+              h2 5 смена
+              p Смена для тех, кто готов взять ответственность за себя и стать независимым. Научим разбираться в тайнах бытовых вещей и основам выживания в любом большом городе 21 века!
+              p Так же вы сможете выбрать направление смены для вашего ребенка, в рамках которого будут проводиться тренинги на тему:
+      br
+      br
+  .card.card_slider.card_violet.card_violet-image
+    .grid-container
       .card__mainheader
         .card__title Более 10 000 детей участвовали <br/> в реализованных мероприятиях
       #events.card__slider
         .card__item.card__item_slider.card__item_lines
           .card__mainwrapper
             .grid-x
-              .cell.medium-8
+              .cell.medium-8.card__img-container
                 .card__img
-                  img(src="i/kid-large.png").card__photo
+                  img(src="i/kid-large.png").card__photo.card__photo_lines
                   img(src="i/reviews/circle.png").card__circle
               .cell.medium-15.medium-offset-1
                 .card__header
                   .card__name.card__name_slider
                     | Максим Серов, 16 лет
                 .card__content
-                  p Почувствовал нереальный кайф от пребывания в этом лагере. Все было сделано на высшем уровне — от распорядка дня, до мероприятий. Для человека который никогда не был в лагере, это будет потрясающий и незабываемый опыт. Вожатые веселые энергичные ребята, они всегда находятся с отрядом в сложные моменты и разделяют с ним победы и поражения, горечь и веселье. Пед.состав — умные и интересные  в общении люди. Они всегда готовы помочь вам, выслушать и наставить. Что касается пионеров: бывает такое, что в начале люди боятся заговорить первыми в незнакомой компании и стесняются посторонних людей,но за время прибывания в этом лагере все поменяются. Совместная работа в мероприятиях сплочает людей и через некоторое время, абсолютно все станут общаться друг с другом и проводить свободное время  в кругу новых друзей.
+                  p Почувствовал нереальный кайф от пребывания в этом лагере. Все было сделано на высшем уровне — от распорядка дня, до мероприятий. Для человека который никогда не был в лагере, это будет потрясающий и незабываемый опыт. Вожатые веселые энергичные ребята, они всегда находятся с отрядом в сложные моменты и разделяют с ним победы и поражения, горечь и веселье. Пед.состав — умные и интересные в общении люди. Они всегда готовы помочь вам, выслушать и наставить. Что касается пионеров: бывает такое, что в начале люди боятся заговорить первыми в незнакомой компании и стесняются посторонних людей,но за время прибывания в этом лагере все поменяются. Совместная работа в мероприятиях сплочает людей и через некоторое время, абсолютно все станут общаться друг с другом и проводить свободное время в кругу новых друзей.
                   p Я очень полюбил этот лагерь, мои ожидания были куда скромнее и не соответствовали реальности, я не ожидал такого резонанса от всех окружающих меня людей, из-за этого изменился и я сам, теперь смотрю на мир совсем другим взглядом. Я постараюсь приехать сюда вновь прихватив с собой друзей.
                   p P.S. Желаю этому лагерю успеха и процветания!
-
         .card__item.card__item_slider.card__item_lines
           .card__mainwrapper
-            .card__img
-              img(src="i/kid-large.png").card__photo
-              img(src="i/reviews/circle.png").card__circle
+            .grid-x
+              .cell.medium-8.card__img-container
+                .card__img
+                  img(src="i/kid-large-second.png").card__photo.card__photo_lines
+                  img(src="i/reviews/circle.png").card__circle
+              .cell.medium-15.medium-offset-1
+                .card__header
+                  .card__name.card__name_slider
+                    | Елизовета Петрова, 16 лет
+                .card__content
+                  p Почувствовала нереальный кайф от пребывания в этом лагере. Все было сделано на высшем уровне — от распорядка дня, до мероприятий. Для человека который никогда не был в лагере, это будет потрясающий и незабываемый опыт. Вожатые веселые энергичные ребята, они всегда находятся с отрядом в сложные моменты и разделяют с ним победы и поражения, горечь и веселье. Пед.состав — умные и интересные в общении люди. Они всегда готовы помочь вам, выслушать и наставить. Что касается пионеров: бывает такое, что в начале люди боятся заговорить первыми в незнакомой компании и стесняются посторонних людей,но за время прибывания в этом лагере все поменяются. Совместная работа в мероприятиях сплочает людей и через некоторое время, абсолютно все станут общаться друг с другом и проводить свободное время в кругу новых друзей.
+                  p Я очень полюбила этот лагерь, мои ожидания были куда скромнее и не соответствовали реальности, я не ожидала такого резонанса от всех окружающих меня людей, из-за этого изменилась и я сама, теперь смотрю на мир совсем другим взглядом. Я постараюсь приехать сюда вновь прихватив с собой друзей.
+                  p P.S. Желаю этому лагерю успеха и процветания!
+  .article
+    .grid-container
+      .article__subtitle
+        | Вашим ребенком будут заниматься наши <br/> <span class="article__underline">молодые талантливые вожатые</span>
 
+  .card.card_slider
+    img.card__back-image.card__back-image_1(src="images/shift/shift-one.png")
+    .grid-container
+      #counselors.card__slider
+        .card__item.card__item_slider
+          .card__img
+            img(src="i/team/team-1.png").card__photo
+            img(src="i/reviews/circle.png").card__circle
+          .card__header
+            .card__name.card__name_slider
+              | Даша Свищева
+            .card__prof
+              | Методист
+          .card__content Бакалавр в области международных отношений, переводчик, преподаватель английского, французского и арабского языков, в настоящее время получает третье педагогическое образование. Увлекается лингвистикой, хореографией, научно- популярной литературой, обожает детей.
+
+        .card__item.card__item_slider
+          .card__img
+            img(src="i/team/team-2.png").card__photo
+            img(src="i/reviews/circle.png").card__circle
+          .card__header
+            .card__name.card__name_slider
+              | Полина Салита
+            .card__prof
+              | Вожатая
+          .card__content
+            | Студентка Института филологии МПГУ, будущий учитель русского языка и литературы. 9 лет занималась плаванием. Каждое лето проводила в детском лагере. С тех пор ничего не изменилось, только теперь в лагере в качестве вожатого и преподавателя русского языка, как иностранного.
+        .card__item.card__item_slider
+          .card__img
+            img(src="i/team/team-3.png").card__photo
+            img(src="i/reviews/circle.png").card__circle
+          .card__header
+            .card__name.card__name_slider
+              | Антон Носов
+            .card__prof
+              | Методист
+          .card__content
+            | Дипломированный социолог, специализация по организации работы с молодежью. Футболист в душе и спортивный журналист. Опыт работы вожатым – 10 лет.
+        .card__item.card__item_slider
+          .card__img
+            img(src="i/team/team-1.png").card__photo
+            img(src="i/reviews/circle.png").card__circle
+          .card__header
+            .card__name.card__name_slider
+              | Даша Свищева
+            .card__prof
+              | Методист
+          .card__content Бакалавр в области международных отношений, переводчик, преподаватель английского, французского и арабского языков, в настоящее время получает третье педагогическое образование. Увлекается лингвистикой, хореографией, научно- популярной литературой, обожает детей.
+
+        .card__item.card__item_slider
+          .card__img
+            img(src="i/team/team-2.png").card__photo
+            img(src="i/reviews/circle.png").card__circle
+          .card__header
+            .card__name.card__name_slider
+              | Полина Салита
+            .card__prof
+              | Вожатая
+          .card__content
+            | Студентка Института филологии МПГУ, будущий учитель русского языка и литературы. 9 лет занималась плаванием. Каждое лето проводила в детском лагере. С тех пор ничего не изменилось, только теперь в лагере в качестве вожатого и преподавателя русского языка, как иностранного.
+        .card__item.card__item_slider
+          .card__img
+            img(src="i/team/team-3.png").card__photo
+            img(src="i/reviews/circle.png").card__circle
+          .card__header
+            .card__name.card__name_slider
+              | Антон Носов
+            .card__prof
+              | Методист
+          .card__content
+            | Дипломированный социолог, специализация по организации работы с молодежью. Футболист в душе и спортивный журналист. Опыт работы вожатым – 10 лет.
+
+
+  .article
+    .grid-container
+      .article__subtitle
+        | Мастер-классы будут проводить <br/> <span class="article__underline">профессионалы своего дела</span>
+
+  .card.card_slider
+    img.card__back-image.card__back-image_2(src="images/shift/circle-second.png")
+    .grid-container
+      #counselors-second.card__slider
+        .card__item.card__item_slider
+          .card__img
+            img(src="i/team/team-4.png").card__photo
+            img(src="i/reviews/circle.png").card__circle
+          .card__header
+            .card__name.card__name_slider
+              | Юлия Булдыкова
+            .card__prof
+              | Маркетинг и реклама
+          .card__content Бренд-менеджер JACOBS MONARCH, Mondelez International Group (Kraft Foods RUS)
+
+        .card__item.card__item_slider
+          .card__img
+            img(src="i/team/team-5.png").card__photo
+            img(src="i/reviews/circle.png").card__circle
+          .card__header
+            .card__name.card__name_slider
+              | Григорий Иванец
+            .card__prof
+              | Актерское мастерство и кинорежиссура
+          .card__content
+            | Режиссер кинокомпании «Titan Cinema Production» (TCP)
         .card__item.card__item_slider
           .card__img
             img(src="i/team/team-6.png").card__photo
@@ -479,3 +600,59 @@ block page
               | Авторский курс по целеполаганию
           .card__content
             | Опытный психолог с 15-ти летним педагогическим стажем работы, разработчик ряда авторских программ и методик в сфере эффективного развития личности, автор книги «Путь лидера»
+
+  .article
+    .grid-container
+      .article__subtitle
+        | <span class="article__underline">Жизнь</span> лагеря
+      .article__content
+        | Все фотографии можно будет посмотреть в <a href="#"> Галерее </a>
+  br
+  .grid-container
+    .card.card_slider
+      #life.card__slider
+        .card__item.card__item_life
+          a(href="i/life/life-1.png" data-fancybox="gallery")
+            img(src="i/life/life-1.png").card__life
+
+        .card__item.card__item_life
+          a(href="i/life/life-2.png" data-fancybox="gallery")
+            img(src="i/life/life-2.png").card__life
+
+        .card__item.card__item_life
+          a(href="i/life/life-3.png" data-fancybox="gallery")
+            img(src="i/life/life-3.png").card__life
+
+        .card__item.card__item_life
+            a(href="i/life/life-1.png" data-fancybox="gallery")
+              img(src="i/life/life-1.png").card__life
+        .card__item.card__item_life
+          a(href="i/life/life-2.png" data-fancybox="gallery")
+            img(src="i/life/life-2.png").card__life
+
+        .card__item.card__item_life
+          a(href="i/life/life-3.png" data-fancybox="gallery")
+            img(src="i/life/life-3.png").card__life
+      .card__button
+        a(type="submit" data-open="Shift").button Выбрать смену
+  #Shift.reveal(data-reveal='' data-animation-in="spin-in" data-animation-out="spin-out").large
+    section.section
+      .grid-container
+        .section__background.section__background_review
+          img(src="images/review/review-circle-1.png").section__img.section__img_1.section__img_z-minus
+          img(src="images/review/review-circle-2.png").section__img.section__img_2.section__img_z-minus
+          img(src="images/review/review-frame-1.png").section__img.section__img_3.section__img_z-minus
+          img(src="images/review/review-frame-2.png").section__img.section__img_4.section__img_z-minus
+          .grid-x
+            .cell
+              .section__content.section__content_center
+                .section__head
+                  span.section__violet.section__violet_2 Подберите смену&nbsp;
+                  | для вашего ребенка
+          div.text-align-center
+            div
+              a.button.button_hollow Смены 7-12 лет
+            div
+              a.button Смены 13-17 лет
+    button.close-button(data-close='', aria-label='Close modal', type='button')
+        span(aria-hidden='true') &times;

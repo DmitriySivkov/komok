@@ -2,7 +2,9 @@
     border:none;
     display: flex;
     flex-direction: column;
-
+    &, &-content, &-panel{
+        background: transparent !important;
+    }
     &-panel_no-padding{
         padding:0;
     }

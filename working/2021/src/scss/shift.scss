@@ -1,0 +1,12 @@
+.shift{
+    background: url($imagesPath+ "/2circle.png");
+    background-repeat: no-repeat;
+    background-size: auto;
+
+    background-position: bottom 20% right;
+
+
+    @include breakpoint(large down) {
+    background-position: bottom right;
+}
+}
