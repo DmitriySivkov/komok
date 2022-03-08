@@ -252,7 +252,10 @@
     }
 }
 @include breakpoint(small only){
-    #events .counselors__next_place,#events .counselors__prev_place {
+    .counselors__next_place, .counselors__prev_place {
+        width: rem-calc(70);
+    }
+        #events .counselors__next_place,#events .counselors__prev_place {
         bottom: rem-calc(-10);
     }
 }
