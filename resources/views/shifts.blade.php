@@ -6,7 +6,9 @@
     <div class="article">
         <img class="article__circle" src="{{ asset('images/place/circle.png') }}">
         <div class="grid-container">
-            <div class="article__subtitle">Смены <span class="article__underline">для подростков</span> 13-17 лет</div>
+            <div class="article__subtitle">
+                Смены <span class="article__underline">для подростков</span> {{ request()->get('age') === 'younger' ? '7-12 лет' : '13-17 лет' }}
+            </div>
         </div>
     </div>
         <br><br>
@@ -56,9 +58,15 @@
                                                 </div>
                                                 <div class="cell large-5 large-offset-2">
                                                     <div class="todo">
-                                                        <div class="todo__item"><a class="todo__link" href="#">Распорядок дня</a></div>
-                                                        <div class="todo__item"><a class="todo__link" href="#">Необходимые документы</a></div>
-                                                        <div class="todo__item"><a class="todo__link" href="#">Список вещей для лагеря</a></div>
+                                                        <div class="todo__item">
+                                                            <a class="todo__link" data-open="exampleModal{{ $period->id }}schedule" aria-controls="exampleModal{{ $period->id }}schedule" aria-haspopup="dialog" tabindex="0">Распорядок дня</a>
+                                                        </div>
+                                                        <div class="todo__item">
+                                                            <a class="todo__link" data-open="exampleModal{{ $period->id }}docs" aria-controls="exampleModal{{ $period->id }}docs" aria-haspopup="dialog" tabindex="0">Необходимые документы</a>
+                                                        </div>
+                                                        <div class="todo__item">
+                                                            <a class="todo__link" data-open="exampleModal{{ $period->id }}things" aria-controls="exampleModal{{ $period->id }}things" aria-haspopup="dialog" tabindex="0">Список вещей для лагеря</a>
+                                                        </div>
                                                     </div>
                                                 </div>
                                                 <div class="cell">
@@ -80,8 +88,38 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="cell large-16">
+                                                <div class="cell large-16" id="orderTicket">
                                                     <div class="amount">
+                                                        @if ($errors->any())
+                                                            <div class="grid-x justify-content-center">
+                                                                <div class="cell">
+                                                                    <div class="grid-x grid-margin-x grid-padding-y">
+                                                                        <div class="cell">
+                                                                            <div class="callout callout_alert">
+                                                                                <ul>
+                                                                                    @foreach(array_unique($errors->all()) as $error)
+                                                                                        <li>{{ $error }}</li>
+                                                                                    @endforeach
+                                                                                </ul>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        @endif
+                                                        @if(session()->has('success'))
+                                                            <div class="grid-x justify-content-center">
+                                                                <div class="cell">
+                                                                    <div class="grid-x grid-margin-x grid-padding-y">
+                                                                        <div class="cell">
+                                                                            <div class="callout callout_success">
+                                                                                {{ session()->get('success') }}
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        @endif
                                                         <h3 class="amount__title">Стоимость</h3>
                                                         <div class="amount__content">
                                                             <div class="amount__price">{{ $period->price }} ₽
@@ -89,7 +127,11 @@
                                                                     <div class="amount__price_old">{{ $period->old_price }} ₽</div>
                                                                 @endif
                                                             </div>
-                                                            <div><a class="button" href="#" type="submit">Купить путевку</a></div>
+                                                            <div>
+                                                                <a class="button" data-open="exampleModalform{{$period->id}}" aria-controls="exampleModalform{{$period->id}}" aria-haspopup="dialog" tabindex="0">
+                                                                    Купить путевку
+                                                                </a>
+                                                            </div>
                                                         </div>
                                                         <div class="amount__description">
                                                             <div class="amount__text">
@@ -98,57 +140,70 @@
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div class="reveal large" id="exampleModal1" data-reveal="" data-animation-in="spin-in"
+                                                <div class="reveal large" id="exampleModalform{{$period->id}}" data-reveal="" data-animation-in="spin-in"
                                                      data-animation-out="spin-out">
                                                     <section class="section">
                                                         <div class="grid-container">
-                                                            <div class="section__background section__background_review"><img
+                                                            <div class="section__background section__background_review">
+                                                                <img
                                                                     class="section__img section__img_1 section__img_z-minus"
-                                                                    src="images/review/review-circle-1.png"><img
+                                                                    src="{{ asset('images/review/review-circle-1.png') }}">
+                                                                <img
                                                                     class="section__img section__img_2 section__img_z-minus"
-                                                                    src="images/review/review-circle-2.png"><img
+                                                                    src="{{ asset('images/review/review-circle-2.png') }}">
+                                                                <img
                                                                     class="section__img section__img_3 section__img_z-minus"
-                                                                    src="images/review/review-frame-1.png"><img
+                                                                    src="{{ asset('images/review/review-frame-1.png') }}">
+                                                                <img
                                                                     class="section__img section__img_4 section__img_z-minus"
-                                                                    src="images/review/review-frame-2.png">
+                                                                    src="{{ asset('images/review/review-frame-2.png') }}">
                                                                 <div class="grid-x">
                                                                     <div class="cell">
                                                                         <div class="section__content section__content_center">
-                                                                            <div class="section__head"><span class="section__violet section__violet_2">Забронируйте путевку&nbsp;</span>в
-                                                                                лагерь
+                                                                            <div class="section__head">
+                                                                                <span class="section__violet section__violet_2">Забронируйте путевку&nbsp;</span>в лагерь
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <form>
+                                                                <form method="post" action="/orderTicket">
+                                                                    @csrf
                                                                     <div class="grid-x justify-content-center">
                                                                         <div class="cell large-10">
                                                                             <div class="grid-x grid-margin-x grid-padding-y">
                                                                                 <div class="cell">
-                                                                                    <div class="custom-input"><input placeholder=" "><label>Имя и фамилия</label>
+                                                                                    <div class="custom-input">
+                                                                                        <input name="name" placeholder=" " value="{{ old('name') }}">
+                                                                                        <label>Имя и фамилия</label>
                                                                                     </div>
                                                                                 </div>
                                                                                 <div class="cell">
-                                                                                    <div class="custom-input"><input placeholder=" " type="tel" name="phone"
-                                                                                                                     id="phone"><label>Номер телефона</label></div>
+                                                                                    <div class="custom-input">
+                                                                                        <input placeholder=" " type="tel" name="phone" id="phone" value="{{ old('phone') }}">
+                                                                                        <label>Номер телефона</label>
+                                                                                    </div>
                                                                                 </div>
                                                                                 <div class="cell">
-                                                                                    <div class="custom-input"><input placeholder=" " type="mail"><label>Электронная
-                                                                                            почта</label></div>
+                                                                                    <div class="custom-input">
+                                                                                        <input name="mail" placeholder=" " type="mail" value="{{ old('mail') }}">
+                                                                                        <label>Электронная почта</label>
+                                                                                    </div>
                                                                                 </div>
-                                                                                <div class="cell text-align-center"><a class="button z-index-1" href="#"
-                                                                                                                       type="submit">Забронировать место</a></div>
-                                                                                <div class="amount"><h3 class="amount__title amount__title_center">Стоимость</h3>
-                                                                                    <div class="amount__content amount__content_center">
-                                                                                        <div class="amount__price">49 600 ₽
-                                                                                            <div class="amount__price_old">59 000 ₽</div>
-                                                                                        </div>
+                                                                                <div class="cell text-align-center">
+                                                                                    <button class="button z-index-1" type="submit">Забронировать место</button>
+                                                                                </div>
+                                                                            </div>
+                                                                            <div class="amount">
+                                                                                <h3 class="amount__title amount__title_center">Стоимость</h3>
+                                                                                <div class="amount__content amount__content_center">
+                                                                                    <div class="amount__price">{{ $period->price }} ₽
+                                                                                        @if($period->old_price)
+                                                                                            <div class="amount__price_old">{{ $period->old_price }} ₽</div>
+                                                                                        @endif
                                                                                     </div>
-                                                                                    <div class="amount__description amount__description_center">
-                                                                                        <div class="amount__text">Торопитесь! Количество мест ограничено. Указанная
-                                                                                            стоимость действует до 1 апреля. Успейте получить скидку уже сегодня!
-                                                                                        </div>
-                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="amount__description amount__description_center">
+                                                                                    <div class="amount__text">{{ $period->price_text }}</div>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -160,19 +215,19 @@
                                                     <button class="close-button" data-close="" aria-label="Close modal" type="button"><span
                                                             aria-hidden="true">&times;</span></button>
                                                 </div>
-                                                <div class="reveal large" id="exampleModal2" data-reveal="" data-animation-in="spin-in" data-animation-out="spin-out">
+                                                <div class="reveal large" id="exampleModal{{$period->id}}schedule" data-reveal="" data-animation-in="spin-in" data-animation-out="spin-out">
                                                     {!! $period->schedule !!}
                                                     <button class="close-button" data-close="" aria-label="Close modal" type="button">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
-                                                <div class="reveal large" id="exampleModal2" data-reveal="" data-animation-in="spin-in" data-animation-out="spin-out">
+                                                <div class="reveal large" id="exampleModal{{$period->id}}docs" data-reveal="" data-animation-in="spin-in" data-animation-out="spin-out">
                                                     {!! $period->docs !!}
                                                     <button class="close-button" data-close="" aria-label="Close modal" type="button">
                                                         <span aria-hidden="true">&times;</span>
                                                     </button>
                                                 </div>
-                                                <div class="reveal large" id="exampleModal2" data-reveal="" data-animation-in="spin-in" data-animation-out="spin-out">
+                                                <div class="reveal large" id="exampleModal{{$period->id}}things" data-reveal="" data-animation-in="spin-in" data-animation-out="spin-out">
                                                     {!! $period->things !!}
                                                     <button class="close-button" data-close="" aria-label="Close modal" type="button">
                                                         <span aria-hidden="true">&times;</span>
