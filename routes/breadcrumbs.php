@@ -40,6 +40,11 @@ Breadcrumbs::for('about', function ($trail) {
     $trail->push('О лагере', route('about'));
 });
 
+Breadcrumbs::for('shifts', function ($trail) {
+    $trail->parent('home');
+    $trail->push('Смены', route('shifts'));
+});
+
 // Home > Blog > [Category]
 //Breadcrumbs::for('category', function ($trail, $category) {
 //    $trail->parent('blog');

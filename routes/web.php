@@ -20,6 +20,7 @@ Route::get('/faq', [\App\Http\Controllers\FaqController::class, "index"])->name(
 Route::get('/team', [\App\Http\Controllers\TeamController::class, "index"])->name('team');
 Route::get('/location', [\App\Http\Controllers\PlaceController::class, "index"])->name('place');
 Route::get('/about', [\App\Http\Controllers\AboutController::class, "index"])->name('about');
+Route::get('/shifts', [\App\Http\Controllers\ShiftsController::class, "index"])->name('shifts');
 
 /** forms */
 Route::post('/orderTicket', [\App\Http\Controllers\OrderTicketController::class, "store"]);

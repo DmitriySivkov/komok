@@ -20,7 +20,7 @@
         @foreach($relationshipOptions as $relationshipOption)
             <option
                 value="{{ $relationshipOption->{$options->customAllFromRelation->key} }}"
-                @if(in_array($relationshipOption->{$options->customAllFromRelation->key}, $selected_values)) selected="selected" @endif
+                @if(in_array($relationshipOption->{$options->customAllFromRelation->key}, (array)$selected_values)) selected="selected" @endif
             >
                 {{ $relationshipOption->{$options->customAllFromRelation->label} }}
             </option>
