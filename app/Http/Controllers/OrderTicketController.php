@@ -17,7 +17,8 @@ class OrderTicketController extends Controller
         $validator = Validator::make($request->all(), [
             'name' => ['required'],
             'phone' => ['required_without:mail'],
-            'mail' => ['required_without:phone']
+            'mail' => ['required_without:phone'],
+            'shift' => []
         ], [
             'name.required' => 'Необходимо заполнить имя',
             'phone.required_without' => 'Необходимо заполнить телефон или почту',

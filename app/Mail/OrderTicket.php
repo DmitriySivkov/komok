@@ -35,7 +35,8 @@ class OrderTicket extends Mailable
                 'data' => [
                     'Имя' => $this->orderTicket->name,
                     'Почта' => $this->orderTicket->mail,
-                    'Телефон' => $this->orderTicket->phone
+                    'Телефон' => $this->orderTicket->phone,
+                    'Смена' => $this->orderTicket->shift
                 ]
             ]);
     }
