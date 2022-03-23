@@ -85,7 +85,39 @@
                 </div>
                 @endforeach
             </div>
-            <div class="card__button"><a class="button">Выбрать смену</a></div>
+            <div class="card__button"><a class="button" type="submit" data-open="Shift">Выбрать смену</a></div>
         </div>
+    </div>
+    <div class="reveal large" id="Shift" data-reveal="" data-animation-in="spin-in" data-animation-out="spin-out">
+        <section class="section">
+            <div class="grid-container">
+                <div class="section__background section__background_review">
+                    <img class="section__img section__img_1 section__img_z-minus" src="{{ asset('images/review/review-circle-1.png') }}">
+                    <img class="section__img section__img_2 section__img_z-minus" src="{{ asset('images/review/review-circle-2.png') }}">
+                    <img class="section__img section__img_3 section__img_z-minus" src="{{ asset('images/review/review-frame-1.png') }}">
+                    <img class="section__img section__img_4 section__img_z-minus" src="{{ asset('images/review/review-frame-2.png') }}">
+                    <div class="grid-x">
+                        <div class="cell">
+                            <div class="section__content section__content_center">
+                                <div class="section__head">
+                                    <span class="section__violet section__violet_2">Подберите смену&nbsp;</span>для вашего ребенка
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-align-center">
+                        <div>
+                            <a class="button button_hollow" href="/shifts?age=younger">Смены 7-12 лет</a>
+                        </div>
+                        <div>
+                            <a class="button" href="/shifts">Смены 13-17 лет</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <button class="close-button" data-close="" aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
     </div>
 @endsection
