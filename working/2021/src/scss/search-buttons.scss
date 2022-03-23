@@ -1,0 +1,9 @@
+.search-buttons{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+    @include breakpoint(small only){
+        justify-content: center;
+    }
+}
+

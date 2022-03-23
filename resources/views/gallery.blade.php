@@ -127,11 +127,13 @@
                         </div>
                     </div>
                 </div>
-                <div class="grid-x grid-padding-x">
-                    <div class="cell">
+                <div class="grid-x grid-padding-x grid-padding-y">
+                    <div class="search-buttons cell">
                         <button class="button" type="submit">Найти</button>
+                        <a class="button button_hollow" href="{{url()->current();}}">Сбросить</a>
                     </div>
                 </div>
+
             </form>
         </div>
         <div class="gallery">
