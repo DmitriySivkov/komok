@@ -22,7 +22,12 @@ class PlaceController extends LayoutController
             'blocks_on_place' => $data['blocks_on_place'],
             'settings'=> $this->getLayoutSettings(),
             'meta' => $this->getMeta(),
-            'features' => Feature::all()
+            'features' => Feature::all()->each(function(&$item) {
+                $tmp = json_decode($item['picture'], true);
+                $item['picture'] = (is_array($tmp) && !empty($tmp)) ?
+                    json_decode($item['picture'], true)[0]['download_link'] :
+                    "#";
+            })
         ]);
     }
 }
