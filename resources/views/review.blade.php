@@ -74,10 +74,10 @@
         <section class="section">
             <div class="grid-container">
                 <div class="section__background section__background_review">
-                    <img class="section__img section__img_1" src="{{ asset('images/review/review-circle-1.png') }}">
-                    <img class="section__img section__img_2" src="{{ asset('images/review/review-circle-2.png') }}">
-                    <img class="section__img section__img_3" src="{{ asset('images/review/review-frame-1.png') }}">
-                    <img class="section__img section__img_4" src="{{ asset('images/review/review-frame-2.png') }}">
+                    <img class="section__img section__img_1" src="{{ asset('images/review/review-circle-1.svg') }}">
+                    <img class="section__img section__img_2" src="{{ asset('images/review/review-circle-2.svg') }}">
+                    <img class="section__img section__img_3" src="{{ asset('images/review/review-frame-1.svg') }}">
+                    <img class="section__img section__img_4" src="{{ asset('images/review/review-frame-2.svg') }}">
                     <div class="grid-x" id="orderTicket">
                         <div class="cell">
                             <div class="section__content section__content_center">

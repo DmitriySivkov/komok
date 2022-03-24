@@ -148,16 +148,16 @@
                                                         <div class="section__background section__background_review">
                                                             <img
                                                                 class="section__img section__img_1 section__img_z-minus"
-                                                                src="{{ asset('images/review/review-circle-1.png') }}">
+                                                                src="{{ asset('images/review/review-circle-1.svg') }}">
                                                             <img
                                                                 class="section__img section__img_2 section__img_z-minus"
-                                                                src="{{ asset('images/review/review-circle-2.png') }}">
+                                                                src="{{ asset('images/review/review-circle-2.svg') }}">
                                                             <img
                                                                 class="section__img section__img_3 section__img_z-minus"
-                                                                src="{{ asset('images/review/review-frame-1.png') }}">
+                                                                src="{{ asset('images/review/review-frame-1.svg') }}">
                                                             <img
                                                                 class="section__img section__img_4 section__img_z-minus"
-                                                                src="{{ asset('images/review/review-frame-2.png') }}">
+                                                                src="{{ asset('images/review/review-frame-2.svg') }}">
                                                             <div class="grid-x">
                                                                 <div class="cell">
                                                                     <div class="section__content section__content_center">
@@ -365,10 +365,10 @@
         <section class="section">
             <div class="grid-container">
                 <div class="section__background section__background_review">
-                    <img class="section__img section__img_1 section__img_z-minus" src="{{ asset('images/review/review-circle-1.png') }}">
-                    <img class="section__img section__img_2 section__img_z-minus" src="{{ asset('images/review/review-circle-2.png') }}">
-                    <img class="section__img section__img_3 section__img_z-minus" src="{{ asset('images/review/review-frame-1.png') }}">
-                    <img class="section__img section__img_4 section__img_z-minus" src="{{ asset('images/review/review-frame-2.png') }}">
+                    <img class="section__img section__img_1 section__img_z-minus" src="{{ asset('images/review/review-circle-1.svg') }}">
+                    <img class="section__img section__img_2 section__img_z-minus" src="{{ asset('images/review/review-circle-2.svg') }}">
+                    <img class="section__img section__img_3 section__img_z-minus" src="{{ asset('images/review/review-frame-1.svg') }}">
+                    <img class="section__img section__img_4 section__img_z-minus" src="{{ asset('images/review/review-frame-2.svg') }}">
                     <div class="grid-x">
                         <div class="cell">
                             <div class="section__content section__content_center">
