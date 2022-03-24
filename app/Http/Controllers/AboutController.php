@@ -21,10 +21,21 @@ class AboutController extends LayoutController
         $shifts = Shift::all();
         $shifts->each(function($item) {
             $item->programs = Program::query()->whereIn('id', json_decode($item->programs, true))->get();
+            $item->programs->each(function(&$item) {
+                $tmp = json_decode($item['picture'], true);
+                $item['picture'] = (is_array($tmp) && !empty($tmp)) ?
+                    json_decode($item['picture'], true)[0]['download_link'] :
+                    "#";
+            });
         });
 
         $skills = Skill::all();
-
+        $skills->each(function(&$item) {
+            $tmp = json_decode($item['picture'], true);
+            $item['picture'] = (is_array($tmp) && !empty($tmp)) ?
+                json_decode($item['picture'], true)[0]['download_link'] :
+                "#";
+        });
         return view('about', [
             'blocks_on_about' => $data['blocks_on_about'],
             'settings'=> $this->getLayoutSettings(),

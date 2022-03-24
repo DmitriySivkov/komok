@@ -1,7 +1,7 @@
 <div class="grid-container">
     <header class="header">
         <a class="header__logo" href="/" title="На главную">
-            <img src="/storage/{{ $settings["site.logo"]->value }}">
+            <img src="/storage/{{ json_decode($settings['site.logo']->value, true)[0]['download_link'] }}">
         </a>
         <nav class="nav" id="nav">
             <div class="nav__links">
