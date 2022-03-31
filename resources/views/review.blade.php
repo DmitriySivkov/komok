@@ -24,7 +24,7 @@
                     <div class="card__item">
                         <div class="card__img">
                             <img class="card__photo" src="{{ asset('storage/' . $item->picture) }}">
-                            <img class="card__circle" src="{{ asset('i/reviews/circle.png') }}">
+                            <img class="card__circle" src="{{ asset('i/reviews/circle.svg') }}">
                         </div>
                         <div class="card__header">
                             <div class="card__name">{{ $item->name }}</div>
@@ -41,7 +41,7 @@
                     <div class="card__item">
                         <div class="card__img">
                             <img class="card__photo" src="{{ asset('storage/' . $item->picture) }}">
-                            <img class="card__circle" src="{{ asset('i/reviews/circle.png') }}">
+                            <img class="card__circle" src="{{ asset('i/reviews/circle.svg') }}">
                         </div>
                         <div class="card__header">
                             <div class="card__name">{{ $item->name }}</div>
@@ -58,7 +58,7 @@
                     <div class="card__item">
                         <div class="card__img">
                             <img class="card__photo" src="{{ asset('storage/' . $item->picture) }}">
-                            <img class="card__circle" src="{{ asset('i/reviews/circle.png') }}">
+                            <img class="card__circle" src="{{ asset('i/reviews/circle.svg') }}">
                         </div>
                         <div class="card__header">
                             <div class="card__name">{{ $item->name }}</div>
