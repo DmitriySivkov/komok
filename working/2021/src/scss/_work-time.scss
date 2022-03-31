@@ -11,6 +11,9 @@
         line-height: rem-calc(34);
         color: #000000;
     }
+    .nav &{
+        display: none;
+    }
     @include breakpoint(xlarge down){
         font-size: rem-calc(14);
 
@@ -19,7 +22,12 @@
         }
     }
     @include breakpoint(small only){
+        display: none;
         width: 100%;
         margin-top: 1rem;
+
+        .show &{
+            display: block;
+        }
     }
 }

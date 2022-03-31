@@ -1,7 +1,8 @@
 .nav{
     display: flex;
     flex-direction: column;
-    margin: 0 rem-calc(10);
+    margin: 0 auto;
+    text-align: center;
     &__links{
         display: flex;
         flex-direction: column;
@@ -40,7 +41,11 @@
     }
     @include breakpoint(small only){
         &{
+            width: 100%;
             order: 1;
+        }
+        &__links{
+            width: 100%;
         }
         &__top,
         &__bottom{
