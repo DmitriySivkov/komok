@@ -1,8 +1,7 @@
 <div class="grid-container">
     <header class="header">
         <a class="header__logo" href="/" title="На главную">
-            <img src="/storage/{{ json_decode($settings['site.logo']->value, true)[0]['download_link'] }}">
-        </a>
+            <img src="/storage/{{ is_null($settings['site.logo']->value) ? json_decode($settings['site.logo']->value, true)[0]['download_link'] : 0 }}">
         <nav class="nav" id="nav">
             <div class="nav__links">
                 {{ menu('Главное', 'components.menu.main_top') }}

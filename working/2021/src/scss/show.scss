@@ -43,9 +43,12 @@
 
             margin-bottom: rem-calc(30);
         }
+        &__title{
+            line-height: 2.8rem;
+        }
         &__content{
             text-align: left;
-            padding-right: .4rem;
+            margin-left: 1rem;
         }
     }
 }

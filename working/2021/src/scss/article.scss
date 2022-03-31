@@ -54,6 +54,8 @@
         background: #fff;
     }
     &__content{
+        margin-top: 1rem;
+        font-size: rem-calc(20);
         & a{
             color: black;
             text-decoration: underline;
@@ -94,7 +96,7 @@
             }
             &__subtitle{
                 margin: rem-calc(16) 0 rem-calc(10) 0;
-                font-size: 1.7rem;
+                font-size: 2.1rem;
 
                 &_no-margin{
                     margin:0;

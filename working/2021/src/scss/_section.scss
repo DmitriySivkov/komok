@@ -186,6 +186,10 @@
     }
     @include breakpoint(small only){
         &{
+            &__text{
+                text-align: left;
+                margin-left: .8rem;
+            }
             &_large-padding{
                 padding-top:rem-calc(120);
             }
@@ -196,7 +200,8 @@
             }
         }
         &__head{
-            font-size: 1.4rem;
+            font-size: 2.1rem;
+            line-height: 2.8rem;
         }
         &__slide{
             height: 80%;

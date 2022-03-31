@@ -3,11 +3,13 @@
     <div class="grid-container">
         {{ Breadcrumbs::render('gallery') }}
         <div class="article">
+            <div class="article__header">
             <h1 class="article__title">{{ $meta->headline }}</h1>
             <div class="article__img">
                 <img class="article__photo" src="{{ asset('i/article/gallery.png') }}">
             </div>
-            <div class="grid-x grid-padding-y">
+            </div>
+            <div class="grid-x grid-padding-y article__content">
                 <div class="cell medium-12">
                     {!! $meta->description !!}
                 </div>

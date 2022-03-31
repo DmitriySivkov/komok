@@ -17,15 +17,15 @@
             </div>
             <div class="cell large-13 large-offset-2 section__background large-order-2 small-order-1">
                 <img class="section__slide" src="{{ asset('storage/' . $blocks_on_main[1]->picture) }}">
-                <img class="section__img section__img_1" src="{{ asset('images/mainpage/back1/Group.png') }}">
-                <img class="section__img section__img_2" src="{{ asset('images/mainpage/back1/Group-1.png') }}">
-                <img class="section__img section__img_3" src="{{ asset('images/mainpage/back1/Group-2.png') }}">
-                <img class="section__img section__img_4" src="{{ asset('images/mainpage/back1/Group-3.png') }}">
-                <img class="section__img section__img_5" src="{{ asset('images/mainpage/back1/Group-4.png') }}">
-                <img class="section__img section__img_6" src="{{ asset('images/mainpage/back1/Group-5.png') }}">
-                <img class="section__img section__img_7" src="{{ asset('images/mainpage/back1/Group-6.png') }}">
-                <img class="section__img section__img_8 section__img_circle" src="{{ asset('images/mainpage/back1/circle-orange.png') }}">
-                <img class="section__img section__img_9 section__img_circle" src="{{ asset('images/mainpage/back1/circle-violette.png') }}"></div>
+                <img class="section__img section__img_1" src="{{ asset('images/mainpage/back1/Group.svg') }}">
+                <img class="section__img section__img_2" src="{{ asset('images/mainpage/back1/Group-1.svg') }}">
+                <img class="section__img section__img_3" src="{{ asset('images/mainpage/back1/Group-2.svg') }}">
+                <img class="section__img section__img_4" src="{{ asset('images/mainpage/back1/Group-3.svg') }}">
+                <img class="section__img section__img_5" src="{{ asset('images/mainpage/back1/Group-4.svg') }}">
+                <img class="section__img section__img_6" src="{{ asset('images/mainpage/back1/Group-5.svg') }}">
+                <img class="section__img section__img_7" src="{{ asset('images/mainpage/back1/Group-6.svg') }}">
+                <img class="section__img section__img_8 section__img_circle" src="{{ asset('images/mainpage/back1/circle-orange.svg') }}">
+                <img class="section__img section__img_9 section__img_circle" src="{{ asset('images/mainpage/back1/circle-violette.svg') }}"></div>
         </div>
         <section class="section"></section>
         <div class="grid-container">
@@ -42,7 +42,7 @@
                         </div>
                     </div>
                 </div>
-                <img class="section__img section__img_10" src="{{ asset('images/mainpage/back2/circle.png') }}">
+                <img class="section__img section__img_10" src="{{ asset('images/mainpage/back2/circle.svg') }}">
             </div>
         </div>
     </div>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
             </div>
-            <img class="section__img section__img_11" src="{{ asset('images/mainpage/back3/Megafon.png') }}">
+            <img class="section__img section__img_11" src="{{ asset('images/mainpage/back3/Megafon.svg') }}">
         </div>
     </div>
     <section class="section">
@@ -88,17 +88,17 @@
                         <img class="section__slide" src="{{ asset('storage/' . $blocks_on_main[4]->picture) }}">
                     </div>
                 </div>
-                <img class="section__img section__img_12" src="{{ asset('images/mainpage/back4/Brain.png') }}">
-                <img class="section__img section__img_13" src="{{ asset('images/mainpage/back4/Art.png') }}">
-                <img class="section__img section__img_14" src="{{ asset('images/mainpage/back4/Camera.png') }}">
+                <img class="section__img section__img_12" src="{{ asset('images/mainpage/back4/Brain.svg') }}">
+                <img class="section__img section__img_13" src="{{ asset('images/mainpage/back4/Art.svg') }}">
+                <img class="section__img section__img_14" src="{{ asset('images/mainpage/back4/Camera.svg') }}">
             </div>
         </div>
-        <img class="section__img section__img_15" src="{{ asset('images/mainpage/back4/circle.png') }}">
+        <img class="section__img section__img_15" src="{{ asset('images/mainpage/back4/circle.svg') }}">
     </section>
     <div class="board">
         <div class="grid-container">
             <div class="board__wrapper">
-                <img class="board__img" src="{{ asset('images/mainpage/back5/circle.png') }}">
+                <img class="board__img" src="{{ asset('images/mainpage/back5/circle.svg') }}">
                 <div class="board__content">
                     {!! $blocks_on_main[5]->description !!}
                 </div>
@@ -122,14 +122,14 @@
                 </div>
                 <div class="cell large-13 large-offset-2 section__background large-order-2 small-order-1">
                     <img class="section__slide" src="{{ asset('storage/' . $blocks_on_main[6]->picture) }}">
-                    <img class="section__img section__img_16" src="{{ asset('images/mainpage/back6/Brain.png') }}">
-                    <img class="section__img section__img_17" src="{{ asset('images/mainpage/back6/Clock.png') }}">
-                    <img class="section__img section__img_18" src="{{ asset('images/mainpage/back6/Mask.png') }}">
-                    <img class="section__img section__img_19" src="{{ asset('images/mainpage/back6/Tv.png') }}">
+                    <img class="section__img section__img_16" src="{{ asset('images/mainpage/back6/Brain.svg') }}">
+                    <img class="section__img section__img_17" src="{{ asset('images/mainpage/back6/Clock.svg') }}">
+                    <img class="section__img section__img_18" src="{{ asset('images/mainpage/back6/Mask.svg') }}">
+                    <img class="section__img section__img_19" src="{{ asset('images/mainpage/back6/Tv.svg') }}">
                 </div>
             </div>
         </div>
-        <img class="section__img section__img_20" src="{{ asset('images/mainpage/back6/circle.png') }}">
-        <img class="section__img section__img_21" src="{{ asset('images/mainpage/back6/circle-small.png') }}">
+        <img class="section__img section__img_20" src="{{ asset('images/mainpage/back6/circle.svg') }}">
+        <img class="section__img section__img_21" src="{{ asset('images/mainpage/back6/circle-small.svg') }}">
     </section>
 @endsection
