@@ -2,7 +2,6 @@
     display: flex;
     flex-direction: column;
     margin: 0 auto;
-    text-align: center;
     &__links{
         display: flex;
         flex-direction: column;
@@ -30,6 +29,7 @@
         }
     }
     @include breakpoint(large down){
+        text-align: center;
         margin-top: rem-calc(10);
         margin-bottom: rem-calc(10);
         &__top-link{
