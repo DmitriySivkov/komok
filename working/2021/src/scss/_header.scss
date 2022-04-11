@@ -8,4 +8,14 @@
         padding: 1.125rem 0;
         flex-direction: column;
     }
+
+    flex-direction: row;
+    @include breakpoint(small only){
+        &__logo{
+            width: 50%;
+        }
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
 }

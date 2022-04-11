@@ -27,15 +27,22 @@
             transition: transform .2s linear;
 
 
-            width: 30px;
+/*            width: 30px;
             height: 30px;
             border-top: 8px solid #8B57A3;
-            border-left: 8px solid #8B57A3;
+            border-left: 8px solid #8B57A3;*/
+
+            width: 30px;
+            height: 30px;
+
+            background: url("/images/arrow-large.svg");
             content: "";
-            transform: rotate(
+           /* transform: rotate(
                     -135deg
-            ) translateX(-50%);
-            top:25%;
+            ) translateX(-50%);*/
+            background-size: contain;
+            background-repeat: no-repeat;
+            top:50%;
         }
 
         & span{
@@ -55,10 +62,12 @@
     .is-active > .accordion-title::before {
         content: "";
         transform: rotate(
-                45deg
+                180deg
         );
-        top:50%;
+        top:42%;
+        /*
         right: rem-calc(7);
+        */
     }
     .is-active > .accordion-title{
         border-color:#8B57A3 !important;

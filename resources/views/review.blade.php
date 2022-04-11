@@ -24,7 +24,7 @@
                     <div class="card__item">
                         <div class="card__img">
                             <img class="card__photo" src="{{ asset('storage/' . $item->picture) }}">
-                            <img class="card__circle" src="{{ asset('i/reviews/circle.png') }}">
+                            <img class="card__circle" src="{{ asset('i/reviews/circle.svg') }}">
                         </div>
                         <div class="card__header">
                             <div class="card__name">{{ $item->name }}</div>
@@ -41,7 +41,7 @@
                     <div class="card__item">
                         <div class="card__img">
                             <img class="card__photo" src="{{ asset('storage/' . $item->picture) }}">
-                            <img class="card__circle" src="{{ asset('i/reviews/circle.png') }}">
+                            <img class="card__circle" src="{{ asset('i/reviews/circle.svg') }}">
                         </div>
                         <div class="card__header">
                             <div class="card__name">{{ $item->name }}</div>
@@ -58,7 +58,7 @@
                     <div class="card__item">
                         <div class="card__img">
                             <img class="card__photo" src="{{ asset('storage/' . $item->picture) }}">
-                            <img class="card__circle" src="{{ asset('i/reviews/circle.png') }}">
+                            <img class="card__circle" src="{{ asset('i/reviews/circle.svg') }}">
                         </div>
                         <div class="card__header">
                             <div class="card__name">{{ $item->name }}</div>
@@ -74,10 +74,10 @@
         <section class="section">
             <div class="grid-container">
                 <div class="section__background section__background_review">
-                    <img class="section__img section__img_1" src="{{ asset('images/review/review-circle-1.png') }}">
-                    <img class="section__img section__img_2" src="{{ asset('images/review/review-circle-2.png') }}">
-                    <img class="section__img section__img_3" src="{{ asset('images/review/review-frame-1.png') }}">
-                    <img class="section__img section__img_4" src="{{ asset('images/review/review-frame-2.png') }}">
+                    <img class="section__img section__img_1" src="{{ asset('images/review/review-circle-1.svg') }}">
+                    <img class="section__img section__img_2" src="{{ asset('images/review/review-circle-2.svg') }}">
+                    <img class="section__img section__img_3" src="{{ asset('images/review/review-frame-1.svg') }}">
+                    <img class="section__img section__img_4" src="{{ asset('images/review/review-frame-2.svg') }}">
                     <div class="grid-x" id="orderTicket">
                         <div class="cell">
                             <div class="section__content section__content_center">

@@ -9,7 +9,7 @@
                     <img class="article__photo" src="{{ asset('i/article/faq.png') }}">
                 </div>
             </div>
-            <div class="grid-x grid-padding-y">
+            <div class="grid-x grid-padding-y article__content">
                 <div class="cell medium-16 large-6">
                     {!! $meta->description !!}
                 </div>
