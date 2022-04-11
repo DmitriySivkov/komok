@@ -29,7 +29,7 @@ class OrderTicket extends Mailable
      */
     public function build()
     {
-        return $this->subject('Комок: новое сообщение от сайта')
+        return $this->subject('Заявка в лагерь')
             ->view('emails.orderTicket')
             ->with([
                 'data' => [
