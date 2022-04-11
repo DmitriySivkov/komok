@@ -17,19 +17,19 @@ class ShiftsController extends LayoutController
 {
     public function index(Request $request, GalleryService $gallery)
     {
-        $data['shifts_period'] = ShiftPeriod::all()->keyBy('id');
+        $data['shifts_period'] = ShiftPeriod::query()
+            ->orderBy('id', 'desc')
+            ->when($request->has('age') && $request->get('age') === 'younger', function ($query) {
+                $query->whereJsonContains('shift', strval(1));
+            }, function ($query) {
+                $query->whereJsonContains('shift', strval(2));
+            })
+            ->get();
+
         $data['shifts_period']->each(function($item) {
             $item->programs = ShiftProgram::query()->whereIn('id', json_decode($item->programs, true))->get();
-            $item->shift = Shift::query()->where('id', json_decode($item->shift, true)[0])->get();
+            $item->shift = Shift::query()->whereIn('id', json_decode($item->shift, true))->get();
         });
-        if ($request->has('age') && $request->get('age') === 'younger')
-            $data['shifts_period'] = $data['shifts_period']->filter(function($item) {
-               return $item->shift[0]->id == 1;
-            });
-        else
-            $data['shifts_period'] = $data['shifts_period']->filter(function($item) {
-                return $item->shift[0]->id == 2;
-            });
 
         $reviews = ReviewBlock::query()->inRandomOrder()->limit(5)->get();
         foreach ($reviews as $item)
