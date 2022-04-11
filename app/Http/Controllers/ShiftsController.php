@@ -22,10 +22,13 @@ class ShiftsController extends LayoutController
             $item->programs = ShiftProgram::query()->whereIn('id', json_decode($item->programs, true))->get();
             $item->shift = Shift::query()->where('id', json_decode($item->shift, true)[0])->get();
         });
-
         if ($request->has('age') && $request->get('age') === 'younger')
             $data['shifts_period'] = $data['shifts_period']->filter(function($item) {
                return $item->shift[0]->id == 1;
+            });
+        else
+            $data['shifts_period'] = $data['shifts_period']->filter(function($item) {
+                return $item->shift[0]->id == 2;
             });
 
         $reviews = ReviewBlock::query()->inRandomOrder()->limit(5)->get();
