@@ -1,7 +1,7 @@
 <div class="grid-container">
     <header class="header">
         <a class="header__logo" href="/" title="На главную">
-            <img src="/storage/{{ json_decode($settings['site.logo']->value, true)[0]['download_link']}}">
+            <img style="width: 100%" src="/storage/{{ json_decode($settings['site.logo']->value, true)[0]['download_link']}}">
         </a>
         <button class="burger" id="navToggle" type="button">
             <span class="burger__item">Menu</span>
