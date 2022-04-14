@@ -18,7 +18,7 @@ class ShiftsController extends LayoutController
     public function index(Request $request, GalleryService $gallery)
     {
         $data['shifts_period'] = ShiftPeriod::query()
-            ->orderBy('id', 'desc')
+            ->orderBy('id', 'asc')
             ->when($request->has('age') && $request->get('age') === 'younger', function ($query) {
                 $query->whereJsonContains('shift', strval(1));
             }, function ($query) {
