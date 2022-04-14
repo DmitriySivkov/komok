@@ -35,7 +35,7 @@ class GalleryController extends LayoutController
         }
 
         $pictures = $gallery->getList($filter);
-        $years = range(Carbon::now()->year, 2019);
+        $years = range(Carbon::now()->year, 2015);
 
         return view('gallery', [
             'meta' => $this->getMeta(),

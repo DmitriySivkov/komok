@@ -59,6 +59,20 @@
                                 >
                                     Лето
                                 </option>
+                                <option
+                                    {{ old('season') == "Весна" ? "selected" : "" }}
+                                    {{ request()->query('season') == "Лето" ? "selected" : "" }}
+                                    value="Весна"
+                                >
+                                    Весна
+                                </option>
+                                <option
+                                    {{ old('season') == "Осень" ? "selected" : "" }}
+                                    {{ request()->query('season') == "Осень" ? "selected" : "" }}
+                                    value="Осень"
+                                >
+                                    Осень
+                                </option>
                             </select>
                         </div>
                     </div>
@@ -93,6 +107,20 @@
                                     value="4"
                                 >
                                     4
+                                </option>
+                                <option
+                                    {{ old('shift') == "5" ? "selected" : "" }}
+                                    {{ request()->query('shift') == "5" ? "selected" : "" }}
+                                    value="5"
+                                >
+                                    5
+                                </option>
+                                <option
+                                    {{ old('shift') == "6" ? "selected" : "" }}
+                                    {{ request()->query('shift') == "6" ? "selected" : "" }}
+                                    value="6"
+                                >
+                                    6
                                 </option>
                             </select>
                         </div>

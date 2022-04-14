@@ -29,7 +29,7 @@ class AskQuestion extends Mailable
      */
     public function build()
     {
-        return $this->subject('Комок: новое сообщение от сайта')
+        return $this->subject('Комок: Задать вопрос')
             ->view('emails.askQuestion')
             ->with([
                 'data' => [
