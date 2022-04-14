@@ -24,7 +24,7 @@ class PlaceController extends LayoutController
                     return ResizeService::resize(
                         Storage::path('public/' . $picPath),
                         'public',
-                        286, 286
+                        1430, 774
                     );
                 })->toArray();
             }
