@@ -20,7 +20,7 @@
                 <div class="raider__col">
                             <div class="raider__item">Выберите в левом столбике период проведения смены. </div>
                             <div class="raider__item">Нажмите кнопку в правом нижнем углу <b>"КУПИТЬ ПУТЕВКУ"</b></div>
-                            <div class="raider__item">Заполните форму и нажмите <b>"ОТПРАВИТЬ"</b> :)</div>
+                            <div class="raider__item">Заполните форму и нажмите <b>"ЗАБРОНИРОВАТЬ МЕСТО"</b> :)</div>
                 </div>
 
             </div>
