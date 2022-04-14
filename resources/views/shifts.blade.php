@@ -12,7 +12,21 @@
             </div>
         </div>
     </div>
-    <br><br>
+    <br>
+    <div class="grid-container">
+        <div>
+            <h3>Для того, чтобы выбрать смену:</h3>
+            <div class="raider">
+                <div class="raider__col">
+                            <div class="raider__item">Выберите в левом столбике период проведения смены. </div>
+                            <div class="raider__item">Нажмите кнопку в правом нижнем углу <b>"КУПИТЬ ПУТЕВКУ"</b></div>
+                            <div class="raider__item">Заполните форму и нажмите <b>"ОТПРАВИТЬ"</b> :)</div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <br>
     <div class="shift">
         <div class="grid-container">
             <div class="grid-x grid-padding-x grid-margin-x grid-padding-y grid-margin-y">
