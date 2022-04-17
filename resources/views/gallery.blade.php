@@ -182,7 +182,7 @@
                             <div class="cell">
                                 <a
                                     class="gallery__link"
-                                    href="{{ asset('storage/' . App\Services\ResizeService::resize(Storage::path('public/' . $picPath),'public', 701, 526)) }}"
+                                    href="{{'/storage/' . $picPath}}"
                                     data-fancybox="gallery"
                                 >
                                     <img
@@ -206,7 +206,7 @@
                                 <div class="cell medium-12">
                                     <a
                                         class="gallery__link"
-                                        href="{{ asset('storage/' . App\Services\ResizeService::resize(Storage::path('public/' . $picPath),'public', 356, 245)) }}"
+                                        href="{{'/storage/' . $picPath}}"
                                         data-fancybox="gallery"
                                     >
                                         <img
@@ -233,7 +233,7 @@
                                     <div class="cell medium-12">
                                         <a
                                             class="gallery__link"
-                                            href="{{ asset('storage/' . App\Services\ResizeService::resize(Storage::path('public/' . $picPath),'public', 356, 245)) }}"
+                                            href="{{'/storage/' . $picPath}}"
                                             data-fancybox="gallery"
                                         >
                                             <img
@@ -255,7 +255,7 @@
                             <div class="cell">
                                 <a
                                     class="gallery__link"
-                                    href="{{ asset('storage/' . App\Services\ResizeService::resize(Storage::path('public/' . $picPath),'public', 701, 526)) }}"
+                                    href="{{'/storage/' . $picPath}}"
                                     data-fancybox="gallery"
                                 >
                                     <img
@@ -278,7 +278,7 @@
                         <div class="cell">
                             <a
                                 class="gallery__link"
-                                href="{{ asset('storage/' . App\Services\ResizeService::resize(Storage::path('public/' . $picPath),'public', 1412, 618)) }}"
+                                href="{{'/storage/' . $picPath}}"
                                 data-fancybox="gallery"
                             >
                                 <img
