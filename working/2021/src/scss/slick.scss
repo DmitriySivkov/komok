@@ -252,6 +252,9 @@
     }
 }
 @include breakpoint(small only){
+    .svg.counselors__next.slick-arrow{
+        bottom:0;
+    }
     .arrow-next, .arrow-prev{
         width: rem-calc(70);
     }
