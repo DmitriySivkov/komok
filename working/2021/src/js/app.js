@@ -38,7 +38,7 @@ import "../scss/style.scss";
     autoplaySpeed: 2000,
 
     dots: true,
-    nextArrow: "<svg class='counselors__next_large counselors__next arrow-next' width=\"138\" height=\"138\" viewBox=\"0 0 138 138\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    nextArrow: "<svg class='counselors__next arrow-next' width=\"138\" height=\"138\" viewBox=\"0 0 138 138\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
       "<g filter=\"url(#filter0_d_95_60)\">\n" +
       "<circle cx=\"69\" cy=\"36\" r=\"35\" fill=\"#8B57A3\"/>\n" +
       "</g>\n" +
@@ -173,7 +173,7 @@ import "../scss/style.scss";
     autoplaySpeed: 2000,
 
     dots: true,
-    nextArrow: "<svg class='counselors__next' width=\"138\" height=\"138\" viewBox=\"0 0 138 138\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
+    nextArrow: "<svg class='counselors__next_large counselors__next' width=\"138\" height=\"138\" viewBox=\"0 0 138 138\" fill=\"none\" xmlns=\"http://www.w3.org/2000/svg\">\n" +
       "<g filter=\"url(#filter0_d_98_116)\">\n" +
       "<circle cx=\"69\" cy=\"36\" r=\"35\" fill=\"white\"/>\n" +
       "</g>\n" +
