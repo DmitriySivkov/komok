@@ -1,7 +1,7 @@
 .board{
     margin:rem-calc(80) 0;
     &__wrapper{
-        background: url("/i/board-1.svg ");
+        background: url("/i/board-1.png ");
         position: relative;
 
         background-size: 100% 100%;
@@ -13,7 +13,7 @@
 
 
         &_second{
-            background-image: url("/i/board-2.svg");
+            background-image: url("/i/board-2.png");
         }
     }
     &__content{
