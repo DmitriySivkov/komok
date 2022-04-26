@@ -206,13 +206,15 @@
         }
         &__slide{
             height: 80%;
+            padding:0;
         }
         &__img{
             &_circle{
                 height: 12%;
             }
             &_8{
-                top:42%;
+                top: 35%;
+                right: 10%;
             }
             &_9{
                 top: 54%;
