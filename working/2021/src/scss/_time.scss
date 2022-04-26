@@ -27,5 +27,12 @@
 
     @include breakpoint(small only){
         margin: rem-calc(40) 0;
+        &__age{
+            position: relative;
+            width: 80%;
+            display: block;
+            margin: 0 auto;
+            padding:0;
+        }
     }
 }
