@@ -76,6 +76,7 @@
     @include breakpoint(small only){
         &-title{
             font-size: rem-calc(30);
+            padding-right: 4rem;
         }
     }
 }
