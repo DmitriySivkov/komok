@@ -12,7 +12,7 @@
                     <div class="section__text">
                         {!! $blocks_on_main[1]->description !!}
                     </div>
-                    <div><a class="button" href="{{ $blocks_on_main[1]->button_link }}">{{ $blocks_on_main[1]->button_title }}</a></div>
+                    <div><a class="button"  data-open="Shift"{{-- href="{{ $blocks_on_main[1]->button_link }}--}}">{{ $blocks_on_main[1]->button_title }}</a></div>
                 </div>
             </div>
             <div class="cell large-13 large-offset-2 section__background large-order-2 small-order-1">
@@ -132,4 +132,36 @@
         <img class="section__img section__img_20" src="{{ asset('images/mainpage/back6/circle.svg') }}">
         <img class="section__img section__img_21" src="{{ asset('images/mainpage/back6/circle-small.svg') }}">
     </section>
+    <div class="reveal large" id="Shift" data-reveal="" data-animation-in="spin-in" data-animation-out="spin-out">
+        <section class="section">
+            <div class="grid-container">
+                <div class="section__background section__background_review">
+                    <img class="section__img section__img_1 section__img_z-minus" src="{{ asset('images/review/review-circle-1.svg') }}">
+                    <img class="section__img section__img_2 section__img_z-minus" src="{{ asset('images/review/review-circle-2.svg') }}">
+                    <img class="section__img section__img_3 section__img_z-minus" src="{{ asset('images/review/review-frame-1.svg') }}">
+                    <img class="section__img section__img_4 section__img_z-minus" src="{{ asset('images/review/review-frame-2.svg') }}">
+                    <div class="grid-x">
+                        <div class="cell">
+                            <div class="section__content section__content_center">
+                                <div class="section__head">
+                                    <span class="section__violet section__violet_2">Подберите смену&nbsp;</span>для вашего ребенка
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-align-center">
+                        <div>
+                            <a class="button button_hollow" href="/shifts?age=younger">Смены 7-12 лет</a>
+                        </div>
+                        <div>
+                            <a class="button" href="/shifts">Смены 13-17 лет</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <button class="close-button" data-close="" aria-label="Close modal" type="button">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
 @endsection

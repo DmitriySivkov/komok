@@ -18,8 +18,8 @@
             <h3>Для того, чтобы выбрать смену:</h3>
             <div class="raider">
                 <div class="raider__col">
-                            <div class="raider__item">Выберите в левом столбике период проведения смены. </div>
-                            <div class="raider__item">Нажмите кнопку в правом нижнем углу <b>"КУПИТЬ ПУТЕВКУ"</b></div>
+                            <div class="raider__item">Выберите период проведения смены. </div>
+                            <div class="raider__item">Нажмите кнопку <b>"КУПИТЬ ПУТЕВКУ"</b></div>
                             <div class="raider__item">Заполните форму и нажмите <b>"ЗАБРОНИРОВАТЬ МЕСТО"</b> :)</div>
                 </div>
 
