@@ -55,7 +55,7 @@
     </div>
     <div class="grid-container">
         <div class="map"><img class="map__circle" src="{{ asset('images/place/circle-4.svg') }}">
-            <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3A6de56de49907ea8f2ca4c6d6a0472178035afb00d7d250d644e9b08a7b6c62fb&amp;source=constructor" width="938" height="571"  frameborder="0"></iframe>
+            <iframe  class="map__frame"  src="https://yandex.ru/map-widget/v1/?um=constructor%3A509bba21e192bef7980849b9ca28a27bd85a8b258d15f212b86a2a625c2ef4d0&amp;source=constructor" width="718" height="543" frameborder="0"></iframe>
         </div>
     </div>
     <div class="bus">
