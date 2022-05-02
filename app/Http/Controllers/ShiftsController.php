@@ -8,6 +8,7 @@ use App\Models\ReviewBlock;
 use App\Models\Shift;
 use App\Models\ShiftPeriod;
 use App\Models\ShiftProgram;
+use App\Models\TeamBlock;
 use App\Services\GalleryService;
 use App\Services\ResizeService;
 use Illuminate\Http\Request;
@@ -59,9 +60,30 @@ class ShiftsController extends LayoutController
             return in_array(trim($item->profession), ['Методист', 'Вожатая', 'Вожатый']);
         });
 
-        $employees = $employees->filter(function($item) {
+/*        $employees = $employees->filter(function($item) {
             return !in_array(trim($item->profession), ['Методист', 'Вожатая', 'Вожатый']);
+        });*/
+        $data['blocks_on_team'] = TeamBlock::all()->keyBy('id');
+
+        $data['blocks_on_team']->each(function($item) {
+            if ($item->emphasized_text)
+                $item->headline = str_replace($item->emphasized_text, '', $item->headline);
+
+            $item->employees = Employee::query()->whereIn('id', json_decode($item->employees, true))->get();
+
+            $item->employees->each(function($employee) {
+                if (Storage::disk('public')->exists($employee->picture)) {
+                    $employee->picture = ResizeService::resize(
+                        Storage::path('public/' . $employee->picture),
+                        'public',
+                        128, 128
+                    );
+                }
+            });
         });
+/*        $employees = Employee::query()->whereIn('id', json_decode($data['blocks_on_team'][3]['employees'], true))->get();*/
+
+
 
         $pictures = $gallery->getList();
 
@@ -94,7 +116,7 @@ class ShiftsController extends LayoutController
         return view('shifts', [
             'shifts_period' => $data['shifts_period'],
             'reviews' => $reviews,
-            'employees' => $employees,
+            'employees' => $data['blocks_on_team'][3],
             'elders' => $elders,
             'pictures' => $pictures,
             'settings'=> $this->getLayoutSettings(),

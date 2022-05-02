@@ -334,7 +334,7 @@
         <img class="card__back-image card__back-image_2" src="{{ asset('images/shift/circle-second.png') }}">
         <div class="grid-container">
             <div class="card__slider" id="counselors-second">
-                @foreach($employees as $employee)
+                @foreach($employees->employees as $employee)
                 <div class="card__item card__item_slider">
                     <div class="card__img">
                         <img class="card__photo" src="{{ asset('storage/' . $employee->picture) }}">
