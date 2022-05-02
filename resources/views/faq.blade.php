@@ -86,6 +86,10 @@
 
                                         <button class="button" type="submit">Отправить</button>
                                         <br>
+
+                                    </div>
+                                    <div class="cell large-22">
+
                                         <div>Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a target="_blank" href="/oferta" style="">политикой конфиденциальности</a></div>
 
                                     </div>
