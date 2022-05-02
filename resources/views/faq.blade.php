@@ -82,7 +82,12 @@
                                         <textarea name="text" rows="5" cols="33" placeholder="Поле для текста">{{ old('text') }}</textarea>
                                     </div>
                                     <div class="cell large-22 question__button">
+
+
                                         <button class="button" type="submit">Отправить</button>
+                                        <br>
+                                        <div>Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a target="_blank" href="/oferta" style="">политикой конфиденциальности</a></div>
+
                                     </div>
                                 </div>
                             </form>

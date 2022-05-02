@@ -133,7 +133,11 @@
                                         </div>
                                     </div>
                                     <div class="cell text-align-center">
+
                                         <button class="button z-index-1" type="submit">Забронировать место</button>
+                                        <br>
+                                        <div>Нажимая на кнопку, вы даете согласие на обработку персональных данных и соглашаетесь c <a target="_blank" href="/oferta" style="">политикой конфиденциальности</a></div>
+
                                     </div>
                                 </div>
                             </div>

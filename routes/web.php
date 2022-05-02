@@ -21,6 +21,7 @@ Route::get('/team', [\App\Http\Controllers\TeamController::class, "index"])->nam
 Route::get('/location', [\App\Http\Controllers\PlaceController::class, "index"])->name('place');
 Route::get('/about', [\App\Http\Controllers\AboutController::class, "index"])->name('about');
 Route::get('/shifts', [\App\Http\Controllers\ShiftsController::class, "index"])->name('shifts');
+Route::get('/oferta', [\App\Http\Controllers\OfertaController::class, "index"])->name('oferta');
 
 /** forms */
 Route::post('/orderTicket', [\App\Http\Controllers\OrderTicketController::class, "store"]);
