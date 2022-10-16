@@ -18,14 +18,28 @@ class ShiftsController extends LayoutController
 {
     public function index(Request $request, GalleryService $gallery)
     {
-        $data['shifts_period'] = ShiftPeriod::query()
-            ->orderBy('id', 'asc')
-            ->when($request->has('age') && $request->get('age') === 'younger', function ($query) {
-                $query->whereJsonContains('shift', strval(1));
-            }, function ($query) {
-                $query->whereJsonContains('shift', strval(2));
-            })
-            ->get();
+        if ($request->has('age')){
+            $data['shifts_period'] = ShiftPeriod::query()
+                ->orderBy('id', 'asc')
+                ->when($request->has('age') && $request->get('age') === 'family', function ($query) {
+                    $query->whereJsonContains('shift', strval(3));
+                }
+                )
+                ->when($request->has('age') && $request->get('age') === 'younger', function ($query) {
+                    $query->whereJsonContains('shift', strval(1));
+                })
+                ->get();
+        } else{
+            $data['shifts_period'] = ShiftPeriod::query()
+                ->orderBy('id', 'asc')
+                ->when($request->has('age'), function ($query) {
+                    $query->whereJsonContains('shift', strval(2));
+                },
+                function ($query){
+                    $query->whereJsonContains('shift', strval(2));
+                })
+                ->get();
+        }
 
         $data['shifts_period']->each(function($item) {
             $item->programs = ShiftProgram::query()->whereIn('id', json_decode($item->programs, true))->get();
@@ -112,7 +126,6 @@ class ShiftsController extends LayoutController
             }
             return $picture;
         });
-
         return view('shifts', [
             'shifts_period' => $data['shifts_period'],
             'reviews' => $reviews,

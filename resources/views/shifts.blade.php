@@ -7,8 +7,12 @@
         <img class="article__circle" src="{{ asset('images/place/circle.png') }}">
         <div class="grid-container">
             <div class="article__subtitle">
+                @if (request()->get('age') !== 'family')
                 Смены <span class="article__underline">для {{ request()->get('age') === 'younger' ? 'детей' : 'подростков' }}</span>
                 {{ request()->get('age') === 'younger' ? '7-12 лет' : '13-17 лет' }}
+                @else
+                Семейные выезды
+                @endif
             </div>
         </div>
     </div>
