@@ -82,7 +82,7 @@
                         <div class="cell">
                             <div class="section__content section__content_center">
                                 <div class="section__head">
-                                    <span class="section__violet section__violet_2">Забронируйте путевку&nbsp;</span>в лагерь
+                                    <span class="section__violet section__violet_2">Забронируйте &nbsp;</span>выездную программу
                                 </div>
                             </div>
                         </div>
