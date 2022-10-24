@@ -39,6 +39,12 @@ class OrderTicketController extends Controller
                 ->first()->value
         )->send(new \App\Mail\OrderTicket($orderTicket));
 
+        Mail::to(
+            $orderTicket->getAttributeValue('mail')
+        )->send(new \App\Mail\AnketaTicket($orderTicket)
+            );
+
+
         return Redirect::to(URL::previous() . "#orderTicket")
             ->with('success', 'Заявка отправлена, скоро наш менеджер с вами свяжется.');
     }
