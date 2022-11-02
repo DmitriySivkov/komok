@@ -28,6 +28,14 @@
             margin-right: 0;
         }
     }
+    @include breakpoint(xlarge down){
+        &__top-link{
+            font-size: rem-calc(16);
+        }
+        &__bottom-link{
+            font-size: rem-calc(14);
+        }
+    }
     @include breakpoint(large down){
         text-align: center;
         margin-top: rem-calc(10);
