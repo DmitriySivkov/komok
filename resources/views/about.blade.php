@@ -4,7 +4,7 @@
         {{ Breadcrumbs::render('about') }}
         <div class="article">
             <div class="article__subtitle">
-                {{ $blocks_on_about[1]->headline }}<span class="article__underline"><br/>{{ $blocks_on_about[1]->emphasized_text }}</span>
+                {{ $blocks_on_about[1]->headline }}<span class="article__underline">{{ $blocks_on_about[1]->emphasized_text }}</span>
             </div>
         </div>
         @foreach($shifts as $shift)
