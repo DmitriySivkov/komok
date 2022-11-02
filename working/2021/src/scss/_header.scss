@@ -6,9 +6,11 @@
     padding: rem-calc(66) 0;
     @include breakpoint(large down){
         padding: 1.125rem 0;
-        flex-direction: column;
+        justify-content: space-evenly;
     }
-
+    @include breakpoint(medium down){
+        justify-content: space-evenly;
+    }
     flex-direction: row;
     @include breakpoint(small only){
         &__logo{
@@ -17,5 +19,4 @@
         flex-direction: row;
         justify-content: space-around;
     }
-
 }

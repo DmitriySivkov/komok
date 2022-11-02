@@ -38,6 +38,9 @@
         &__bottom-link{
             font-size: rem-calc(10);
         }
+
+        order: 2 !important;
+        width: 100%;
     }
     @include breakpoint(small only){
         &{
@@ -59,4 +62,5 @@
             flex-direction: column;
         }
     }
+
 }

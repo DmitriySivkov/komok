@@ -14,11 +14,11 @@
     .nav &{
         display: none;
     }
-    @include breakpoint(xlarge down){
+    @include breakpoint(xxlarge down){
         font-size: rem-calc(14);
 
         &__link{
-            font-size: rem-calc(18);
+            font-size: rem-calc(16);
         }
     }
     @include breakpoint(small only){
@@ -30,4 +30,5 @@
             display: block;
         }
     }
+
 }
