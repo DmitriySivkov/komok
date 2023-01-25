@@ -271,7 +271,7 @@ import "../scss/style.scss";
   }
   $('.js-todo-item').equalHeight();
 
-//   #Achievments drop up list on page about-new
+//   #Achievment drop up list on page about-new
 
   /*$('#achievments-drop-up-list .achievments__item').show(100, function(){
     setTimeout(function(){

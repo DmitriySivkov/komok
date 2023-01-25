@@ -2,67 +2,108 @@
 @section('body')
     <div class="grid-container">
         {{ Breadcrumbs::render('about') }}
-        <div class="article">
-            <div class="article__subtitle">
-                {{ $blocks_on_about[1]->headline }}<span class="article__underline">{{ $blocks_on_about[1]->emphasized_text }}</span>
-            </div>
-        </div>
-        @foreach($shifts as $shift)
-        <div class="time">
-            <span class="time__age">{{ $shift->title }}</span>
-            <div class="time__crossline"></div>
-        </div>
-        <div class="show">
-            @foreach($shift->programs as $program)
-            <div class="show__item">
-                <img class="show__image" src="{{ asset('storage/' . $program->picture) }}">
-                <h2 class="show__title">{{ $program->headline }}</h2>
-                <div class="show__content">
-                    {!! $program->text !!}
-                </div>
-            </div>
-            @endforeach
-        </div>
-        @endforeach
+
         <section class="section">
             <div class="grid-container">
-                <div class="section__background">
-                    <div class="grid-x">
-                        <div class="cell large-11">
-                            <div class="section__content">
-                                <div class="section__head">{{ $blocks_on_about[2]->headline }}
-                                    <span class="section__violet section__violet_6">{{ $blocks_on_about[2]->emphasized_text }}</span>
-                                </div>
-                                <div class="section__text">{!! $blocks_on_about[2]->description !!}</div>
+                <div class="grid-x">
+                    <div class="cell large-12 large-order-1 small-order-2">
+                        <div class="section__content section__content_second">
+                            <div class="section__head">{{ $blocks_on_about[1]->headline }}&nbsp;<span
+                                    class="section__violet section__violet_2">{{ $blocks_on_about[1]->emphasized_text }}</span>&nbsp;{{ $blocks_on_about[1]->headline2 }}
+                            </div>
+                            <div class="section__text">
+                                {!! $blocks_on_about[1]->text !!}
                             </div>
                         </div>
-                        <div class="cell large-9 large-offset-2">
-                            <img class="section__slide" src="{{ asset('i/camera.png') }}">
-                        </div>
+                    </div>
+                    <div
+                        class="cell large-10 large-offset-2 section__background section__background_second large-order-2 small-order-1">
+                        <img class="section__slide" src="{{ asset('storage/' . $blocks_on_about[1]->picture) }}">
                     </div>
                 </div>
             </div>
         </section>
-        <div class="skill">
-            @foreach($skills as $skill)
-            <div class="skill__item">
-                <div class="skill__image">
-                    <img src="{{ asset('storage/' . $skill->picture) }}">
-                </div>
-                <div class="skill__title">{{ $skill->headline }}</div>
-                <div class="skill__content">
-                    {!! $skill->text !!}
-                </div>
-            </div>
-            @endforeach
-        </div>
-        <div class="board">
+
+        <section class="section">
             <div class="grid-container">
-                <div class="board__wrapper board__wrapper_second">
-                    <div class="board__content board__content_center">{!! $blocks_on_about[3]->text !!}</div>
+                <div class="grid-x player">
+                    <div class="cell">
+                        <div class="player__wrapper">
+                            <iframe
+                                src="{{ $blocks_on_about[2]->video }}"
+                                title="YouTube video player" frameborder="0"
+                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                allowfullscreen=""></iframe>
+                        </div>
+                        <br><img class="player__circle" src="{{ asset('images/about/player-circle.png') }}"></div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <div class="achievments"><img class="achievments__circle" src="{{ asset('images/about/achievments-circle.png') }}">
+            <div class="grid-container">
+                <div class="grid-x">
+                    <div class="cell achievments__container large-offset-2">
+                        <div class="achievments__header">
+                            <div class="article__subtitle"></div>
+                            <span class="article__underline">Комок</span>&nbsp;это
+                        </div>
+                        <div class="achievments__wrapper" style="width: 70%" id="achievments-drop-up-list">
+
+                            @foreach($skills as $skill)
+                                <div class="achievments__item">
+                                    <div class="achievments__picture">
+                                        <img class="achievments__image"
+                                                                           src="{{ asset('storage/'.$skill->image) }}">
+                                    </div>
+                                    <div class="achievments__content">
+                                        <div class="achievments__header">{{ $skill->headline }}</div>
+                                        <div class="achievments__description">{!! $skill->text !!}</div>
+                                    </div>
+
+                                </div>
+                            @endforeach
+
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+
+
+
+
+
+
+        <div class="grid-container">
+            <div class="grid-x cifry">
+                <div class="cifry__header">
+                    <div class="div">Комок <span class="article__underline">в цифрах</span></div>
+                </div>
+
+
+                @foreach($programs as $program)
+                <div class="cifry__item">
+                    <span class="cifry__nomer">{{ $program->headline }}
+                        <img class="cifry__circle" src="{{ asset('images/about/cifry-circle.png') }}">
+                    </span>
+                    <div class="cifry__description">{!! $program->text !!}</div>
+                </div>
+                @endforeach
+
+            </div>
+            <div class="board">
+                <div class="grid-container">
+                    <div class="board__wrapper board__wrapper_second">
+                        <div class="board__content board__content_center">{!! $blocks_on_about[3]->text !!}</div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
         <section class="section">
             <div class="grid-container">
                 <div class="section__background section__background_review">

@@ -29,6 +29,8 @@ class AboutController extends LayoutController
             });
         });
 
+        $programs = Program::all();
+
         $skills = Skill::all();
         $skills->each(function(&$item) {
             $tmp = json_decode($item['picture'], true);
@@ -41,7 +43,8 @@ class AboutController extends LayoutController
             'settings'=> $this->getLayoutSettings(),
             'meta' => $this->getMeta(),
             'shifts' => $shifts,
-            'skills' => $skills
+            'skills' => $skills,
+            'programs' => $programs
         ]);
     }
 }
