@@ -34,7 +34,12 @@
         right: 0;
         position: absolute;
     }
-
+    @include breakpoint(large down){
+        &__wrapper {
+            background-size: cover;
+            padding: 4.375rem 0;
+            }
+        }
     @include breakpoint(small only){
         &{
             margin: 2rem 0;

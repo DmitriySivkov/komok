@@ -271,4 +271,37 @@ import "../scss/style.scss";
   }
   $('.js-todo-item').equalHeight();
 
+//   #Achievments drop up list on page about-new
+
+  /*$('#achievments-drop-up-list .achievments__item').show(100, function(){
+    setTimeout(function(){
+      $(this).hide(200);
+      $(this).next().show(300, arguments.callee);
+      /!*
+            $('#achievments-drop-up-list .achievments__item').hide(500);
+      *!/
+    }, 200);
+  });*/
+
+  let $target = $('#achievments-drop-up-list .achievments__item');
+  let hold = 2800;
+  let index = 0;
+
+  while (index <= $target.length){
+    if (index !== 0){
+      $target.eq(index).hide();
+    }
+    index++;
+  }
+  index = 1;
+  setInterval(() => {
+      if (index >=  $target.length)
+        index = 0;
+      if ($target.eq(index) !== $target.length){
+        $target.hide();
+      }
+      $target.eq(index).show();
+      index++;
+    }, hold
+  );
 })(jQuery);

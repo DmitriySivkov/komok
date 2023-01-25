@@ -1,0 +1,74 @@
+.cifry{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    &__header{
+        font-weight: bold;
+        font-size: rem-calc(45);
+        line-height: rem-calc(51);
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-top: 3.1875rem;
+        margin-bottom: rem-calc(115);
+    }
+
+    &__nomer{
+        color:#5F48B0;
+        font-weight: 800;
+        font-size: rem-calc(80);
+        line-height: 114.4%;
+
+        position: relative;
+    }
+    &__description{
+        margin-top: rem-calc(30);
+        font-weight: 400;
+        font-size: rem-calc(20);
+        line-height: rem-calc(31);
+    }
+    &__item{
+        width: 23%;
+        margin-bottom: rem-calc(115);
+    }
+    &__circle{
+        position: absolute;
+        top:rem-calc(3);
+        right: rem-calc(-12);
+        z-index: -1;
+    }
+
+    @include breakpoint(large down){
+        &__item{
+            width: 32%;
+            margin-bottom: rem-calc(85);
+        }
+    }
+    @include breakpoint(medium only){
+        &__nomer{
+            font-size: rem-calc(60);
+        }
+    }
+    @include breakpoint(small only){
+        &__header{
+            margin-top: rem-calc(65);
+            font-size: 2.1rem;
+        }
+        &__nomer{
+            font-size: rem-calc(40);
+        }
+        &__item{
+            width: 48%;
+            margin-bottom: rem-calc(55);
+            text-align: center;
+        }
+        &__circle{
+            top: 0;
+            right: unset;
+            height: 20px;
+            width: 20px;
+        }
+    }
+}

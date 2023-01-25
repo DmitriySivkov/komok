@@ -4,11 +4,15 @@
     &__background{
         padding: rem-calc(75) 0;
         position: relative;
+
+        &_second{
+            padding-top: rem-calc(0);
+        }
     }
     &__head{
         font-weight: 800;
         font-size: rem-calc(45);
-        line-height: rem-calc(51);
+        line-height: rem-calc(61);
         margin-bottom: rem-calc(35);
     }
     &__suptop{
@@ -24,6 +28,10 @@
         justify-content: center;
         flex-direction: column;
         height: 100%;
+        &_second{
+            justify-content: flex-start;
+            padding-top: rem-calc(70);
+        }
         &_center{
             text-align: center;
         }
@@ -166,6 +174,10 @@
         }
         &__background{
             text-align: center;
+
+            &_second{
+                padding-bottom: 0;
+            }
         }
         &__img{
             &_1{

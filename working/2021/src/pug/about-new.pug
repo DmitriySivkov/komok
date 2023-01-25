@@ -1,0 +1,133 @@
+extends site-regular
+block page
+  .grid-container
+    .breadcrumbs
+      a.breadcrumbs__item Главная
+      span.breadcrumbs__item.breadcrumbs__item_active О лагере
+    section.section
+      .grid-container
+        .grid-x
+          .cell.large-12.large-order-1.small-order-2
+            .section__content.section__content_second
+              .section__head
+                | Молодежный проект Комок — это&nbsp;
+                span.section__violet.section__violet_2 свобода быть собой
+                |&nbsp;для каждого ребенка
+              .section__text
+                p Все создатели проекта — родители, и, создавая его, мы смотрели на то, чего хотим для своих детей.
+                p Конечно, качественное образование — важно, но ещё важнее дать ребенку возможность поверить в свои силы, осознать, что всё в этой жизни зависит от него, от умения коммуницировать, отстаивать свою точку зрения, принимать грамотные решения и отвечать за свои поступки.
+                p Этому не учат в школе, а наш проект — учит!
+                p <i> <b> Корнилова Евгения Валерьевна, </b> <br> руководитель лагеря, практикующий психолог.</i>
+          .cell.large-10.large-offset-2.section__background.section__background_second.large-order-2.small-order-1
+            img(src="./i/evgenia.jpg").section__slide
+    section.section
+      .grid-container
+        .grid-x.player
+          .cell
+            .player__wrapper
+              iframe( src='https://www.youtube.com/embed/WJAAlFm1uqQ?modestbranding=1&amp;rel=0&amp;showinfo=0&autohide=1&autoplay=1' title='YouTube video player' frameborder='0' allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share' allowfullscreen='')
+            br
+            img(src="./images/player-circle.png").player__circle
+  .achievments
+    img(src="./images/achievments/achievments-circle.png").achievments__circle
+    .grid-container
+      .cell.achievments__container.large-offset-4
+        .achievments__header
+          .article__subtitle
+          | <span class="article__underline">Комок</span> это
+        .achievments__wrapper#achievments-drop-up-list
+          .achievments__item
+            .achievments__picture
+              img(src="./images/achievments/achievments-1.png").achievments__image
+            .achievments__content
+              .achievments__header Lore Ipsun
+              .achievments__description В отрядах до 10 человек, готовых
+          .achievments__item
+            .achievments__picture
+              img(src="./images/achievments/achievments-1.png").achievments__image
+            .achievments__content
+              .achievments__header Мама, Ipsum Lora 2
+              .achievments__description Ipsum Lora 2
+          .achievments__item
+            .achievments__picture
+              img(src="./images/achievments/achievments-1.png").achievments__image
+            .achievments__content
+              .achievments__header Lore Ipsum 3
+              .achievments__description Lore Ipsum 3
+
+  .grid-container
+    .grid-x.cifry
+      .cifry__header
+        .div
+          | Комок <span class="article__underline">в цифрах</span>
+      .cifry__item
+        span.cifry__nomer 2015
+          img(src="./images/cifry-circle.png").cifry__circle
+        .cifry__description год создания проекта
+      .cifry__item
+        span.cifry__nomer 62
+          img(src="./images/cifry-circle.png").cifry__circle
+        .cifry__description смены проведено
+      .cifry__item
+        span.cifry__nomer 59
+          img(src="./images/cifry-circle.png").cifry__circle
+        .cifry__description уникальных тем выездов
+      .cifry__item
+        span.cifry__nomer 1726
+          img(src="./images/cifry-circle.png").cifry__circle
+        .cifry__description детей, посетивших смены, стали нашими друзьями
+      .cifry__item
+        span.cifry__nomer 23
+          img(src="./images/cifry-circle.png").cifry__circle
+        .cifry__description учебных направления
+      .cifry__item
+        span.cifry__nomer 7
+          img(src="./images/cifry-circle.png").cifry__circle
+        .cifry__description выездов школы вожатых
+      .cifry__item
+        span.cifry__nomer 78%
+          img(src="./images/cifry-circle.png").cifry__circle
+        .cifry__description семей возвращаются к нам
+      .cifry__item
+        span.cifry__nomer 95%
+          img(src="./images/cifry-circle.png").cifry__circle
+        .cifry__description работающих вожатых ранее были участниками наших смен
+
+
+    .board
+      .grid-container
+        .board__wrapper.board__wrapper_second
+          img(src="./images/mainpage/back5/circle.svg").board__img
+          .board__content Мы помогаем детям становиться увереннее в себе, быть общительнее и раскрывать свои возможности
+
+    section.section
+      .grid-container
+        .section__background.section__background_review
+          img(src="images/review/review-circle-1.png").section__img.section__img_1
+          img(src="images/review/review-circle-2.png").section__img.section__img_2
+          img(src="images/review/review-frame-1.png").section__img.section__img_3
+          img(src="images/review/review-frame-2.png").section__img.section__img_4
+          .grid-x
+            .cell
+              .section__content.section__content_center
+                .section__head
+                  span.section__violet.section__violet_2 Забронируйте путевку&nbsp;
+                  | в лагерь
+          form
+            .grid-x.justify-content-center
+              .cell.large-10
+                .grid-x.grid-margin-x.grid-padding-y
+                  .cell
+                    .custom-input
+                      input(type="text" placeholder=" ")
+                      label Имя и фамилия
+                  .cell
+                    .custom-input
+                      input(placeholder=" " type="tel" name="phone")#phone
+                      label Номер телефона
+                  .cell
+                    .custom-input
+                      input(placeholder=" " type="mail")
+                      label Электронная почта
+                  .cell.text-align-center
+                    a(href="#" type="submit").button.z-index-1 Забронировать место
