@@ -94,7 +94,7 @@
                 @endforeach
 
             </div>
-            <div class="board">
+            <div class="board board_no-margin">
                 <div class="grid-container">
                     <div class="board__wrapper board__wrapper_second">
                         <div class="board__content board__content_center">{!! $blocks_on_about[3]->text !!}</div>
