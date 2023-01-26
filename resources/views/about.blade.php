@@ -107,15 +107,15 @@
         <section class="section">
             <div class="grid-container">
                 <div class="section__background section__background_review">
-                    <img class="section__img section__img_1" src="images/review/review-circle-1.svg">
-                    <img class="section__img section__img_2" src="images/review/review-circle-2.svg">
-                    <img class="section__img section__img_3" src="images/review/review-frame-1.svg">
-                    <img class="section__img section__img_4" src="images/review/review-frame-2.svg">
+                    <img class="section__img section__img_1" src="{{ asset('images/review/review-circle-1.svg') }}">
+                    <img class="section__img section__img_2" src="{{ asset('images/review/review-circle-2.svg') }}">
+                    <img class="section__img section__img_3" src="{{ asset('images/review/review-frame-1.svg') }}">
+                    <img class="section__img section__img_4" src="{{ asset('images/review/review-frame-2.svg') }}">
                     <div class="grid-x" id="orderTicket">
                         <div class="cell">
                             <div class="section__content section__content_center">
                                 <div class="section__head">
-                                    <span class="section__violet section__violet_2">Забронируйте</span>&nbsp;выездную программу
+                                    <span class="section__violet section__violet_2">Забронируйте &nbsp;</span>выездную программу
                                 </div>
                             </div>
                         </div>
@@ -174,6 +174,7 @@
                                         </div>
                                     </div>
                                     <div class="cell text-align-center">
+
 
                                         <button class="button z-index-1" type="submit">Забронировать место</button>
                                         <br>
