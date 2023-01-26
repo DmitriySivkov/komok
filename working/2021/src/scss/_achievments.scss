@@ -28,6 +28,9 @@
         animation-iteration-count: infinite;
 
     }
+    &__container{
+    padding-left: rem-calc(140);
+    }
     &__content{
         display: flex;
         flex-direction: column;
@@ -70,8 +73,8 @@
         }
     }
     @include breakpoint(large only){
-        &__wrapper{
-            padding-left: rem-calc(140);
+        &__container{
+            padding-left: 0;
         }
     }
     @include breakpoint(medium down){
