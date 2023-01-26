@@ -68,8 +68,8 @@
     }
     @include breakpoint(large only){
         &__image{
-            width: rem-calc(84);
-            height: rem-calc(79);
+            min-width: rem-calc(84);
+            min-height: rem-calc(79);
         }
     }
     @include breakpoint(medium only){
