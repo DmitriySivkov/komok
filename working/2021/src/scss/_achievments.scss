@@ -74,12 +74,11 @@
             top: -70px;
         }
     }
-    @include breakpoint(large only){
+
+    @include breakpoint(medium down){
         &__container{
             padding-left: 0;
         }
-    }
-    @include breakpoint(medium down){
         .achievments__image{
             min-width: auto;
             min-height: auto;
