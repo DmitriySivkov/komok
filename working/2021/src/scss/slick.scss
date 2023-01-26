@@ -189,7 +189,7 @@
     &_lines{
         transition: width .2s linear;
         & + .card__circle{
-            transform: translateX(-195%);
+            transform: translate(-108%, -10%) scale(0.7);
         }
     }
 }
@@ -202,7 +202,7 @@
     & .slick-track{
         & .slick-active .card__mainwrapper .grid-x .cell {
             & .card__img .card__circle{
-                transform: translateX(-20%);
+                transform: translateX(0%);
             }
             & .card__header, .card__content{
                 opacity: 1;

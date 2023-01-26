@@ -23,8 +23,8 @@
                 @foreach($blocks_on_team[1]->employees as $employee)
                 <div class="card__item card__item_slider">
                     <div class="card__img">
-                        <img class="card__photo" src="{{ asset('storage/' . $employee->picture) }}">
-                        <img class="card__circle" src="{{ asset('i/reviews/circle.svg') }}">
+                        <img class="card__photo card__photo_team" src="{{ asset('storage/' . $employee->picture) }}">
+                        <img class="card__circle card__circle_team" src="{{ asset('i/reviews/circle.svg') }}">
                     </div>
                     <div class="card__header">
                         <div class="card__name card__name_slider">{{ $employee->name }}</div>
@@ -47,8 +47,8 @@
                 @foreach($blocks_on_team[3]->employees as $employee)
                 <div class="card__item card__item_slider">
                     <div class="card__img">
-                        <img class="card__photo" src="{{ asset('storage/' . $employee->picture) }}">
-                        <img class="card__circle" src="{{ asset('i/reviews/circle.svg') }}"></div>
+                        <img class="card__photo card__photo_team" src="{{ asset('storage/' . $employee->picture) }}">
+                        <img class="card__circle card__circle_team" src="{{ asset('i/reviews/circle.svg') }}"></div>
                     <div class="card__header">
                         <div class="card__name card__name_slider">{{ $employee->name }}</div>
                         <div class="card__prof">{{ $employee->profession }}</div>
@@ -72,8 +72,8 @@
                 @foreach($blocks_on_team[4]->employees as $employee)
                 <div class="card__item card__item_large">
                     <div class="card__img">
-                        <img class="card__photo" src="{{ asset('storage/' . $employee->picture) }}">
-                        <img class="card__circle card__circle_large" src="{{ asset('i/reviews/circle.svg') }}">
+                        <img class="card__photo card__photo_team" src="{{ asset('storage/' . $employee->picture) }}">
+                        <img class="card__circle card__circle_team" src="{{ asset('i/reviews/circle.svg') }}">
                     </div>
                     <div class="card__header">
                         <div class="card__name card__name_large">{{ $employee->name }}</div>

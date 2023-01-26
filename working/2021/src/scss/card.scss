@@ -110,6 +110,11 @@
         border-radius: 50%;
         z-index: 2;
         position: relative;
+
+        &_team{
+            transform: scale(1.15);
+            padding-bottom: rem-calc(10);
+        }
     }
     &__circle{
         position: absolute;
@@ -118,6 +123,9 @@
         z-index: 1;
         &_large{
             top: -1.625rem;
+        }
+        &_team{
+            right: -1.625rem;
         }
     }
     &__name,&__age{

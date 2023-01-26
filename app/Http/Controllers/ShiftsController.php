@@ -53,7 +53,7 @@ class ShiftsController extends LayoutController
                 $item->picture = ResizeService::resize(
                     Storage::path('public/' . $item->picture),
                     'public',
-                    286, 286
+                    170, 170
                 );
             }
         }
