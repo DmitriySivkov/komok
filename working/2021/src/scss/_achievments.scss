@@ -49,7 +49,10 @@
     &__picture{
         margin-right: rem-calc(23);
     }
-
+    &__image{
+        min-width: rem-calc(84);
+        min-height: rem-calc(79);
+    }
     @keyframes achievments-content-drop-up {
         0%{
             opacity: 0;
@@ -66,10 +69,10 @@
             top: -70px;
         }
     }
-    @include breakpoint(large only){
-        &__image{
-            min-width: rem-calc(84);
-            min-height: rem-calc(79);
+    @include breakpoint(medium down){
+        .achievments__image{
+            min-width: auto;
+            min-height: auto;
         }
     }
     @include breakpoint(medium only){
