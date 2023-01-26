@@ -69,6 +69,11 @@
             top: -70px;
         }
     }
+    @include breakpoint(large only){
+        &__wrapper{
+            padding-left: rem-calc(140);
+        }
+    }
     @include breakpoint(medium down){
         .achievments__image{
             min-width: auto;
