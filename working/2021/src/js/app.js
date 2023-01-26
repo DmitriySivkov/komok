@@ -273,16 +273,6 @@ import "../scss/style.scss";
 
 //   #Achievment drop up list on page about-new
 
-  /*$('#achievments-drop-up-list .achievments__item').show(100, function(){
-    setTimeout(function(){
-      $(this).hide(200);
-      $(this).next().show(300, arguments.callee);
-      /!*
-            $('#achievments-drop-up-list .achievments__item').hide(500);
-      *!/
-    }, 200);
-  });*/
-
   let $target = $('#achievments-drop-up-list .achievments__item');
   let hold = 2800;
   let index = 0;
@@ -304,4 +294,15 @@ import "../scss/style.scss";
       index++;
     }, hold
   );
+// Equal height for achievments-drop-up-list items
+  $('#achievments-drop-up-list').each(function(){
+    var highestBox = 0;
+    $(this).find('.achievments__item').each(function(){
+      if($(this).height() > highestBox){
+        highestBox = $(this).height();
+      }
+    })
+
+    $(this).find('.achievments__item').height(highestBox);
+  });
 })(jQuery);
