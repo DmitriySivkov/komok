@@ -18,7 +18,6 @@
     &__item{
         display: flex;
         align-items: baseline;
-        margin-bottom: rem-calc(80);
         position: relative;
         &+&{
             opacity: 0;
