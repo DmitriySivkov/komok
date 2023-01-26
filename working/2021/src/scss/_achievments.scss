@@ -55,6 +55,8 @@
     &__image{
         min-width: rem-calc(84);
         min-height: rem-calc(79);
+        max-width: rem-calc(84);
+        max-height: rem-calc(79);
     }
     @keyframes achievments-content-drop-up {
         0%{
