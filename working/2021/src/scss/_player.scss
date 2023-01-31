@@ -7,7 +7,7 @@
 
         & iframe{
             width: 100%;
-            height: 804px;
+            height: rem-calc(604);
         }
     }
 
@@ -19,7 +19,7 @@
     @include breakpoint(large down){
         &__wrapper{
             & iframe{
-                height: 602px;
+                height: rem-calc(502);
             }
         }
     }
@@ -27,7 +27,7 @@
     @include breakpoint(small only){
         &__wrapper{
             & iframe{
-                height: 301px;
+                height: rem-calc(301);
             }
         }
     }
