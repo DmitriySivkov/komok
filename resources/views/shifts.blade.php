@@ -50,9 +50,16 @@
                 <div class="cell large-19 large-offset-1">
                     <div class="tabs-content vertical" data-tabs-content="example-tabs">
                         @foreach($shifts_period as $period)
+
                         <div class="tabs-panel {{ $loop->first ? 'is-active' : '' }} tabs-panel_no-padding" id="panel{{$period->id}}v">
                             <div class="tabs-content vertical" data-tabs-content="second-tabs">
                                 <div class="vertical tabs" id="second-tabs" data-tabs="">
+                                    <h2>
+                                        {{ $period->title }}
+                                    </h2>
+                                    <div>
+                                        {!! $period->description  !!}
+                                    </div>
                                     @foreach($period->programs as $program)
                                     <div class="tabs-panel {{ $loop->first ? 'is-active' : '' }} tabs-panel_no-padding" id="second{{$period->id}}v{{$program->id}}">
                                         <div class="grid-x">
