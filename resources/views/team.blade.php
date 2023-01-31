@@ -13,6 +13,7 @@
                 <div class="cell large-13">
                     <div class="article__subtitle">
                         {{ $blocks_on_team[1]->headline }}<br><span class="article__underline">{{ $blocks_on_team[1]->emphasized_text }}</span>
+                        {{ $blocks_on_team[1]->headline2 }}
                     </div>
                 </div>
             </div>
@@ -41,6 +42,7 @@
             <div class="card__mainheader">
                 <div class="card__title">{{ $blocks_on_team[3]->headline }}<br>
                     <span class="card__underline">{{ $blocks_on_team[3]->emphasized_text }}</span>
+                    {{ $blocks_on_team[3]->headline2 }}
                 </div>
             </div>
             <div class="card__slider" id="workers">
@@ -63,8 +65,9 @@
         <div class="card card_large">
             <div class="card__mainheader">
                 <div class="card__title">
-                    <span class="card__underline card__underline_violet">{{ $blocks_on_team[4]->emphasized_text }}</span>
                     {{ $blocks_on_team[4]->headline }}
+                    <span class="card__underline card__underline_violet">{{ $blocks_on_team[4]->emphasized_text }}</span>
+                    {{ $blocks_on_team[4]->headline2 }}
                 </div>
                 <div class="card__content">{!! $blocks_on_team[4]->text !!}</div>
             </div>

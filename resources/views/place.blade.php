@@ -13,6 +13,7 @@
             </div>
             <div class="article__subtitle">
                 <span class="article__underline">{{ $blocks_on_place[1]->headline }}</span> {{ $blocks_on_place[1]->emphasized_text }}
+                {{ $blocks_on_place[1]->headline2 }}
             </div>
             <div class="grid-x grid-padding-y">
                 <div class="cell large-8">
@@ -46,6 +47,7 @@
     <div class="article"><img class="article__circle" src="{{ asset('images/place/circle-1.svg') }}">
         <div class="grid-container">
             <div class="article__subtitle">{{ $blocks_on_place[2]->headline }} <span class="article__underline">{{ $blocks_on_place[2]->emphasized_text }}</span></div>
+            {{ $blocks_on_place[2]->headline2 }}
             <div class="grid-x grid-padding-y">
                 <div class="cell large-8">
                     {!! $blocks_on_place[2]->text !!}
