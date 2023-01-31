@@ -24,7 +24,7 @@ class TeamController extends LayoutController
                     $employee->picture = ResizeService::resize(
                         Storage::path('public/' . $employee->picture),
                         'public',
-                        128, 128
+                        187, 187
                     );
                 }
             });
