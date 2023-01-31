@@ -6,8 +6,9 @@
             <div class="cell large-9 large-order-1 small-order-2">
                 <div class="section__content">
                     <div class="section__head">
-                        <span class="section__violet section__violet_1">{{ $blocks_on_main[1]->emphasized_text }}</span>
                         {{ $blocks_on_main[1]->headline }}
+                        <span class="section__violet section__violet_1">{{ $blocks_on_main[1]->emphasized_text }}</span>
+                        {{ $blocks_on_main[1]->headline2 }}
                     </div>
                     <div class="section__text">
                         {!! $blocks_on_main[1]->description !!}
@@ -34,7 +35,9 @@
                     <div class="cell large-11 large-offset-6">
                         <div class="section__content section__content_center">
                             <div class="section__head">
-                                {{ $blocks_on_main[2]->headline }}<span class="section__violet section__violet_2">{{ $blocks_on_main[2]->emphasized_text }}</span>
+                                {{ $blocks_on_main[2]->headline }}
+                                <span class="section__violet section__violet_2">{{ $blocks_on_main[2]->emphasized_text }}</span>
+                                {{ $blocks_on_main[2]->headline2 }}
                             </div>
                             <div class="section__text">
                                 {!! $blocks_on_main[2]->description !!}
@@ -58,6 +61,7 @@
                         <div class="section__head">
                             <div class="section__suptop">{{ $blocks_on_main[3]->text_above_headline }}</div>
                             {{ $blocks_on_main[3]->headline }}<span class="section__violet section__violet_3">{{ $blocks_on_main[3]->emphasized_text }}</span>
+                            {{ $blocks_on_main[3]->headline2 }}
                         </div>
                         <div class="section__text">
                             {!! $blocks_on_main[3]->description !!}
@@ -78,6 +82,7 @@
                             <div class="section__head">
                                 <div class="section__suptop">{{ $blocks_on_main[4]->text_above_headline }}</div>
                                 {{ $blocks_on_main[4]->headline }}<span class="section__violet section__violet_4">{{ $blocks_on_main[4]->emphasized_text }}</span></div>
+                            {{ $blocks_on_main[4]->headline2 }}
                             <div class="section__text">
                                 {!! $blocks_on_main[4]->description !!}
                             </div>
@@ -111,8 +116,9 @@
                 <div class="cell large-9 large-order-1 small-order-2">
                     <div class="section__content">
                         <div class="section__head">
-                            <span class="section__violet section__violet_5">{{ $blocks_on_main[6]->emphasized_text }}</span>
                             {{ $blocks_on_main[6]->headline }}
+                            <span class="section__violet section__violet_5">{{ $blocks_on_main[6]->emphasized_text }}</span>
+                            {{ $blocks_on_main[6]->headline2 }}
                         </div>
                         <div class="section__text">
                             {!! $blocks_on_main[6]->description !!}
