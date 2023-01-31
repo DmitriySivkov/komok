@@ -274,7 +274,7 @@ import "../scss/style.scss";
 //   #Achievment drop up list on page about-new
 
   let $target = $('#achievments-drop-up-list .achievments__item');
-  let hold = 2800;
+  let hold = 5800;
   let index = 0;
 
   while (index <= $target.length){

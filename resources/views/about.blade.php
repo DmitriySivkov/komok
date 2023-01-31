@@ -39,44 +39,37 @@
                 </div>
             </div>
         </section>
+    </div>
+    <div class="achievments"><img class="achievments__circle" src="{{ asset('images/about/achievments-circle.png') }}">
+        <div class="grid-container">
+            <div class="grid-x">
+                <div class="cell achievments__container">
+                    <div class="achievments__header">
+                        <div class="article__subtitle"></div>
+                        <span class="article__underline">Комок</span>&nbsp;это
+                    </div>
+                    <div class="achievments__wrapper" style="max-width: 70%" id="achievments-drop-up-list">
 
-
-
-        <div class="achievments"><img class="achievments__circle" src="{{ asset('images/about/achievments-circle.png') }}">
-            <div class="grid-container">
-                <div class="grid-x">
-                    <div class="cell achievments__container">
-                        <div class="achievments__header">
-                            <div class="article__subtitle"></div>
-                            <span class="article__underline">Комок</span>&nbsp;это
-                        </div>
-                        <div class="achievments__wrapper" style="max-width: 70%" id="achievments-drop-up-list">
-
-                            @foreach($skills as $skill)
-                                <div class="achievments__item">
-                                    <div class="achievments__picture">
-                                        <img class="achievments__image"
-                                                                           src="{{ asset('storage/'.$skill->image) }}">
-                                    </div>
-                                    <div class="achievments__content">
-                                        <div class="achievments__header">{{ $skill->headline }}</div>
-                                        <div class="achievments__description">{!! $skill->text !!}</div>
-                                    </div>
-
+                        @foreach($skills as $skill)
+                            <div class="achievments__item">
+                                <div class="achievments__picture">
+                                    <img class="achievments__image"
+                                         src="{{ asset('storage/'.$skill->image) }}">
                                 </div>
-                            @endforeach
+                                <div class="achievments__content">
+                                    <div class="achievments__header">{{ $skill->headline }}</div>
+                                    <div class="achievments__description">{!! $skill->text !!}</div>
+                                </div>
 
-                        </div>
+                            </div>
+                        @endforeach
+
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-
-
-
+    </div>
+    <div class="grid-container">
         <div class="grid-container">
             <div class="grid-x cifry">
                 <div class="cifry__header">
