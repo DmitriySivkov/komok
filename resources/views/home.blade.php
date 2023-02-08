@@ -63,7 +63,7 @@
                             {{ $blocks_on_main[3]->headline }}<span class="section__violet section__violet_3">{{ $blocks_on_main[3]->emphasized_text }}</span>
                             {{ $blocks_on_main[3]->headline2 }}
                         </div>
-                        <div class="section__text">
+                        <div class="section__text" style="padding-left: 1rem">
                             {!! $blocks_on_main[3]->description !!}
                         </div>
                         <div><a class="button" href="{{ $blocks_on_main[3]->button_link }}">{{ $blocks_on_main[3]->button_title }}</a></div>

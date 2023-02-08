@@ -8,8 +8,7 @@
         <div class="grid-container">
             <div class="article__subtitle">
                 @if (request()->get('age') !== 'family')
-                Смены <span class="article__underline">для {{ request()->get('age') === 'younger' ? 'детей' : 'подростков' }}</span>
-                {{ request()->get('age') === 'younger' ? '7-12 лет' : '13-17 лет' }}
+                    Выездные смены <span class="article__underline">для детей </span> в Подмосковье
                 @else
                 Семейные выезды
                 @endif
