@@ -1,0 +1,27 @@
+.person{
+    text-align: center;
+
+    &__content{
+        margin-top: 2rem;
+        text-align: left;
+    }
+    &__subheader{
+        margin-top: 1rem;
+    }
+    &__photo{
+        border-radius: 50%;
+        z-index: 2;
+        position: relative;
+        width: 70%;
+    }
+    &__circle{
+        position: absolute;
+        right: 6.375rem;
+        top: 8.375rem;
+        z-index: 1;
+    }
+    &__content + .section__img_6 {
+        top: 50%;
+        right: 85%;
+    }
+}

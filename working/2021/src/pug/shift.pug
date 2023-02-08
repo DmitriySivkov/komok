@@ -1,4 +1,4 @@
-extends site-regular
+ extends site-regular
 block page
   .grid-container
     .breadcrumbs
@@ -466,7 +466,8 @@ block page
               | Даша Свищева
             .card__prof
               | Методист
-          .card__content Бакалавр в области международных отношений, переводчик, преподаватель английского, французского и арабского языков, в настоящее время получает третье педагогическое образование. Увлекается лингвистикой, хореографией, научно- популярной литературой, обожает детей.
+            .card__content
+             a(href="#" data-open="TeamModal1").button Познакомиться
 
         .card__item.card__item_slider
           .card__img
@@ -656,3 +657,19 @@ block page
               a.button Смены 13-17 лет
     button.close-button(data-close='', aria-label='Close modal', type='button')
         span(aria-hidden='true') &times;
+  #TeamModal1.reveal(data-reveal='' data-animation-in="spin-in" data-animation-out="spin-out").medium
+   .person
+     .person__header.h1 Даша Свищева
+     .person__img
+       img(src="https://ck58411.tmweb.ru/storage/employees/January2023/RJsXRX020zYyykPOP2WD.jpg").person__photo
+       img(src="i/reviews/circle.png").person__circle
+     .person__subheader.h2 Методист
+     .person__content
+       p
+       | <strong>Генри Форд (30 июля 1863 – 7 апреля 1947)</strong> - американский промышленник, бизнес-магнат, основатель Ford Motor Company,
+       | <br> главный разработчик конвейерной техники массового производства.
+       | Создав первый автомобиль, который могли позволить себе американцы среднего класса, он превратил его из дорогого диковинного предмета в доступное средство передвижения, оказавшее глубокое влияние на ландшафт 20-го века.
+     img(src="./images/mainpage/back1/Group-5.svg").section__img.section__img_6
+     img(src="./images/mainpage/back1/Group-6.svg").section__img.section__img_7
+     button.close-button(data-close='', aria-label='Close modal', type='button')
+       span(aria-hidden='true') &times;
