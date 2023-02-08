@@ -321,6 +321,7 @@
         <div class="grid-container">
             <div class="card__slider" id="counselors">
                 @foreach($elders as $elder)
+                <? if ($elder["is_public"]): ?>
                 <div class="card__item card__item_slider">
                     <div class="card__img">
                         <img class="card__photo" src="{{ asset('storage/' . $elder->picture) }}">
@@ -333,6 +334,7 @@
                         {!! $elder->description !!}
                     </div>
                 </div>
+                <? endif; ?>
                 @endforeach
             </div>
         </div>
@@ -348,6 +350,7 @@
         <div class="grid-container">
             <div class="card__slider" id="counselors-second">
                 @foreach($employees->employees as $employee)
+                <? if ($employee["is_public"]): ?>
                 <div class="card__item card__item_slider">
                     <div class="card__img">
                         <img class="card__photo" src="{{ asset('storage/' . $employee->picture) }}">
@@ -361,6 +364,7 @@
                         {!! $employee->description !!}
                     </div>
                 </div>
+                <? endif; ?>
                 @endforeach
             </div>
         </div>
