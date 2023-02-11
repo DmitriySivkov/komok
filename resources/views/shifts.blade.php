@@ -327,7 +327,7 @@
                     <div class="card__img">
                         <img class="card__photo" src="{{ asset('storage/' . $elder->picture) }}">
                         <img class="card__circle" src="{{ asset('i/reviews/circle.png') }}"></div>
-                    <div class="card__header">
+                    <div class="card__header card__header_bottom">
                         <div class="card__name card__name_slider">{{ $elder->name }}</div>
                         <div class="card__prof">{{ $elder->profession }}</div>
                     </div>
@@ -357,7 +357,7 @@
                         <img class="card__photo" src="{{ asset('storage/' . $employee->picture) }}">
                         <img class="card__circle" src="{{ asset('i/reviews/circle.png') }}">
                     </div>
-                    <div class="card__header">
+                    <div class="card__header card__header_bottom">
                         <div class="card__name card__name_slider">{{ $employee->name }}</div>
                         <div class="card__prof">{{ $employee->profession }}</div>
                     </div>

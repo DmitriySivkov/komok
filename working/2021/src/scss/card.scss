@@ -163,7 +163,7 @@
         }
     }
     @include breakpoint(small only){
-        &__prof+&__button{
+        &__header_bottom{
             padding-bottom: 4rem;
         }
     }
