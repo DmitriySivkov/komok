@@ -255,6 +255,9 @@
     }
 }
 @include breakpoint(small only){
+    .counselors__next_place,.counselors__prev_place {
+        top:30%;
+    }
     .counselors__next.counselors__next_large{
         bottom:0;
         top: auto;

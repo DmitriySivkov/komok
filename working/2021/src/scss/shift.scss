@@ -9,4 +9,7 @@
     @include breakpoint(large down) {
     background-position: bottom right;
 }
+    @include breakpoint(small only){
+        background: none;
+    }
 }
