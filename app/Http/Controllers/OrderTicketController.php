@@ -19,7 +19,6 @@ class OrderTicketController extends Controller
             'phone' => ['required_without:mail'],
             'mail' => ['required_without:phone'],
             'shift' => [],
-            'price' => []
         ], [
             'name.required' => 'Необходимо заполнить имя',
             'phone.required_without' => 'Необходимо заполнить телефон или почту',

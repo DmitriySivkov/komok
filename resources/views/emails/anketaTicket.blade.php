@@ -342,13 +342,6 @@
                                                                                 </ul>
                                                                                 <div class="center">
                                                                                     <a class="button" href="{{$settings["site.order_anketa"]->value}}">СКАЧАТЬ АНКЕТУ</a>
-
-                                                                                    <form method='POST' action='https://demo.paykeeper.ru/create/' >
-                                                                                        <input type='text' name='sum' value='{{$paykeeper["Цена путевки"]}}' style="opacity: 0" />
-                                                                                        <input type='text' name='orderid' value='{{$paykeeper["Номер заказа"]}}. Молодежный лагерь «КОМОК».' style="opacity: 0" /> <br />
-                                                                                        <input type='text' name='service_name' value='Заказ с сайта komok-camp №{{$paykeeper["Номер заказа"]}}' style="opacity: 0"/> <br />
-                                                                                        <input class="button" type='submit' value='Перейти к оплате' style="opacity: 1"/>
-                                                                                    </form>
                                                                                 </div>
 
 

@@ -40,10 +40,6 @@ class AnketaTicket extends Mailable
                     'Телефон' => $this->orderTicket->phone,
                     'Смена' => $this->orderTicket->shift,
                 ],
-                'paykeeper' => [
-                    'Цена путевки' =>$this->orderTicket->price,
-                    'Номер заказа' => $this->orderTicket->id,
-                ],
                 'settings'=> $this->getLayoutSettings(),
             ]);
     }
