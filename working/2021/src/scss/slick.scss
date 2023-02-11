@@ -250,6 +250,9 @@
         top:auto;
         bottom: rem-calc(-30);
     }
+    .counselors__next_place,.counselors__prev_place {
+        top:50%;
+    }
 }
 @include breakpoint(small only){
     .counselors__next.counselors__next_large{
