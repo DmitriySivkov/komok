@@ -26,6 +26,10 @@
         animation: achievments-content-drop-up;
         animation-duration: 6s;
         animation-iteration-count: infinite;
+        &:hover{
+            opacity: 1;
+            animation: none;
+        }
 
     }
     &__container{

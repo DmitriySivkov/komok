@@ -284,17 +284,36 @@ import "../scss/style.scss";
     index++;
   }
   index = 1;
+/*  $target.on( 'mouseenter mouseleave', function() {
+      $(this).toggleClass('hover');
+    }
+  )*/
+  $target.
+  mouseover(function(){
+    $target.toggleClass('toggle');
+  }).
+  mouseout(function(){
+    $target.toggleClass('toggle');
+    // при покидании элемента
+  });
   setInterval(() => {
       if (index >=  $target.length)
         index = 0;
-      if ($target.eq(index) !== $target.length){
-        $target.hide();
+
+
+      if ($target.hasClass("toggle")){
+      } else{
+        if ($target.eq(index) !== $target.length){
+          $target.hide();
+        }
+        $target.eq(index).show();
+        index++;
       }
-      $target.eq(index).show();
-      index++;
+
     }, hold
   );
 // Equal height for achievments-drop-up-list items
+
   $('#achievments-drop-up-list').each(function(){
     var highestBox = 0;
     $(this).find('.achievments__item').each(function(){
@@ -304,5 +323,27 @@ import "../scss/style.scss";
     })
 
     $(this).find('.achievments__item').height(highestBox);
+  });
+
+  $('#counselors .slick-list .slick-track').each(function(){
+    var highestBox = 0;
+    $(this).find('.card__item').each(function(){
+      if($(this).height() > highestBox){
+        highestBox = $(this).height();
+      }
+    })
+
+    $(this).find('.card__item').height(highestBox);
+  });
+
+  $('#counselors-second .slick-list.draggable .slick-track').each(function(){
+    var highestBox = 0;
+    $(this).find('.card__item').each(function(){
+      if($(this).height() > highestBox){
+        highestBox = $(this).height();
+      }
+    })
+
+    $(this).find('.card__item').height(highestBox);
   });
 })(jQuery);

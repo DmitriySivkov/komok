@@ -155,7 +155,12 @@
     &__button{
         text-align: center;
     }
-
+    &__content{
+        &_bottom{
+            position: absolute;
+            bottom: 0;
+        }
+    }
     @include breakpoint(medium down){
         &__col{
             width: 100%;
@@ -171,6 +176,7 @@
             }
         }
         &__item{
+            padding: 1rem;
             &_slider {
                 padding-right: .5rem;
                 padding-left: .5rem;

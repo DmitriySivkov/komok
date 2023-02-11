@@ -27,7 +27,7 @@
         <section class="section">
             <div class="grid-container">
                 <div class="grid-x player">
-                    <div class="cell">
+                    <div class="player__content">
                         <div class="player__wrapper">
                             <iframe
                                 src="{{ $blocks_on_about[2]->video }}"

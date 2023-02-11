@@ -30,8 +30,8 @@
                         <div class="card__name card__name_slider">{{ $employee->name }}</div>
                         <div class="card__prof">{{ $employee->profession }}</div>
                     </div>
-                    <div class="card__content">
-                        {!! $employee->description !!}
+                    <div class="card__content card__content_bottom">
+                        <a class="button" data-open="TeamModal{{ $employee->id }}">Познакомиться</a>
                     </div>
                 </div>
                 @endforeach
@@ -120,4 +120,29 @@
             <span aria-hidden="true">&times;</span>
         </button>
     </div>
+    @foreach($blocks_on_team[1]->employees as $employee)
+            <? if ($employee["is_public"]): ?>
+        <div id="TeamModal{{ $employee->id }}" class="reveal medium" data-reveal="" data-animation-in="spin-in" data-animation-out="spin-out">
+            <div class="person">
+                <div class="person__header h1">
+                    {{ $employee->name }}
+                </div>
+                <div class="person__subheader h2">
+                    {{ $employee->profession }}
+                </div>
+                <div class="person__content">
+                    {!! $employee->description !!}
+                </div>
+                <img src="./images/mainpage/back1/Group-3.svg" alt="" class="section__img section__img_3">
+                <img src="./images/mainpage/back1/Group-5.svg" alt="" class="section__img section__img_5">
+                <button class="close-button" data-close='' aria-label='Close modal' type='button'>
+                        <span aria-hidden=true>
+                                          &times;
+                        </span>
+                </button>
+
+            </div>
+        </div>
+        <? endif; ?>
+    @endforeach
 @endsection
