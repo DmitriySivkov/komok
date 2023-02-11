@@ -194,6 +194,7 @@
                                                             <form method="post" action="/orderTicket">
                                                                 @csrf
                                                                 <div class="grid-x justify-content-center">
+                                                                    <input name="price" value="{{ $period->price }}" type="hidden">
                                                                     <div class="cell large-10">
                                                                         <div class="grid-x grid-margin-x grid-padding-y">
                                                                             <div class="cell">
