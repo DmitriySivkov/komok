@@ -113,8 +113,7 @@
 
         &_team{
             transform: scale(1.15);
-            padding: 1rem;
-            padding-bottom: rem-calc(10);
+             padding-bottom: rem-calc(10);
         }
     }
     &__circle{
@@ -153,6 +152,7 @@
         line-height: 114.4%;
         margin-top: rem-calc(10);
     }
+
     &__button{
         text-align: center;
     }
@@ -160,6 +160,11 @@
         &_bottom{
             position: absolute;
             bottom: 0;
+        }
+    }
+    @include breakpoint(small only){
+        &__prof+&__button{
+            padding-bottom: 4rem;
         }
     }
     @include breakpoint(medium down){
