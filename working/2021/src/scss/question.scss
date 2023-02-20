@@ -32,6 +32,11 @@
         }
     }
     @include breakpoint(small only){
+        &__button{
+            &_small-center{
+                justify-content: center;
+            }
+        }
         &__phone{
             font-size: rem-calc(30);
         }

@@ -136,9 +136,9 @@
                                 value="Смены 7-12 лет"
                                 checked
                             />
-                            <div class="custom-radio__wrapper">
-                                <label for="small">Смены 7-12 лет</label>
-                            </div>
+                            <label for="small" class="custom-radio__wrapper">
+                                <label>Смены 7-12 лет</label>
+                            </label>
                         </div>
                     </div>
                     <div class="cell">
@@ -151,9 +151,9 @@
                                 name="age"
                                 value="Смены 13-17 лет"
                             />
-                            <div class="custom-radio__wrapper">
-                                <label for="large">Смены 13-17 лет</label>
-                            </div>
+                            <label for="large" class="custom-radio__wrapper">
+                                <label>Смены 13-17 лет</label>
+                            </label>
                         </div>
                     </div>
                 </div>

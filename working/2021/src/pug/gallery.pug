@@ -42,15 +42,13 @@ block page
           .cell
             .custom-radio
               input#small(type="radio" name="group2")
-              .custom-radio__wrapper
-                label(for="small")
-                  | Смены 7-12 лет
+              label(for="small").custom-radio__wrapper
+                | Смены 7-12 лет
           .cell
             .custom-radio
               input#large(type="radio" checked="checked" name="group2")
-              .custom-radio__wrapper
-                label(for="large" onclick="console.log(1);")
-                  | Смены 13-17 лет
+              label(for="large").custom-radio__wrapper
+                | Смены 13-17 лет
         .grid-x.grid-padding-x.grid-padding-y
           .search-buttons.cell
             button.button(type='submit') &Ncy;&acy;&jcy;&tcy;&icy;

@@ -1,6 +1,7 @@
 .custom-radio{
 
     .custom-radio__wrapper{
+        display: block;
         padding: rem-calc(8) rem-calc(16);
         border-radius: 124px;
         text-align: center;
@@ -9,6 +10,7 @@
 
         transition: background-color .2s linear;
         &:hover{
+            cursor: pointer;
             background: linear-gradient(-90deg, #5F48B0 3.24%, #6048B0 4.96%, #7F53A6 63.89%, #8B57A3 96.77%);
         }
         & label{
