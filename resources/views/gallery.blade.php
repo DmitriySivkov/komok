@@ -137,7 +137,7 @@
                                 checked
                             />
                             <label for="small" class="custom-radio__wrapper">
-                                <label>Смены 7-12 лет</label>
+                                <div>Смены 7-12 лет</div>
                             </label>
                         </div>
                     </div>
@@ -152,7 +152,7 @@
                                 value="Смены 13-17 лет"
                             />
                             <label for="large" class="custom-radio__wrapper">
-                                <label>Смены 13-17 лет</label>
+                                <div>Смены 13-17 лет</div>
                             </label>
                         </div>
                     </div>
